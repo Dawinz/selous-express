@@ -1,6 +1,7 @@
 import React from 'react';
 import Hero from '../components/Hero';
 import SearchForm from '../components/SearchForm';
+import Gallery from '../components/Gallery';
 
 const Home = () => {
   return (
@@ -22,7 +23,7 @@ const Home = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bebas font-bold text-zuberi-navy mb-4 tracking-wide">
-              WHY CHOOSE ZUBERI LUXURY
+              WHY CHOOSE ZUBERI EXPRESS
             </h2>
             <p className="text-lg text-gray-600 font-poppins max-w-2xl mx-auto">
               Experience the difference with our premium bus services
@@ -77,6 +78,9 @@ const Home = () => {
           </div>
         </div>
       </section>
+      
+      {/* Gallery Section */}
+      <Gallery />
     </div>
   );
 };

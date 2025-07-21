@@ -9,6 +9,7 @@ const SearchForm = () => {
   });
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState('');
+  const [isBookingDialogOpen, setIsBookingDialogOpen] = useState(false);
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -60,9 +61,11 @@ const SearchForm = () => {
       if (typeof window.safariplus === 'undefined') {
         // For development/testing - show mock dialog
         if (process.env.NODE_ENV === 'development') {
+          setIsBookingDialogOpen(true);
           setTimeout(() => {
             alert(`Mock Booking Dialog:\nFrom: ${formData.from}\nTo: ${formData.to}\nDate: ${formData.date}\nPassengers: ${formData.passengers}\n\nIn production, this would open SafariPlus booking system.`);
             setIsLoading(false);
+            setIsBookingDialogOpen(false);
           }, 1500);
           return;
         } else {
@@ -70,18 +73,27 @@ const SearchForm = () => {
         }
       }
 
+      // Hide the search form when SafariPlus dialog opens
+      setIsBookingDialogOpen(true);
+
       // Call SafariPlus booking dialog
       await window.safariplus.newTripDialog({
         origin: formData.from,
         destination: formData.to,
         departureDate: formData.date,
-        passengersCount: parseInt(formData.passengers)
+        passengersCount: parseInt(formData.passengers),
+        onClose: () => {
+          // Show the search form again when dialog closes
+          setIsBookingDialogOpen(false);
+          setIsLoading(false);
+        }
       });
 
     } catch (error) {
       console.error('SafariPlus booking error:', error);
       setError(error.message || 'Unable to load booking system. Please try again.');
       setIsLoading(false);
+      setIsBookingDialogOpen(false);
     }
   };
 
@@ -90,6 +102,11 @@ const SearchForm = () => {
     'Dar es Salaam', 'Mwanza', 'Kahama', 'Moshi', 'Arusha', 
     'Dodoma', 'Mbeya', 'Tanga', 'Morogoro', 'Iringa'
   ];
+
+  // Don't render the search form if booking dialog is open
+  if (isBookingDialogOpen) {
+    return null;
+  }
 
   return (
     <div id="search-form" className="bg-white rounded-xl shadow-2xl p-6 md:p-8 mx-4 -mt-12 relative z-20">

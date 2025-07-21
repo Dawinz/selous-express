@@ -3,8 +3,15 @@ import React from 'react';
 const Hero = () => {
   return (
     <div className="relative bg-gradient-to-r from-zuberi-navy to-blue-800 min-h-[60vh] flex items-center">
-      {/* Background Pattern */}
-      <div className="absolute inset-0 bg-black bg-opacity-20"></div>
+      {/* Background Image */}
+      <div 
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{
+          backgroundImage: 'url(/images/zuberi%202.jpg)',
+        }}
+      ></div>
+      {/* Background Overlay */}
+      <div className="absolute inset-0 bg-gradient-to-r from-zuberi-navy/80 to-blue-800/70"></div>
       
       {/* Hero Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">

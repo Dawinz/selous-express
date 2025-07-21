@@ -11,7 +11,7 @@ const Footer = () => {
           {/* Company Info Section */}
           <div className="lg:col-span-2">
             <h3 className="text-2xl font-bebas font-bold mb-4 tracking-wide">
-              ZUBERI LUXURY BUSES
+              ZUBERI EXPRESS
             </h3>
             <p className="text-gray-300 font-poppins mb-4 text-lg">
               Safari za Kifahari, Tiketi kwa Urahisi
@@ -144,7 +144,7 @@ const Footer = () => {
 
             {/* Copyright */}
             <div className="text-gray-400 font-poppins text-sm">
-              © {new Date().getFullYear()} Zuberi Luxury Buses. All rights reserved.
+              © {new Date().getFullYear()} Zuberi Express. All rights reserved.
             </div>
           </div>
         </div>

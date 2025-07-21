@@ -11,7 +11,7 @@ const Navbar = () => {
           {/* Logo */}
           <div className="flex-shrink-0">
             <Link to="/" className="text-xl font-bebas font-bold tracking-wider hover:text-zuberi-lime transition-colors duration-200">
-              ZUBERI LUXURY
+              ZUBERI EXPRESS
             </Link>
           </div>
 
