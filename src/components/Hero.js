@@ -7,7 +7,7 @@ const Hero = () => {
       <div 
         className="relative w-full h-full bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: 'url(/images/zuberi 2.jpg)',
+          backgroundImage: 'url(/images/zuberi-2.jpg)',
         }}
       ></div>
     </div>
