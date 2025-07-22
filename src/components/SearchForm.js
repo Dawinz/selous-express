@@ -155,7 +155,7 @@ const SearchForm = ({ setIsBookingDialogOpen }) => {
   return (
     <div>
       <div>
-          <div id="search-form" className="bg-zuberi-navy rounded-2xl shadow-2xl shadow-zuberi-navy/40 p-8 md:p-10 mx-4 -mt-12 relative z-20">
+          <div id="search-form" className="bg-gradient-to-br from-zuberi-navy via-zuberi-red to-zuberi-lime rounded-2xl shadow-2xl shadow-zuberi-red/40 p-8 md:p-10 mx-4 -mt-12 relative z-20">
             <div className="max-w-6xl mx-auto">
               {/* Form Header */}
               <div className="text-center mb-6">
