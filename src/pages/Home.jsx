@@ -7,11 +7,11 @@ const Home = ({ setIsBookingDialogOpen }) => {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
-      <section className="mb-8">
+      <section>
         <Hero />
       </section>
       {/* Search Form Section */}
-      <section className="pb-16 px-4 sm:px-6 lg:px-8">
+      <section className="pt-4 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
           <SearchForm setIsBookingDialogOpen={setIsBookingDialogOpen} />
         </div>
