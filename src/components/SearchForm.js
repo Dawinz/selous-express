@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
+import SafariYetuScrollManager from '../utils/safariYetuScrollManager';
 
 const SearchForm = () => {
   const [formData, setFormData] = useState({
@@ -10,6 +11,17 @@ const SearchForm = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState('');
   const [isBookingDialogOpen, setIsBookingDialogOpen] = useState(false);
+  const scrollManagerRef = useRef(null);
+
+  // Cleanup scroll manager on component unmount
+  useEffect(() => {
+    return () => {
+      if (scrollManagerRef.current) {
+        scrollManagerRef.current.cleanup();
+        scrollManagerRef.current = null;
+      }
+    };
+  }, []);
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -54,44 +66,67 @@ const SearchForm = () => {
       return;
     }
 
+    // Clean up any existing scroll manager
+    if (scrollManagerRef.current) {
+      scrollManagerRef.current.cleanup();
+    }
+
+    // Create new scroll manager instance
+    scrollManagerRef.current = SafariYetuScrollManager.createInstance();
     setIsLoading(true);
+    setIsBookingDialogOpen(true);
 
     try {
-      // Check if SafariPlus is loaded
-      if (typeof window.safariplus === 'undefined') {
-        // For development/testing - show mock dialog
-        if (process.env.NODE_ENV === 'development') {
-          setIsBookingDialogOpen(true);
-          setTimeout(() => {
-            alert(`Mock Booking Dialog:\nFrom: ${formData.from}\nTo: ${formData.to}\nDate: ${formData.date}\nPassengers: ${formData.passengers}\n\nIn production, this would open SafariPlus booking system.`);
-            setIsLoading(false);
-            setIsBookingDialogOpen(false);
-          }, 1500);
-          return;
-        } else {
-          throw new Error('Booking system is loading. Please try again in a moment.');
-        }
-      }
-
-      // Hide the search form when SafariPlus dialog opens
-      setIsBookingDialogOpen(true);
-
-      // Call SafariPlus booking dialog
-      await window.safariplus.newTripDialog({
+      // Prepare booking data
+      const bookingData = {
         origin: formData.from,
         destination: formData.to,
         departureDate: formData.date,
         passengersCount: parseInt(formData.passengers),
         onClose: () => {
-          // Show the search form again when dialog closes
+          // This callback might not be called by SafariYetu, 
+          // so we rely on our monitoring system
+          console.log('SafariYetu dialog closed via callback');
           setIsBookingDialogOpen(false);
           setIsLoading(false);
         }
-      });
+      };
+
+      // Check if SafariPlus is loaded, handle development vs production
+      if (typeof window.safariplus === 'undefined') {
+        if (process.env.NODE_ENV === 'development') {
+          // Development mock - still use scroll manager for testing
+          scrollManagerRef.current.disableScroll();
+          
+          setTimeout(() => {
+            alert(`Mock Booking Dialog:\nFrom: ${formData.from}\nTo: ${formData.to}\nDate: ${formData.date}\nPassengers: ${formData.passengers}\n\nIn production, this would open SafariYetu booking system.`);
+            
+            // Simulate dialog closing
+            if (scrollManagerRef.current) {
+              scrollManagerRef.current.enableScroll();
+              scrollManagerRef.current.cleanup();
+            }
+            setIsLoading(false);
+            setIsBookingDialogOpen(false);
+          }, 1500);
+          return;
+        } else {
+          throw new Error('SafariYetu booking system is loading. Please try again in a moment.');
+        }
+      }
+
+      // Use scroll manager to open SafariYetu dialog
+      await scrollManagerRef.current.openBookingDialog(bookingData);
 
     } catch (error) {
-      console.error('SafariPlus booking error:', error);
+      console.error('SafariYetu booking error:', error);
       setError(error.message || 'Unable to load booking system. Please try again.');
+      
+      // Clean up on error
+      if (scrollManagerRef.current) {
+        scrollManagerRef.current.cleanup();
+        scrollManagerRef.current = null;
+      }
       setIsLoading(false);
       setIsBookingDialogOpen(false);
     }

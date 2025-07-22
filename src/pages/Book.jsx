@@ -1,10 +1,22 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
+import SafariYetuScrollManager from '../utils/safariYetuScrollManager';
 
 const Book = () => {
   const [selectedSeats, setSelectedSeats] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [pickupStation, setPickupStation] = useState('');
   const [dropOffStation, setDropOffStation] = useState('');
+  const scrollManagerRef = useRef(null);
+
+  // Cleanup scroll manager on component unmount
+  useEffect(() => {
+    return () => {
+      if (scrollManagerRef.current) {
+        scrollManagerRef.current.cleanup();
+        scrollManagerRef.current = null;
+      }
+    };
+  }, []);
 
   // Station data for pickup and drop-off
   const darStations = ['Ubungo Terminal', 'Kariakoo Station', 'Magomeni Terminal'];
@@ -39,7 +51,8 @@ const Book = () => {
     }
   };
 
-  const handleProceedToPayment = () => {
+  const handleProceedToPayment = async () => {
+    // Validation
     if (selectedSeats.length === 0) {
       alert('Please select at least one seat');
       return;
@@ -54,13 +67,66 @@ const Book = () => {
       alert('Please select a drop-off station');
       return;
     }
-    
+
+    // Clean up any existing scroll manager
+    if (scrollManagerRef.current) {
+      scrollManagerRef.current.cleanup();
+    }
+
+    // Create new scroll manager instance
+    scrollManagerRef.current = SafariYetuScrollManager.createInstance();
     setIsLoading(true);
-    // In a real app, this would integrate with payment system
-    setTimeout(() => {
-      alert(`Proceeding to payment for seats: ${selectedSeats.join(', ')}\nPickup: ${pickupStation}\nDrop-off: ${dropOffStation}`);
+
+    try {
+      // Prepare booking data for SafariYetu
+      const bookingData = {
+        origin: pickupStation,
+        destination: dropOffStation,
+        departureDate: new Date().toISOString().split('T')[0], // Today's date as fallback
+        passengersCount: selectedSeats.length,
+        selectedSeats: selectedSeats,
+        onClose: () => {
+          console.log('SafariYetu payment dialog closed via callback');
+          setIsLoading(false);
+        }
+      };
+
+      // Check if SafariPlus is loaded, handle development vs production
+      if (typeof window.safariplus === 'undefined') {
+        if (process.env.NODE_ENV === 'development') {
+          // Development mock - use scroll manager for testing
+          scrollManagerRef.current.disableScroll();
+          
+          setTimeout(() => {
+            alert(`Mock SafariYetu Payment:\nSeats: ${selectedSeats.join(', ')}\nPickup: ${pickupStation}\nDrop-off: ${dropOffStation}\nPassengers: ${selectedSeats.length}`);
+            
+            // Simulate payment dialog closing
+            if (scrollManagerRef.current) {
+              scrollManagerRef.current.enableScroll();
+              scrollManagerRef.current.cleanup();
+            }
+            setIsLoading(false);
+          }, 2000);
+          return;
+        } else {
+          throw new Error('SafariYetu payment system is loading. Please try again in a moment.');
+        }
+      }
+
+      // Use scroll manager to open SafariYetu payment dialog
+      await scrollManagerRef.current.openBookingDialog(bookingData);
+
+    } catch (error) {
+      console.error('SafariYetu payment error:', error);
+      alert(error.message || 'Unable to load payment system. Please try again.');
+      
+      // Clean up on error
+      if (scrollManagerRef.current) {
+        scrollManagerRef.current.cleanup();
+        scrollManagerRef.current = null;
+      }
       setIsLoading(false);
-    }, 2000);
+    }
   };
 
   const getSeatClass = (seat) => {

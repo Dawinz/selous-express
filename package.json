@@ -17,7 +17,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "sync": "./auto-sync.sh",
+    "auto-sync": "./auto-sync.sh"
   },
   "eslintConfig": {
     "extends": [
