@@ -2,7 +2,7 @@ import React from 'react';
 
 const Hero = () => {
   return (
-    <div className="relative h-screen flex items-center justify-center border-4 border-red-500">
+    <div className="relative h-screen flex items-center justify-center">
       {/* Background Image */}
       <div 
         className="relative w-full h-full bg-cover bg-center bg-no-repeat"
