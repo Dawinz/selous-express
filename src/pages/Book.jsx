@@ -1,11 +1,14 @@
 import React, { useState, useEffect, useRef } from 'react';
 import SafariYetuScrollManager from '../utils/safariYetuScrollManager';
+import SafariYetuOverlay from '../components/SafariYetuOverlay';
 
 const Book = () => {
   const [selectedSeats, setSelectedSeats] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [pickupStation, setPickupStation] = useState('');
   const [dropOffStation, setDropOffStation] = useState('');
+  const [isBookingDialogOpen, setIsBookingDialogOpen] = useState(false);
+  const [currentBookingData, setCurrentBookingData] = useState({});
   const scrollManagerRef = useRef(null);
 
   // Cleanup scroll manager on component unmount
@@ -73,10 +76,6 @@ const Book = () => {
       scrollManagerRef.current.cleanup();
     }
 
-    // Create new scroll manager instance
-    scrollManagerRef.current = SafariYetuScrollManager.createInstance();
-    setIsLoading(true);
-
     try {
       // Prepare booking data for SafariYetu
       const bookingData = {
@@ -88,8 +87,16 @@ const Book = () => {
         onClose: () => {
           console.log('SafariYetu payment dialog closed via callback');
           setIsLoading(false);
+          setIsBookingDialogOpen(false);
+          setCurrentBookingData({});
         }
       };
+
+      // Create new scroll manager instance and set states
+      scrollManagerRef.current = SafariYetuScrollManager.createInstance();
+      setIsLoading(true);
+      setIsBookingDialogOpen(true);
+      setCurrentBookingData(bookingData);
 
       // Check if SafariPlus is loaded, handle development vs production
       if (typeof window.safariplus === 'undefined') {
@@ -106,6 +113,8 @@ const Book = () => {
               scrollManagerRef.current.cleanup();
             }
             setIsLoading(false);
+            setIsBookingDialogOpen(false);
+            setCurrentBookingData({});
           }, 2000);
           return;
         } else {
@@ -126,6 +135,8 @@ const Book = () => {
         scrollManagerRef.current = null;
       }
       setIsLoading(false);
+      setIsBookingDialogOpen(false);
+      setCurrentBookingData({});
     }
   };
 
@@ -138,6 +149,9 @@ const Book = () => {
     }
     return 'bg-white border-2 border-gray-300 hover:border-zuberi-red cursor-pointer';
   };
+
+  // Show overlay instead of completely replacing the UI
+  const showOverlay = isBookingDialogOpen;
 
   return (
     <div className="min-h-screen bg-gray-50 py-8">
@@ -356,6 +370,12 @@ const Book = () => {
           </div>
         </div>
       </div>
+      
+      {/* SafariYetu Overlay */}
+      <SafariYetuOverlay 
+        isOpen={showOverlay} 
+        bookingData={currentBookingData}
+      />
     </div>
   );
 };

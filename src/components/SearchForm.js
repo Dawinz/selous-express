@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import SafariYetuScrollManager from '../utils/safariYetuScrollManager';
+import SafariYetuOverlay from './SafariYetuOverlay';
 
 const SearchForm = () => {
   const [formData, setFormData] = useState({
@@ -11,6 +12,7 @@ const SearchForm = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState('');
   const [isBookingDialogOpen, setIsBookingDialogOpen] = useState(false);
+  const [currentBookingData, setCurrentBookingData] = useState({});
   const scrollManagerRef = useRef(null);
 
   // Cleanup scroll manager on component unmount
@@ -71,11 +73,6 @@ const SearchForm = () => {
       scrollManagerRef.current.cleanup();
     }
 
-    // Create new scroll manager instance
-    scrollManagerRef.current = SafariYetuScrollManager.createInstance();
-    setIsLoading(true);
-    setIsBookingDialogOpen(true);
-
     try {
       // Prepare booking data
       const bookingData = {
@@ -89,8 +86,15 @@ const SearchForm = () => {
           console.log('SafariYetu dialog closed via callback');
           setIsBookingDialogOpen(false);
           setIsLoading(false);
+          setCurrentBookingData({});
         }
       };
+
+      // Create new scroll manager instance and set states
+      scrollManagerRef.current = SafariYetuScrollManager.createInstance();
+      setIsLoading(true);
+      setIsBookingDialogOpen(true);
+      setCurrentBookingData(bookingData);
 
       // Check if SafariPlus is loaded, handle development vs production
       if (typeof window.safariplus === 'undefined') {
@@ -108,6 +112,7 @@ const SearchForm = () => {
             }
             setIsLoading(false);
             setIsBookingDialogOpen(false);
+            setCurrentBookingData({});
           }, 1500);
           return;
         } else {
@@ -129,6 +134,7 @@ const SearchForm = () => {
       }
       setIsLoading(false);
       setIsBookingDialogOpen(false);
+      setCurrentBookingData({});
     }
   };
 
@@ -138,10 +144,8 @@ const SearchForm = () => {
     'Dodoma', 'Mbeya', 'Tanga', 'Morogoro', 'Iringa'
   ];
 
-  // Don't render the search form if booking dialog is open
-  if (isBookingDialogOpen) {
-    return null;
-  }
+  // Show overlay instead of hiding the form completely
+  const showOverlay = isBookingDialogOpen;
 
   return (
     <div id="search-form" className="bg-white rounded-xl shadow-2xl p-6 md:p-8 mx-4 -mt-12 relative z-20">
@@ -296,6 +300,12 @@ const SearchForm = () => {
           </div>
         </div>
       </div>
+      
+      {/* SafariYetu Overlay */}
+      <SafariYetuOverlay 
+        isOpen={showOverlay} 
+        bookingData={currentBookingData}
+      />
     </div>
   );
 };
