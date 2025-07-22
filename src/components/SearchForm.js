@@ -149,10 +149,7 @@ const SearchForm = () => {
 
   return (
     <div>
-      {isBookingDialogOpen ? (
-        <SafariYetuOverlay isOpen={true} bookingData={currentBookingData} />
-      ) : (
-        <div>
+      <div>
           <div id="search-form" className="bg-white rounded-xl shadow-2xl p-6 md:p-8 mx-4 -mt-12 relative z-20">
             <div className="max-w-6xl mx-auto">
               {/* Form Header */}
@@ -307,7 +304,6 @@ const SearchForm = () => {
             </div>
           </div>
         </div>
-      )}
     </div>
   );
 };
