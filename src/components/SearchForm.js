@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import SafariYetuScrollManager from '../utils/safariYetuScrollManager';
 import SafariYetuOverlay from './SafariYetuOverlay';
 
-const SearchForm = () => {
+const SearchForm = ({ setIsBookingDialogOpen }) => {
   const [formData, setFormData] = useState({
     from: '',
     to: '',
@@ -11,7 +11,6 @@ const SearchForm = () => {
   });
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState('');
-  const [isBookingDialogOpen, setIsBookingDialogOpen] = useState(false);
   const [currentBookingData, setCurrentBookingData] = useState({});
   const scrollManagerRef = useRef(null);
 
@@ -93,7 +92,7 @@ const SearchForm = () => {
       // Create new scroll manager instance and set states
       scrollManagerRef.current = SafariYetuScrollManager.createInstance();
       setIsLoading(true);
-      setIsBookingDialogOpen(true);
+      setIsBookingDialogOpen(true); // <-- show blur on app
       setCurrentBookingData(bookingData);
 
       // Check if SafariPlus is loaded, handle development vs production
@@ -111,7 +110,7 @@ const SearchForm = () => {
               scrollManagerRef.current.cleanup();
             }
             setIsLoading(false);
-            setIsBookingDialogOpen(false);
+            setIsBookingDialogOpen(false); // <-- remove blur on app
             setCurrentBookingData({});
           }, 1500);
           return;
@@ -133,7 +132,7 @@ const SearchForm = () => {
         scrollManagerRef.current = null;
       }
       setIsLoading(false);
-      setIsBookingDialogOpen(false);
+      setIsBookingDialogOpen(false); // <-- remove blur on app
       setCurrentBookingData({});
     }
   };
@@ -145,7 +144,7 @@ const SearchForm = () => {
   ];
 
   // Show overlay instead of hiding the form completely
-  const showOverlay = isBookingDialogOpen;
+  const showOverlay = setIsBookingDialogOpen;
 
   return (
     <div>

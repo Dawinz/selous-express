@@ -3,7 +3,7 @@ import Hero from '../components/Hero';
 import SearchForm from '../components/SearchForm';
 import Gallery from '../components/Gallery';
 
-const Home = () => {
+const Home = ({ setIsBookingDialogOpen }) => {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
@@ -14,7 +14,7 @@ const Home = () => {
       {/* Search Form Section */}
       <section className="pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
-          <SearchForm />
+          <SearchForm setIsBookingDialogOpen={setIsBookingDialogOpen} />
         </div>
       </section>
       
