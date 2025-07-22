@@ -1,13 +1,20 @@
 import React from 'react';
 import Hero from '../components/Hero';
+import SearchForm from '../components/SearchForm';
 import Gallery from '../components/Gallery';
 
 const Home = ({ setIsBookingDialogOpen }) => {
   return (
     <div className="min-h-screen bg-gray-50">
-      {/* Hero Section with SearchForm */}
+      {/* Hero Section */}
       <section className="mb-8">
-        <Hero setIsBookingDialogOpen={setIsBookingDialogOpen} />
+        <Hero />
+      </section>
+      {/* Search Form Section */}
+      <section className="pb-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto">
+          <SearchForm setIsBookingDialogOpen={setIsBookingDialogOpen} />
+        </div>
       </section>
       {/* Features Section */}
       <section className="py-16 bg-white mt-8">
