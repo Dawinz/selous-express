@@ -2,10 +2,10 @@ import React from 'react';
 
 const Hero = () => {
   return (
-    <div className="relative min-h-[80vh] flex items-center justify-center">
+    <div className="relative h-screen flex items-center justify-center border-4 border-red-500">
       {/* Background Image */}
       <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        className="relative w-full h-full bg-cover bg-center bg-no-repeat"
         style={{
           backgroundImage: 'url(/images/zuberi 2.jpg)',
         }}

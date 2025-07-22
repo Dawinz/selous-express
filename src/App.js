@@ -12,7 +12,7 @@ function App() {
   const [isBookingDialogOpen, setIsBookingDialogOpen] = useState(false);
 
   return (
-    <div className={`min-h-screen bg-gray-50 font-poppins${isBookingDialogOpen ? ' blur-sm pointer-events-none select-none' : ''}`}>
+    <div className={`min-h-screen font-poppins${isBookingDialogOpen ? ' blur-sm pointer-events-none select-none' : ''}`}>
       {/* Navigation */}
       <Navbar />
       
