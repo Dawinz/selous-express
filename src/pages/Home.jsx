@@ -17,9 +17,9 @@ const Home = ({ setIsBookingDialogOpen }) => {
         </div>
       </section>
       {/* Features Section */}
-      <section className="py-16 bg-zuberi-silver mt-8">
+      <section className="py-8 bg-zuberi-silver mt-8">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
+          <div className="text-center mb-6">
             <h2 className="text-3xl md:text-4xl font-bebas font-bold text-zuberi-navy mb-4 tracking-wide">
               WHY CHOOSE ZUBERI EXPRESS
             </h2>
