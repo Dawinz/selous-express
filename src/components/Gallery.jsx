@@ -12,7 +12,7 @@ const Gallery = () => {
     },
     {
       id: 2,
-      src: '/images/zuberi 2.jpg',
+      src: '/images/zuberi-2.jpg',
       alt: 'Zuberi Express Bus - Front View with Route Destinations',
       title: 'Modern Buses'
     },
