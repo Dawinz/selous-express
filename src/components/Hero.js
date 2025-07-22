@@ -1,8 +1,9 @@
 import React from 'react';
+import SearchForm from './SearchForm';
 
-const Hero = () => {
+const Hero = (props) => {
   return (
-    <div className="relative min-h-[60vh] flex items-center">
+    <div className="relative min-h-[60vh] flex items-center justify-center">
       {/* Background Image */}
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
@@ -10,8 +11,10 @@ const Hero = () => {
           backgroundImage: 'url(/images/zuberi 2.jpg)',
         }}
       ></div>
-      {/* Remove overlay and all text, keep only booking/search form section here if present */}
-      {/* If booking/search form is not here, leave this div empty for now */}
+      {/* Centered Booking/Search Form */}
+      <div className="relative z-10 w-full max-w-3xl mx-auto">
+        <SearchForm {...props} />
+      </div>
     </div>
   );
 };

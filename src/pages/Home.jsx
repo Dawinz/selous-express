@@ -1,23 +1,14 @@
 import React from 'react';
 import Hero from '../components/Hero';
-import SearchForm from '../components/SearchForm';
 import Gallery from '../components/Gallery';
 
 const Home = ({ setIsBookingDialogOpen }) => {
   return (
     <div className="min-h-screen bg-gray-50">
-      {/* Hero Section */}
+      {/* Hero Section with SearchForm */}
       <section className="mb-8">
-        <Hero />
+        <Hero setIsBookingDialogOpen={setIsBookingDialogOpen} />
       </section>
-      
-      {/* Search Form Section */}
-      <section className="pb-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto">
-          <SearchForm setIsBookingDialogOpen={setIsBookingDialogOpen} />
-        </div>
-      </section>
-      
       {/* Features Section */}
       <section className="py-16 bg-white mt-8">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -29,7 +20,6 @@ const Home = ({ setIsBookingDialogOpen }) => {
               Experience the difference with our premium bus services
             </p>
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* Feature 1 */}
             <div className="text-center p-6 rounded-lg border border-gray-200 hover:shadow-lg transition-shadow duration-200">
@@ -45,7 +35,6 @@ const Home = ({ setIsBookingDialogOpen }) => {
                 Luxury seats, air conditioning, and spacious interiors for your comfort
               </p>
             </div>
-            
             {/* Feature 2 */}
             <div className="text-center p-6 rounded-lg border border-gray-200 hover:shadow-lg transition-shadow duration-200">
               <div className="w-16 h-16 bg-zuberi-lime rounded-full flex items-center justify-center mx-auto mb-4">
@@ -60,7 +49,6 @@ const Home = ({ setIsBookingDialogOpen }) => {
                 Reliable schedules and punctual service you can depend on
               </p>
             </div>
-            
             {/* Feature 3 */}
             <div className="text-center p-6 rounded-lg border border-gray-200 hover:shadow-lg transition-shadow duration-200">
               <div className="w-16 h-16 bg-zuberi-navy rounded-full flex items-center justify-center mx-auto mb-4">
@@ -78,7 +66,6 @@ const Home = ({ setIsBookingDialogOpen }) => {
           </div>
         </div>
       </section>
-      
       {/* Gallery Section */}
       <Gallery />
     </div>
