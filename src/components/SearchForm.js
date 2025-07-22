@@ -155,14 +155,14 @@ const SearchForm = ({ setIsBookingDialogOpen }) => {
   return (
     <div>
       <div>
-          <div id="search-form" className="bg-zuberi-silver rounded-xl shadow-2xl p-6 md:p-8 mx-4 -mt-12 relative z-20">
+          <div id="search-form" className="bg-zuberi-navy rounded-2xl shadow-2xl shadow-zuberi-navy/40 p-8 md:p-10 mx-4 -mt-12 relative z-20">
             <div className="max-w-6xl mx-auto">
               {/* Form Header */}
               <div className="text-center mb-6">
-                <h3 className="text-2xl md:text-3xl font-bebas font-bold text-zuberi-navy mb-2 tracking-wide">
+                <h3 className="text-2xl md:text-3xl font-bebas font-bold text-white mb-2 tracking-wide">
                   FIND YOUR JOURNEY
                 </h3>
-                <p className="text-zuberi-navy font-poppins">
+                <p className="text-zuberi-silver font-poppins">
                   Search and book your premium bus travel
                 </p>
                 
@@ -179,14 +179,14 @@ const SearchForm = ({ setIsBookingDialogOpen }) => {
                 <div className="grid grid-cols-1 md:grid-cols-5 gap-4">
                   {/* From */}
                   <div className="space-y-2">
-                    <label className="text-sm font-poppins font-semibold text-zuberi-navy">
+                    <label className="text-sm font-poppins font-semibold text-zuberi-silver">
                       FROM
                     </label>
                     <select
                       name="from"
                       value={formData.from}
                       onChange={handleInputChange}
-                      className="w-full p-4 border-2 border-zuberi-navy rounded-lg focus:border-zuberi-red focus:outline-none font-poppins text-zuberi-navy bg-white text-base"
+                      className="w-full p-4 border-2 border-zuberi-silver rounded-lg focus:border-zuberi-red focus:outline-none font-poppins text-zuberi-navy bg-zuberi-silver text-base"
                       required
                     >
                       <option value="">Select departure</option>
@@ -198,14 +198,14 @@ const SearchForm = ({ setIsBookingDialogOpen }) => {
 
                   {/* To */}
                   <div className="space-y-2">
-                    <label className="text-sm font-poppins font-semibold text-zuberi-navy">
+                    <label className="text-sm font-poppins font-semibold text-zuberi-silver">
                       TO
                     </label>
                     <select
                       name="to"
                       value={formData.to}
                       onChange={handleInputChange}
-                      className="w-full p-4 border-2 border-zuberi-navy rounded-lg focus:border-zuberi-red focus:outline-none font-poppins text-zuberi-navy bg-white text-base"
+                      className="w-full p-4 border-2 border-zuberi-silver rounded-lg focus:border-zuberi-red focus:outline-none font-poppins text-zuberi-navy bg-zuberi-silver text-base"
                       required
                     >
                       <option value="">Select destination</option>
@@ -217,7 +217,7 @@ const SearchForm = ({ setIsBookingDialogOpen }) => {
 
                   {/* Date */}
                   <div className="space-y-2">
-                    <label className="text-sm font-poppins font-semibold text-zuberi-navy">
+                    <label className="text-sm font-poppins font-semibold text-zuberi-silver">
                       TRAVEL DATE
                     </label>
                     <input
@@ -226,21 +226,21 @@ const SearchForm = ({ setIsBookingDialogOpen }) => {
                       value={formData.date}
                       onChange={handleInputChange}
                       min={new Date().toISOString().split('T')[0]}
-                      className="w-full p-4 border-2 border-zuberi-navy rounded-lg focus:border-zuberi-red focus:outline-none font-poppins text-zuberi-navy text-base bg-white"
+                      className="w-full p-4 border-2 border-zuberi-silver rounded-lg focus:border-zuberi-red focus:outline-none font-poppins text-zuberi-navy text-base bg-zuberi-silver"
                       required
                     />
                   </div>
 
                   {/* Passengers */}
                   <div className="space-y-2">
-                    <label className="text-sm font-poppins font-semibold text-zuberi-navy">
+                    <label className="text-sm font-poppins font-semibold text-zuberi-silver">
                       PASSENGERS
                     </label>
                     <select
                       name="passengers"
                       value={formData.passengers}
                       onChange={handleInputChange}
-                      className="w-full p-4 border-2 border-zuberi-navy rounded-lg focus:border-zuberi-red focus:outline-none font-poppins text-zuberi-navy bg-white text-base"
+                      className="w-full p-4 border-2 border-zuberi-silver rounded-lg focus:border-zuberi-red focus:outline-none font-poppins text-zuberi-navy bg-zuberi-silver text-base"
                     >
                       {[1,2,3,4,5,6,7,8,9,10].map(num => (
                         <option key={num} value={num}>{num} Passenger{num > 1 ? 's' : ''}</option>
