@@ -148,11 +148,8 @@ const SearchForm = () => {
   const showOverlay = isBookingDialogOpen;
 
   return (
-    <div className="relative">
-      {isBookingDialogOpen && (
-        <div className="fixed inset-0 z-50 bg-black bg-opacity-60"></div>
-      )}
-      <div className={isBookingDialogOpen ? 'blur-sm pointer-events-none select-none' : ''}>
+    <div>
+      <div>
           <div id="search-form" className="bg-white rounded-xl shadow-2xl p-6 md:p-8 mx-4 -mt-12 relative z-20">
             <div className="max-w-6xl mx-auto">
               {/* Form Header */}
