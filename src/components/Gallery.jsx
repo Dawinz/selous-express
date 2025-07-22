@@ -33,14 +33,14 @@ const Gallery = () => {
   };
 
   return (
-    <section className="py-16 bg-gray-50">
+    <section className="py-16 bg-zuberi-navy">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Gallery Header */}
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bebas font-bold text-zuberi-navy mb-4 tracking-wide">
+          <h2 className="text-3xl md:text-4xl font-bebas font-bold text-white mb-4 tracking-wide">
             OUR FLEET
           </h2>
-          <p className="text-lg text-gray-600 font-poppins max-w-2xl mx-auto">
+          <p className="text-lg text-zuberi-silver font-poppins max-w-2xl mx-auto">
             Experience comfort and luxury with our modern fleet of buses
           </p>
         </div>
@@ -50,7 +50,7 @@ const Gallery = () => {
           {images.map((image) => (
             <div
               key={image.id}
-              className="group relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 cursor-pointer"
+              className="group relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 cursor-pointer bg-white"
               onClick={() => openModal(image)}
             >
               <div className="aspect-w-16 aspect-h-12">
@@ -62,7 +62,7 @@ const Gallery = () => {
               </div>
               
               {/* Overlay */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <div className="absolute inset-0 bg-gradient-to-t from-zuberi-navy/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <div className="absolute bottom-4 left-4 right-4">
                   <h3 className="text-white font-bebas font-bold text-xl tracking-wide">
                     {image.title}
