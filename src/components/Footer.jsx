@@ -17,7 +17,7 @@ const Footer = () => {
               Safari za Kifahari, Tiketi kwa Urahisi
             </p>
             <p className="text-gray-400 font-poppins text-sm leading-relaxed">
-              Experience premium bus travel across Kenya with our modern fleet, 
+              Experience premium bus travel across Tanzania with our modern fleet, 
               professional drivers, and exceptional service. Your comfort and safety 
               are our top priorities.
             </p>
