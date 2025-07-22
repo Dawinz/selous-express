@@ -86,6 +86,7 @@ const SearchForm = ({ setIsBookingDialogOpen }) => {
           setIsBookingDialogOpen(false);
           setIsLoading(false);
           setCurrentBookingData({});
+          setError(''); // Suppress any error when closing the panel
         }
       };
 
@@ -124,7 +125,12 @@ const SearchForm = ({ setIsBookingDialogOpen }) => {
 
     } catch (error) {
       console.error('SafariYetu booking error:', error);
-      setError(error.message || 'Unable to load booking system. Please try again.');
+      // Only show error if booking system failed to load, not if user closed the panel
+      if (error.message && error.message.includes('loading')) {
+        setError(error.message || 'Unable to load booking system. Please try again.');
+      } else {
+        setError(''); // Suppress other errors
+      }
       
       // Clean up on error
       if (scrollManagerRef.current) {
