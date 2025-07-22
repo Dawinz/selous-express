@@ -302,10 +302,10 @@ const SearchForm = () => {
       </div>
       
       {/* SafariYetu Overlay */}
-      <SafariYetuOverlay 
+      {/* <SafariYetuOverlay 
         isOpen={showOverlay} 
         bookingData={currentBookingData}
-      />
+      /> */}
     </div>
   );
 };

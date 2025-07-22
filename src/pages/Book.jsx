@@ -372,10 +372,10 @@ const Book = () => {
       </div>
       
       {/* SafariYetu Overlay */}
-      <SafariYetuOverlay 
+      {/* <SafariYetuOverlay 
         isOpen={showOverlay} 
         bookingData={currentBookingData}
-      />
+      /> */}
     </div>
   );
 };
