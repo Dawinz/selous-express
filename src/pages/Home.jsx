@@ -6,12 +6,18 @@ import Gallery from '../components/Gallery';
 const Home = ({ setIsBookingDialogOpen }) => {
   return (
     <div className="min-h-screen bg-zuberi-navy">
-      {/* Hero Section */}
-      <section>
+      {/* Hero Section with Overlay Form on Mobile */}
+      <section className="relative">
         <Hero />
+        {/* Mobile Form Overlay */}
+        <div className="absolute inset-0 flex items-center justify-center md:hidden">
+          <div className="w-full max-w-sm mx-4">
+            <SearchForm setIsBookingDialogOpen={setIsBookingDialogOpen} />
+          </div>
+        </div>
       </section>
-      {/* Search Form Section */}
-      <section className="pt-4 pb-16 px-4 sm:px-6 lg:px-8">
+      {/* Search Form Section - Hidden on Mobile, Visible on Desktop */}
+      <section className="hidden md:block pt-4 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
           <SearchForm setIsBookingDialogOpen={setIsBookingDialogOpen} />
         </div>
