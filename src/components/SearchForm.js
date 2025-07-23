@@ -155,11 +155,11 @@ const SearchForm = ({ setIsBookingDialogOpen }) => {
   return (
     <div>
       <div>
-          <div id="search-form" className="bg-gradient-to-br from-zuberi-navy via-zuberi-red to-zuberi-lime rounded-lg shadow-2xl shadow-zuberi-red/40 p-1.5 sm:p-6 md:p-10 mx-4 md:-mt-12 relative z-20 md:mx-4 sm:mx-8">
-            <div className="max-w-6xl mx-auto max-w-44 sm:max-w-sm md:max-w-6xl">
+          <div id="search-form" className="bg-gradient-to-br from-zuberi-navy via-zuberi-red to-zuberi-lime rounded-xl shadow-2xl shadow-zuberi-red/40 p-3 sm:p-6 md:p-10 mx-4 md:-mt-12 relative z-20 md:mx-4 sm:mx-8">
+            <div className="max-w-6xl mx-auto max-w-xs sm:max-w-sm md:max-w-6xl">
               {/* Form Header */}
               <div className="text-center mb-1 sm:mb-6">
-                <h3 className="text-xs sm:text-xl md:text-3xl font-bebas font-bold text-white mb-0.5 sm:mb-2 tracking-wide">
+                <h3 className="text-base sm:text-xl md:text-3xl font-bebas font-bold text-white mb-1 sm:mb-2 tracking-wide">
                   FIND YOUR JOURNEY
                 </h3>
                 <p className="text-zuberi-silver font-poppins text-xs sm:text-sm md:text-base hidden sm:block">
