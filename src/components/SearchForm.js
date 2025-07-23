@@ -278,7 +278,7 @@ const SearchForm = ({ setIsBookingDialogOpen }) => {
               </form>
 
               {/* Popular Routes Quick Links */}
-              <div className="mt-1 sm:mt-2 text-center block">
+              <div className="mt-1 sm:mt-2 text-center hidden sm:block">
                 <p className="text-2xs sm:text-xs font-poppins text-gray-600 mb-1 sm:mb-1.5">Popular Routes:</p>
                 <div className="flex flex-wrap justify-center gap-0.5 sm:gap-1">
                   {[
