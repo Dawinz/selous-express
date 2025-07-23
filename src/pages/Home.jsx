@@ -10,7 +10,7 @@ const Home = ({ setIsBookingDialogOpen }) => {
       <section className="relative">
         <Hero />
         {/* Mobile Form Overlay */}
-        <div className="absolute inset-0 flex items-center justify-center md:hidden pl-8 pt-0 -mt-32">
+        <div className="absolute inset-0 flex items-center justify-center md:hidden pl-8 pt-0 -mt-44">
           <div className="w-full max-w-xs mx-4">
             {/* Simple Header */}
             <div className="text-center mb-4">
@@ -23,7 +23,7 @@ const Home = ({ setIsBookingDialogOpen }) => {
         </div>
       </section>
       {/* Search Form Section - Hidden on Mobile, Visible on Desktop */}
-      <section className="hidden md:block pt-0 pb-16 px-4 sm:px-6 lg:px-8 -mt-48 relative z-30">
+      <section className="hidden md:block pt-0 pb-16 px-4 sm:px-6 lg:px-8 -mt-64 relative z-30">
         <div className="max-w-4xl mx-auto">
           <SearchForm setIsBookingDialogOpen={setIsBookingDialogOpen} />
         </div>
