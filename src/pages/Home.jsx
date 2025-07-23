@@ -10,7 +10,7 @@ const Home = ({ setIsBookingDialogOpen }) => {
       <section className="relative">
         <Hero />
         {/* Mobile Form Overlay */}
-        <div className="absolute top-1/3 left-0 right-0 flex justify-center md:hidden">
+        <div className="absolute inset-0 flex items-center justify-center md:hidden">
           <div className="w-full max-w-52 mx-4">
             <SearchForm setIsBookingDialogOpen={setIsBookingDialogOpen} />
           </div>

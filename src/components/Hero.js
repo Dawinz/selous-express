@@ -7,7 +7,7 @@ const Hero = () => {
       <div 
         className="relative w-full h-full bg-cover bg-center bg-no-repeat md:hidden"
         style={{
-          backgroundImage: 'url(/images/zuberi 4.png)',
+          backgroundImage: "url('/images/zuberi 4.png')",
         }}
       ></div>
       {/* Desktop Background Image */}
