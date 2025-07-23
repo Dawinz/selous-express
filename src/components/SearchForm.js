@@ -156,13 +156,13 @@ const SearchForm = ({ setIsBookingDialogOpen }) => {
     <div>
       <div>
           <div id="search-form" className="bg-gradient-to-br from-zuberi-navy via-zuberi-red to-zuberi-lime rounded-2xl shadow-2xl shadow-zuberi-red/40 p-3 sm:p-6 md:p-10 mx-4 md:-mt-12 relative z-20 md:mx-4 sm:mx-8">
-            <div className="max-w-6xl mx-auto sm:max-w-sm md:max-w-6xl">
+            <div className="max-w-6xl mx-auto max-w-xs sm:max-w-sm md:max-w-6xl">
               {/* Form Header */}
-              <div className="text-center mb-3 sm:mb-6">
-                <h3 className="text-lg sm:text-xl md:text-3xl font-bebas font-bold text-white mb-1 sm:mb-2 tracking-wide">
+              <div className="text-center mb-2 sm:mb-6">
+                <h3 className="text-base sm:text-xl md:text-3xl font-bebas font-bold text-white mb-1 sm:mb-2 tracking-wide">
                   FIND YOUR JOURNEY
                 </h3>
-                <p className="text-zuberi-silver font-poppins text-xs sm:text-sm md:text-base">
+                <p className="text-zuberi-silver font-poppins text-xs sm:text-sm md:text-base hidden sm:block">
                   Search and book your premium bus travel
                 </p>
                 
@@ -279,7 +279,7 @@ const SearchForm = ({ setIsBookingDialogOpen }) => {
               </form>
 
               {/* Popular Routes Quick Links */}
-              <div className="mt-4 sm:mt-8 text-center">
+              <div className="mt-2 sm:mt-8 text-center hidden sm:block">
                 <p className="text-xs sm:text-sm font-poppins text-gray-600 mb-2 sm:mb-3">Popular Routes:</p>
                 <div className="flex flex-wrap justify-center gap-1 sm:gap-2">
                   {[
