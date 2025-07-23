@@ -6,27 +6,15 @@ import Gallery from '../components/Gallery';
 const Home = ({ setIsBookingDialogOpen }) => {
   return (
     <div className="min-h-screen bg-zuberi-navy">
-      {/* Hero Section with Overlay Form on Mobile */}
-      <section className="relative">
-        <Hero />
-        {/* Mobile Form Overlay */}
-        <div className="absolute inset-0 flex items-center justify-center md:hidden pl-8 pt-16">
-          <div className="w-full max-w-xs mx-4">
-            {/* Simple Header */}
-            <div className="text-center mb-4">
-              <h1 className="text-white text-xl font-bebas font-bold tracking-wide drop-shadow-lg">
-                BOOK YOUR JOURNEY
-              </h1>
-            </div>
-            <SearchForm setIsBookingDialogOpen={setIsBookingDialogOpen} />
-          </div>
-        </div>
-      </section>
-      {/* Search Form Section - Hidden on Mobile, Visible on Desktop */}
-      <section className="hidden md:block pt-4 pb-16 px-4 sm:px-6 lg:px-8">
+      {/* Search Form Section - Always visible at the top */}
+      <section className="pt-8 pb-8 px-4 sm:px-6 lg:px-8 z-30 relative">
         <div className="max-w-4xl mx-auto">
           <SearchForm setIsBookingDialogOpen={setIsBookingDialogOpen} />
         </div>
+      </section>
+      {/* Hero Section */}
+      <section className="relative">
+        <Hero />
       </section>
       {/* Features Section */}
       <section className="py-8 bg-zuberi-silver mt-8">
