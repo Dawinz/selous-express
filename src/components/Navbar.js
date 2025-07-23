@@ -30,12 +30,6 @@ const Navbar = () => {
               >
                 Contact
               </Link>
-              <Link
-                to="/download-ticket"
-                className="hover:text-zuberi-red transition-colors duration-200 font-poppins font-medium"
-              >
-                Download Ticket
-              </Link>
               <a
                 href="https://wa.me/255789456321"
                 target="_blank"
@@ -96,13 +90,6 @@ const Navbar = () => {
                 onClick={() => setIsMenuOpen(false)}
               >
                 Contact
-              </Link>
-              <Link
-                to="/download-ticket"
-                className="block px-3 py-2 text-white hover:text-zuberi-red font-poppins font-medium"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Download Ticket
               </Link>
               <a
                 href="https://wa.me/255789456321"

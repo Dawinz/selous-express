@@ -5,7 +5,6 @@ import React, { useState } from 'react';
 import Home from './pages/Home';
 import RoutesPage from './pages/Routes';
 import Contact from './pages/Contact';
-import DownloadTicket from './pages/DownloadTicket';
 import Book from './pages/Book';
 
 function App() {
@@ -22,7 +21,6 @@ function App() {
           <Route path="/" element={<Home setIsBookingDialogOpen={setIsBookingDialogOpen} />} />
           <Route path="/routes" element={<RoutesPage />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/download-ticket" element={<DownloadTicket />} />
           <Route path="/book" element={<Book />} />
         </Routes>
       </main>
