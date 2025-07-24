@@ -1,8 +1,10 @@
 import React, { useState, useEffect, useRef } from 'react';
 import SafariYetuScrollManager from '../utils/safariYetuScrollManager';
 import SafariYetuOverlay from './SafariYetuOverlay';
+import { useLanguage } from '../contexts/LanguageContext';
 
 const SearchForm = ({ setIsBookingDialogOpen }) => {
+  const { t } = useLanguage();
   const [formData, setFormData] = useState({
     from: '',
     to: '',
@@ -36,23 +38,23 @@ const SearchForm = ({ setIsBookingDialogOpen }) => {
 
   const validateForm = () => {
     if (!formData.from) {
-      setError('Please select departure city');
+      setError(t('selectDepartureError'));
       return false;
     }
     if (!formData.to) {
-      setError('Please select destination city');
+      setError(t('selectDestinationError'));
       return false;
     }
     if (formData.from === formData.to) {
-      setError('Departure and destination cities must be different');
+      setError(t('differentCitiesError'));
       return false;
     }
     if (!formData.date) {
-      setError('Please select travel date');
+      setError(t('selectDateError'));
       return false;
     }
     if (!formData.passengers) {
-      setError('Please select number of passengers');
+      setError(t('selectPassengersError'));
       return false;
     }
     return true;
@@ -143,10 +145,12 @@ const SearchForm = ({ setIsBookingDialogOpen }) => {
     }
   };
 
-  // Common Tanzania routes for Zuberi Luxury
+  // Limited routes for Kisesa Express
   const popularRoutes = [
-    'Dar es Salaam', 'Mwanza', 'Kahama', 'Moshi', 'Arusha', 
-    'Dodoma', 'Mbeya', 'Tanga', 'Morogoro', 'Iringa'
+    { value: 'mwanza', label: t('mwanza') },
+    { value: 'dar-es-salaam', label: t('darEsSalaam') },
+    { value: 'kahama', label: t('kahama') },
+    { value: 'moshi', label: t('moshi') }
   ];
 
   // Show overlay instead of hiding the form completely
@@ -155,19 +159,19 @@ const SearchForm = ({ setIsBookingDialogOpen }) => {
   return (
     <div>
       <div>
-          <div id="search-form" className="bg-gradient-to-br from-zuberi-navy via-zuberi-red to-zuberi-lime rounded-xl shadow-2xl shadow-zuberi-red/40 p-2 sm:p-3 md:p-4 mx-2 md:-mt-16 relative z-20 md:mx-2 sm:mx-4">
-            <div className="max-w-6xl mx-auto max-w-40 sm:max-w-xs md:max-w-2xl">
+          <div id="search-form" className="bg-gradient-to-br from-kisesa-blue via-kisesa-yellow to-kisesa-gray rounded-xl shadow-2xl shadow-kisesa-yellow/40 p-2 sm:p-3 md:p-4 mx-2 md:-mt-16 relative z-20 md:mx-2 sm:mx-4">
+            <div className="max-w-6xl mx-auto max-w-sm sm:max-w-lg md:max-w-4xl">
               {/* Form Header */}
               <div className="text-center mb-1 sm:mb-2">
                 <h3 className="text-xs sm:text-lg md:text-xl font-bebas font-bold text-white mb-0.5 sm:mb-1 tracking-wide">
-                  FIND YOUR JOURNEY
+                  {t('findYourJourney')}
                 </h3>
-                <p className="text-zuberi-silver font-poppins text-2xs sm:text-xs md:text-sm hidden sm:block">
-                  Search and book your premium bus travel
+                <p className="text-kisesa-white font-poppins text-2xs sm:text-xs md:text-sm hidden sm:block">
+                  {t('searchBookPremium')}
                 </p>
                 {/* Error Message */}
                 {error && (
-                  <div className="mt-1 sm:mt-2 p-1 sm:p-2 bg-red-100 border-2 border-zuberi-red text-zuberi-red rounded-lg font-poppins text-2xs sm:text-xs font-semibold">
+                  <div className="mt-1 sm:mt-2 p-1 sm:p-2 bg-red-100 border-2 border-kisesa-yellow text-kisesa-red rounded-lg font-poppins text-2xs sm:text-xs font-semibold">
                     ⚠️ {error}
                   </div>
                 )}
@@ -178,46 +182,46 @@ const SearchForm = ({ setIsBookingDialogOpen }) => {
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-2 sm:gap-2">
                   {/* From */}
                   <div className="space-y-1 sm:space-y-1.5">
-                    <label className="text-2xs sm:text-xs font-poppins font-semibold text-zuberi-silver">
-                      FROM
+                    <label className="block text-2xs sm:text-xs font-poppins font-semibold text-kisesa-white mb-1">
+                      {t('from')}
                     </label>
                     <select
                       name="from"
                       value={formData.from}
                       onChange={handleInputChange}
-                      className="w-full p-1.5 sm:p-2 border-2 border-zuberi-silver rounded-lg focus:border-zuberi-red focus:outline-none font-poppins text-zuberi-navy bg-zuberi-silver text-2xs sm:text-xs"
+                      className="w-full p-2 sm:p-2.5 border-2 border-kisesa-gray rounded-lg focus:border-kisesa-yellow focus:outline-none font-poppins text-kisesa-blue bg-kisesa-gray text-xs sm:text-sm"
                       required
                     >
-                      <option value="">Select departure</option>
+                      <option value="">{t('selectDeparture')}</option>
                       {popularRoutes.map(city => (
-                        <option key={city} value={city}>{city}</option>
+                        <option key={city.value} value={city.value}>{city.label}</option>
                       ))}
                     </select>
                   </div>
 
                   {/* To */}
                   <div className="space-y-1 sm:space-y-1.5">
-                    <label className="text-2xs sm:text-xs font-poppins font-semibold text-zuberi-silver">
-                      TO
+                    <label className="block text-2xs sm:text-xs font-poppins font-semibold text-kisesa-white mb-1">
+                      {t('to')}
                     </label>
                     <select
                       name="to"
                       value={formData.to}
                       onChange={handleInputChange}
-                      className="w-full p-1.5 sm:p-2 border-2 border-zuberi-silver rounded-lg focus:border-zuberi-red focus:outline-none font-poppins text-zuberi-navy bg-zuberi-silver text-2xs sm:text-xs"
+                      className="w-full p-2 sm:p-2.5 border-2 border-kisesa-gray rounded-lg focus:border-kisesa-yellow focus:outline-none font-poppins text-kisesa-blue bg-kisesa-gray text-xs sm:text-sm"
                       required
                     >
-                      <option value="">Select destination</option>
+                      <option value="">{t('selectDestination')}</option>
                       {popularRoutes.map(city => (
-                        <option key={city} value={city}>{city}</option>
+                        <option key={city.value} value={city.value}>{city.label}</option>
                       ))}
                     </select>
                   </div>
 
                   {/* Date */}
                   <div className="space-y-1 sm:space-y-1.5">
-                    <label className="text-2xs sm:text-xs font-poppins font-semibold text-zuberi-silver">
-                      TRAVEL DATE
+                    <label className="block text-2xs sm:text-xs font-poppins font-semibold text-kisesa-white mb-1">
+                      {t('travelDate')}
                     </label>
                     <input
                       type="date"
@@ -225,24 +229,24 @@ const SearchForm = ({ setIsBookingDialogOpen }) => {
                       value={formData.date}
                       onChange={handleInputChange}
                       min={new Date().toISOString().split('T')[0]}
-                      className="w-full p-1.5 sm:p-2 border-2 border-zuberi-silver rounded-lg focus:border-zuberi-red focus:outline-none font-poppins text-zuberi-navy text-2xs sm:text-xs bg-zuberi-silver"
+                      className="w-full p-2 sm:p-2.5 border-2 border-kisesa-gray rounded-lg focus:border-kisesa-yellow focus:outline-none font-poppins text-kisesa-blue text-xs sm:text-sm bg-kisesa-gray"
                       required
                     />
                   </div>
 
                   {/* Passengers */}
                   <div className="space-y-1 sm:space-y-1.5">
-                    <label className="text-2xs sm:text-xs font-poppins font-semibold text-zuberi-silver">
-                      PASSENGERS
+                    <label className="block text-2xs sm:text-xs font-poppins font-semibold text-kisesa-white mb-1">
+                      {t('passengers')}
                     </label>
                     <select
                       name="passengers"
                       value={formData.passengers}
                       onChange={handleInputChange}
-                      className="w-full p-1.5 sm:p-2 border-2 border-zuberi-silver rounded-lg focus:border-zuberi-red focus:outline-none font-poppins text-zuberi-navy bg-zuberi-silver text-2xs sm:text-xs"
+                      className="w-full p-2 sm:p-2.5 border-2 border-kisesa-gray rounded-lg focus:border-kisesa-yellow focus:outline-none font-poppins text-kisesa-blue bg-kisesa-gray text-xs sm:text-sm"
                     >
                       {[1,2,3,4,5,6,7,8,9,10].map(num => (
-                        <option key={num} value={num}>{num} Passenger{num > 1 ? 's' : ''}</option>
+                        <option key={num} value={num}>{num} {num > 1 ? t('passengers') : t('passenger')}</option>
                       ))}
                     </select>
                   </div>
@@ -258,7 +262,7 @@ const SearchForm = ({ setIsBookingDialogOpen }) => {
                       className={`w-full text-white font-poppins font-bold py-1.5 sm:py-2 px-2 sm:px-3 rounded-lg transition-all duration-200 shadow-lg text-2xs sm:text-xs ${
                         isLoading 
                           ? 'bg-gray-400 cursor-not-allowed' 
-                          : 'bg-zuberi-red hover:bg-red-600 transform hover:scale-105'
+                          : 'bg-kisesa-yellow hover:bg-orange-600 transform hover:scale-105'
                       }`}
                     >
                       {isLoading ? (
@@ -267,10 +271,10 @@ const SearchForm = ({ setIsBookingDialogOpen }) => {
                             <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
                             <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
                           </svg>
-                          TAFUTA SAFARI...
+                          {t('searchSafari')}...
                         </div>
                       ) : (
-                        'TAFUTA SAFARI'
+                        t('searchSafari')
                       )}
                     </button>
                   </div>
@@ -279,12 +283,12 @@ const SearchForm = ({ setIsBookingDialogOpen }) => {
 
               {/* Popular Routes Quick Links */}
               <div className="mt-1 sm:mt-2 text-center hidden sm:block">
-                <p className="text-2xs sm:text-xs font-poppins text-gray-600 mb-1 sm:mb-1.5">Popular Routes:</p>
+                <p className="text-2xs sm:text-xs font-poppins text-white mb-1 sm:mb-1.5">{t('popularRoutes')}</p>
                 <div className="flex flex-wrap justify-center items-center gap-0.5 sm:gap-1 mx-auto w-fit">
                   {[
-                    { route: 'Dar es Salaam - Mwanza', from: 'Dar es Salaam', to: 'Mwanza' },
-                    { route: 'Mwanza - Kahama', from: 'Mwanza', to: 'Kahama' },
-                    { route: 'Mwanza - Moshi', from: 'Mwanza', to: 'Moshi' }
+                    { route: 'Mwanza - Dar es Salaam', from: 'mwanza', to: 'dar-es-salaam' },
+                    { route: 'Dar es Salaam - Mwanza', from: 'dar-es-salaam', to: 'mwanza' },
+                    { route: 'Mwanza - Kahama', from: 'mwanza', to: 'kahama' }
                   ].map(({ route, from, to }) => (
                     <button
                       key={route}
@@ -298,7 +302,7 @@ const SearchForm = ({ setIsBookingDialogOpen }) => {
                         setError('');
                       }}
                       disabled={isLoading}
-                      className="text-2xs sm:text-xs bg-gray-100 hover:bg-zuberi-navy hover:text-white text-gray-700 px-1.5 sm:px-2 py-0.5 sm:py-1 rounded-full font-poppins transition-colors duration-200 disabled:opacity-50"
+                      className="text-2xs sm:text-xs bg-gray-100 hover:bg-kisesa-blue hover:text-white text-gray-700 px-1.5 sm:px-2 py-0.5 sm:py-1 rounded-full font-poppins transition-colors duration-200 disabled:opacity-50"
                     >
                       {route}
                     </button>

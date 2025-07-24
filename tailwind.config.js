@@ -6,11 +6,13 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        zuberi: {
-          navy: '#1A1C5A',
-          red: '#FF3131',
-          silver: '#D4D4D4',
-          lime: '#A5FF5A',
+        kisesa: {
+          blue: '#1E3A8A',
+          yellow: '#FCD34D',
+          lightblue: '#3B82F6',
+          gray: '#E5E7EB',
+          white: '#FFFFFF',
+          dark: '#1F2937',
         }
       },
       fontFamily: {

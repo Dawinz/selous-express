@@ -1,25 +1,27 @@
 import React from 'react';
+import { useLanguage } from '../contexts/LanguageContext';
 
 const Routes = () => {
+  const { t } = useLanguage();
   const routes = [
-    { from: 'Dar es Salaam', to: 'Mwanza', price: 'TSh 45,000', duration: '12 hours' },
-    { from: 'Mwanza', to: 'Dar es Salaam', price: 'TSh 45,000', duration: '12 hours' },
-    { from: 'Mwanza', to: 'Kahama', price: 'TSh 15,000', duration: '4 hours' },
-    { from: 'Kahama', to: 'Mwanza', price: 'TSh 15,000', duration: '4 hours' },
-    { from: 'Mwanza', to: 'Moshi', price: 'TSh 35,000', duration: '10 hours' },
-    { from: 'Moshi', to: 'Mwanza', price: 'TSh 35,000', duration: '10 hours' },
+    { from: t('darEsSalaam'), to: t('mwanza'), price: 'TSh 65,000', duration: '12 hours' },
+    { from: t('mwanza'), to: t('darEsSalaam'), price: 'TSh 65,000', duration: '12 hours' },
+    { from: t('mwanza'), to: t('kahama'), price: 'TSh 14,000', duration: '4 hours' },
+    { from: t('kahama'), to: t('mwanza'), price: 'TSh 14,000', duration: '4 hours' },
+    { from: t('mwanza'), to: t('moshi'), price: 'TSh 48,000', duration: '8 hours' },
+    { from: t('moshi'), to: t('mwanza'), price: 'TSh 48,000', duration: '8 hours' },
   ];
 
   return (
-    <div className="min-h-screen bg-gray-50 py-8">
+    <div className="min-h-screen bg-kisesa-gray py-8">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-12">
-          <h1 className="text-4xl md:text-5xl font-bebas font-bold text-zuberi-navy mb-4 tracking-wide">
-            OUR ROUTES
+          <h1 className="text-4xl md:text-5xl font-bebas font-bold text-kisesa-blue mb-4 tracking-wide">
+            {t('ourRoutes')}
           </h1>
           <p className="text-lg text-gray-600 font-poppins max-w-2xl mx-auto">
-            Discover all the destinations we serve with our premium bus services
+            {t('routesDesc')}
           </p>
         </div>
 
@@ -32,7 +34,7 @@ const Routes = () => {
             >
               <div className="flex items-center justify-between mb-4">
                 <div className="flex items-center space-x-2">
-                  <div className="w-3 h-3 bg-zuberi-red rounded-full"></div>
+                  <div className="w-3 h-3 bg-kisesa-orange rounded-full"></div>
                   <span className="font-poppins font-semibold text-gray-800">{route.from}</span>
                 </div>
                 <svg className="w-6 h-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -40,23 +42,23 @@ const Routes = () => {
                 </svg>
                 <div className="flex items-center space-x-2">
                   <span className="font-poppins font-semibold text-gray-800">{route.to}</span>
-                  <div className="w-3 h-3 bg-zuberi-lime rounded-full"></div>
+                  <div className="w-3 h-3 bg-kisesa-orange rounded-full"></div>
                 </div>
               </div>
 
               <div className="space-y-3">
                 <div className="flex justify-between items-center">
-                  <span className="text-sm font-poppins text-gray-600">Price:</span>
-                  <span className="text-lg font-bebas font-bold text-zuberi-red">{route.price}</span>
+                  <span className="text-sm font-poppins text-gray-600">{t('price')}</span>
+                  <span className="text-lg font-bebas font-bold text-kisesa-orange">{route.price}</span>
                 </div>
                 <div className="flex justify-between items-center">
-                  <span className="text-sm font-poppins text-gray-600">Duration:</span>
+                  <span className="text-sm font-poppins text-gray-600">{t('duration')}</span>
                   <span className="text-sm font-poppins font-semibold text-gray-800">{route.duration}</span>
                 </div>
               </div>
 
-              <button className="w-full mt-4 bg-zuberi-navy hover:bg-blue-800 text-white font-poppins font-bold py-3 px-4 rounded-lg transition-colors duration-200">
-                Book This Route
+              <button className="w-full mt-4 bg-kisesa-yellow hover:bg-yellow-500 text-kisesa-blue font-poppins font-bold py-3 px-4 rounded-lg transition-colors duration-200">
+                {t('bookThisRoute')}
               </button>
             </div>
           ))}
@@ -64,7 +66,7 @@ const Routes = () => {
 
         {/* Additional Info */}
         <div className="mt-16 bg-white rounded-xl shadow-lg p-8">
-          <h2 className="text-2xl font-bebas font-bold text-zuberi-navy mb-6 tracking-wide text-center">
+          <h2 className="text-2xl font-bebas font-bold text-kisesa-navy mb-6 tracking-wide text-center">
             ROUTE INFORMATION
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">

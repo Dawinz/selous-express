@@ -2,20 +2,22 @@ import React from 'react';
 import Hero from '../components/Hero';
 import SearchForm from '../components/SearchForm';
 import Gallery from '../components/Gallery';
+import { useLanguage } from '../contexts/LanguageContext';
 
 const Home = ({ setIsBookingDialogOpen }) => {
+  const { t } = useLanguage();
   return (
-    <div className="min-h-screen bg-zuberi-navy">
+    <div className="min-h-screen bg-kisesa-blue">
       {/* Hero Section with Overlay Form on Mobile */}
       <section className="relative">
         <Hero />
         {/* Mobile Form Overlay */}
         <div className="absolute inset-0 flex items-center justify-center md:hidden pt-0 -mt-24">
-          <div className="w-full max-w-xs mx-4 mx-auto">
+          <div className="w-full max-w-sm mx-4 mx-auto">
             {/* Simple Header */}
             <div className="text-center mb-4">
               <h1 className="text-white text-xl font-bebas font-bold tracking-wide drop-shadow-lg">
-                BOOK YOUR JOURNEY
+                {t('bookYourJourney')}
               </h1>
             </div>
             <SearchForm setIsBookingDialogOpen={setIsBookingDialogOpen} />
@@ -29,57 +31,57 @@ const Home = ({ setIsBookingDialogOpen }) => {
         </div>
       </section>
       {/* Features Section */}
-      <section className="py-8 bg-zuberi-silver mt-8">
+      <section className="py-8 bg-kisesa-gray mt-8">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-6">
-            <h2 className="text-3xl md:text-4xl font-bebas font-bold text-zuberi-navy mb-4 tracking-wide">
-              WHY CHOOSE ZUBERI EXPRESS
+            <h2 className="text-3xl md:text-4xl font-bebas font-bold text-kisesa-blue mb-4 tracking-wide">
+              {t('whyChoose')}
             </h2>
-            <p className="text-lg text-zuberi-navy font-poppins max-w-2xl mx-auto">
+            <p className="text-lg text-kisesa-blue font-poppins max-w-2xl mx-auto">
               Experience the difference with our premium bus services
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* Feature 1 */}
-            <div className="text-center p-6 rounded-lg bg-white border border-zuberi-silver hover:shadow-lg transition-shadow duration-200">
-              <div className="w-16 h-16 bg-zuberi-red rounded-full flex items-center justify-center mx-auto mb-4">
+            <div className="text-center p-6 rounded-lg bg-white border border-kisesa-gray hover:shadow-lg transition-shadow duration-200">
+              <div className="w-16 h-16 bg-kisesa-yellow rounded-full flex items-center justify-center mx-auto mb-4">
                 <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
                 </svg>
               </div>
-              <h3 className="text-xl font-bebas font-bold text-zuberi-navy mb-2 tracking-wide">
-                PREMIUM COMFORT
+              <h3 className="text-xl font-bebas font-bold text-kisesa-blue mb-2 tracking-wide">
+                {t('premiumComfort')}
               </h3>
-              <p className="text-zuberi-navy font-poppins">
-                Luxury seats, air conditioning, and spacious interiors for your comfort
+              <p className="text-kisesa-blue font-poppins">
+                {t('comfortDesc')}
               </p>
             </div>
             {/* Feature 2 */}
-            <div className="text-center p-6 rounded-lg bg-white border border-zuberi-silver hover:shadow-lg transition-shadow duration-200">
-              <div className="w-16 h-16 bg-zuberi-lime rounded-full flex items-center justify-center mx-auto mb-4">
-                <svg className="w-8 h-8 text-zuberi-navy" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div className="text-center p-6 rounded-lg bg-white border border-kisesa-gray hover:shadow-lg transition-shadow duration-200">
+              <div className="w-16 h-16 bg-kisesa-yellow rounded-full flex items-center justify-center mx-auto mb-4">
+                <svg className="w-8 h-8 text-kisesa-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                 </svg>
               </div>
-              <h3 className="text-xl font-bebas font-bold text-zuberi-navy mb-2 tracking-wide">
-                ON-TIME DEPARTURE
+              <h3 className="text-xl font-bebas font-bold text-kisesa-blue mb-2 tracking-wide">
+                {t('onTimeDeparture')}
               </h3>
-              <p className="text-zuberi-navy font-poppins">
-                Reliable schedules and punctual service you can depend on
+              <p className="text-kisesa-blue font-poppins">
+                {t('onTimeDesc')}
               </p>
             </div>
             {/* Feature 3 */}
-            <div className="text-center p-6 rounded-lg bg-white border border-zuberi-silver hover:shadow-lg transition-shadow duration-200">
-              <div className="w-16 h-16 bg-zuberi-navy rounded-full flex items-center justify-center mx-auto mb-4">
+            <div className="text-center p-6 rounded-lg bg-white border border-kisesa-gray hover:shadow-lg transition-shadow duration-200">
+              <div className="w-16 h-16 bg-kisesa-blue rounded-full flex items-center justify-center mx-auto mb-4">
                 <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                 </svg>
               </div>
-              <h3 className="text-xl font-bebas font-bold text-zuberi-navy mb-2 tracking-wide">
-                SAFE TRAVEL
+              <h3 className="text-xl font-bebas font-bold text-kisesa-blue mb-2 tracking-wide">
+                {t('safeTravel')}
               </h3>
-              <p className="text-zuberi-navy font-poppins">
-                Professional drivers and well-maintained vehicles for your safety
+              <p className="text-kisesa-blue font-poppins">
+                {t('safeTravelDesc')}
               </p>
             </div>
           </div>

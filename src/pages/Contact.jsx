@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
+import { useLanguage } from '../contexts/LanguageContext';
 
 const Contact = () => {
+  const { t } = useLanguage();
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -24,11 +26,11 @@ const Contact = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50 py-8">
+    <div className="min-h-screen bg-kisesa-gray py-8">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-12">
-          <h1 className="text-4xl md:text-5xl font-bebas font-bold text-zuberi-navy mb-4 tracking-wide">
+          <h1 className="text-4xl md:text-5xl font-bebas font-bold text-kisesa-navy mb-4 tracking-wide">
             CONTACT US
           </h1>
           <p className="text-lg text-gray-600 font-poppins max-w-2xl mx-auto">
@@ -39,7 +41,7 @@ const Contact = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Contact Form */}
           <div className="bg-white rounded-xl shadow-lg p-8">
-            <h2 className="text-2xl font-bebas font-bold text-zuberi-navy mb-6 tracking-wide">
+            <h2 className="text-2xl font-bebas font-bold text-kisesa-navy mb-6 tracking-wide">
               SEND US A MESSAGE
             </h2>
             <form onSubmit={handleSubmit} className="space-y-6">
@@ -53,7 +55,7 @@ const Contact = () => {
                   value={formData.name}
                   onChange={handleChange}
                   required
-                  className="w-full p-4 border-2 border-gray-200 rounded-lg focus:border-zuberi-red focus:outline-none font-poppins text-base"
+                  className="w-full p-4 border-2 border-gray-200 rounded-lg focus:border-kisesa-orange focus:outline-none font-poppins text-base"
                   placeholder="Enter your full name"
                 />
               </div>
@@ -68,7 +70,7 @@ const Contact = () => {
                   value={formData.email}
                   onChange={handleChange}
                   required
-                  className="w-full p-4 border-2 border-gray-200 rounded-lg focus:border-zuberi-red focus:outline-none font-poppins text-base"
+                  className="w-full p-4 border-2 border-gray-200 rounded-lg focus:border-kisesa-orange focus:outline-none font-poppins text-base"
                   placeholder="Enter your email address"
                 />
               </div>
@@ -82,7 +84,7 @@ const Contact = () => {
                   name="phone"
                   value={formData.phone}
                   onChange={handleChange}
-                  className="w-full p-4 border-2 border-gray-200 rounded-lg focus:border-zuberi-red focus:outline-none font-poppins text-base"
+                  className="w-full p-4 border-2 border-gray-200 rounded-lg focus:border-kisesa-orange focus:outline-none font-poppins text-base"
                   placeholder="Enter your phone number"
                 />
               </div>
@@ -97,14 +99,14 @@ const Contact = () => {
                   onChange={handleChange}
                   required
                   rows="5"
-                  className="w-full p-4 border-2 border-gray-200 rounded-lg focus:border-zuberi-red focus:outline-none font-poppins resize-none text-base"
+                  className="w-full p-4 border-2 border-gray-200 rounded-lg focus:border-kisesa-orange focus:outline-none font-poppins resize-none text-base"
                   placeholder="Tell us how we can help you..."
                 />
               </div>
 
               <button
                 type="submit"
-                className="w-full bg-zuberi-red hover:bg-red-600 text-white font-poppins font-bold py-4 px-6 rounded-lg transition-colors duration-200"
+                className="w-full bg-kisesa-yellow hover:bg-yellow-500 text-kisesa-blue font-poppins font-bold py-4 px-6 rounded-lg transition-colors duration-200"
               >
                 TUMA UJUMBE
               </button>
@@ -115,13 +117,13 @@ const Contact = () => {
           <div className="space-y-8">
             {/* Office Info */}
             <div className="bg-white rounded-xl shadow-lg p-8">
-              <h2 className="text-2xl font-bebas font-bold text-zuberi-navy mb-6 tracking-wide">
+              <h2 className="text-2xl font-bebas font-bold text-kisesa-navy mb-6 tracking-wide">
                 GET IN TOUCH
               </h2>
               <div className="space-y-6">
                 {/* Phone */}
                 <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-zuberi-red rounded-full flex items-center justify-center flex-shrink-0">
+                  <div className="w-12 h-12 bg-kisesa-orange rounded-full flex items-center justify-center flex-shrink-0">
                     <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
                     </svg>
@@ -135,21 +137,21 @@ const Contact = () => {
 
                 {/* Email */}
                 <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-zuberi-lime rounded-full flex items-center justify-center flex-shrink-0">
-                    <svg className="w-6 h-6 text-zuberi-navy" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <div className="w-12 h-12 bg-kisesa-orange rounded-full flex items-center justify-center flex-shrink-0">
+                    <svg className="w-6 h-6 text-kisesa-navy" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 7.89a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
                     </svg>
                   </div>
                   <div>
                     <h3 className="font-bebas font-bold text-gray-800 text-lg">EMAIL</h3>
-                    <p className="text-gray-600 font-poppins">support@zuberi.co.tz</p>
-                    <p className="text-gray-600 font-poppins">bookings@zuberi.co.tz</p>
+                    <p className="text-gray-600 font-poppins">support@kisesa.co.tz</p>
+                    <p className="text-gray-600 font-poppins">bookings@kisesa.co.tz</p>
                   </div>
                 </div>
 
                 {/* Location */}
                 <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-zuberi-navy rounded-full flex items-center justify-center flex-shrink-0">
+                  <div className="w-12 h-12 bg-kisesa-navy rounded-full flex items-center justify-center flex-shrink-0">
                     <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
@@ -166,12 +168,12 @@ const Contact = () => {
 
             {/* Service Hours */}
             <div className="bg-white rounded-xl shadow-lg p-8">
-              <h2 className="text-2xl font-bebas font-bold text-zuberi-navy mb-6 tracking-wide">
+              <h2 className="text-2xl font-bebas font-bold text-kisesa-navy mb-6 tracking-wide">
                 WAKATI WA HUDUMA
               </h2>
               <div className="space-y-4">
                 <div className="flex items-center space-x-3">
-                  <svg className="w-6 h-6 text-zuberi-red" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-6 h-6 text-kisesa-orange" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                   </svg>
                   <div>
@@ -180,7 +182,7 @@ const Contact = () => {
                   </div>
                 </div>
                 <div className="flex items-center space-x-3">
-                  <svg className="w-6 h-6 text-zuberi-lime" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-6 h-6 text-kisesa-orange" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
                   </svg>

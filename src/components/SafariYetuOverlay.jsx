@@ -12,7 +12,7 @@ const SafariYetuOverlay = ({ isOpen, bookingData = {} }) => {
         {/* Loading Spinner */}
         <div className="flex items-center justify-center mb-6">
           <svg 
-            className="animate-spin h-16 w-16 text-zuberi-red" 
+            className="animate-spin h-16 w-16 text-kisesa-orange" 
             xmlns="http://www.w3.org/2000/svg" 
             fill="none" 
             viewBox="0 0 24 24"
@@ -34,7 +34,7 @@ const SafariYetuOverlay = ({ isOpen, bookingData = {} }) => {
         </div>
 
         {/* Title */}
-        <h2 className="text-2xl md:text-3xl font-bebas font-bold text-zuberi-navy mb-4 tracking-wide">
+        <h2 className="text-2xl md:text-3xl font-bebas font-bold text-kisesa-navy mb-4 tracking-wide">
           OPENING SAFARIYETU
         </h2>
 
