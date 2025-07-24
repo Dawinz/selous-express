@@ -1,16 +1,23 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import { useLanguage } from '../contexts/LanguageContext';
 
 const Routes = () => {
   const { t } = useLanguage();
+  const navigate = useNavigate();
   const routes = [
-    { from: t('darEsSalaam'), to: t('mwanza'), price: 'TSh 65,000', duration: '12 hours' },
-    { from: t('mwanza'), to: t('darEsSalaam'), price: 'TSh 65,000', duration: '12 hours' },
-    { from: t('mwanza'), to: t('kahama'), price: 'TSh 14,000', duration: '4 hours' },
-    { from: t('kahama'), to: t('mwanza'), price: 'TSh 14,000', duration: '4 hours' },
-    { from: t('mwanza'), to: t('moshi'), price: 'TSh 48,000', duration: '8 hours' },
-    { from: t('moshi'), to: t('mwanza'), price: 'TSh 48,000', duration: '8 hours' },
+    { from: t('darEsSalaam'), to: t('mwanza'), price: 'TSh 65,000', duration: '12 hours', fromValue: 'dar-es-salaam', toValue: 'mwanza' },
+    { from: t('mwanza'), to: t('darEsSalaam'), price: 'TSh 65,000', duration: '12 hours', fromValue: 'mwanza', toValue: 'dar-es-salaam' },
+    { from: t('mwanza'), to: t('kahama'), price: 'TSh 14,000', duration: '4 hours', fromValue: 'mwanza', toValue: 'kahama' },
+    { from: t('kahama'), to: t('mwanza'), price: 'TSh 14,000', duration: '4 hours', fromValue: 'kahama', toValue: 'mwanza' },
+    { from: t('mwanza'), to: t('moshi'), price: 'TSh 48,000', duration: '8 hours', fromValue: 'mwanza', toValue: 'moshi' },
+    { from: t('moshi'), to: t('mwanza'), price: 'TSh 48,000', duration: '8 hours', fromValue: 'moshi', toValue: 'mwanza' },
   ];
+
+  const handleBookRoute = (route) => {
+    // Navigate to home page with route parameters
+    navigate(`/?from=${route.fromValue}&to=${route.toValue}`);
+  };
 
   return (
     <div className="min-h-screen bg-kisesa-gray py-8">
@@ -57,7 +64,10 @@ const Routes = () => {
                 </div>
               </div>
 
-              <button className="w-full mt-4 bg-kisesa-yellow hover:bg-yellow-500 text-kisesa-blue font-poppins font-bold py-3 px-4 rounded-lg transition-colors duration-200">
+              <button 
+                onClick={() => handleBookRoute(route)}
+                className="w-full mt-4 bg-kisesa-yellow hover:bg-yellow-500 text-kisesa-blue font-poppins font-bold py-3 px-4 rounded-lg transition-colors duration-200"
+              >
                 {t('bookThisRoute')}
               </button>
             </div>

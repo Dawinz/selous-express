@@ -16,6 +16,25 @@ const SearchForm = ({ setIsBookingDialogOpen }) => {
   const [currentBookingData, setCurrentBookingData] = useState({});
   const scrollManagerRef = useRef(null);
 
+  // Read URL parameters and pre-fill form
+  useEffect(() => {
+    const urlParams = new URLSearchParams(window.location.search);
+    const fromParam = urlParams.get('from');
+    const toParam = urlParams.get('to');
+    
+    if (fromParam || toParam) {
+      setFormData(prev => ({
+        ...prev,
+        from: fromParam || '',
+        to: toParam || '',
+        date: new Date().toISOString().split('T')[0] // Set today's date
+      }));
+      
+      // Clear URL parameters after reading
+      window.history.replaceState({}, document.title, window.location.pathname);
+    }
+  }, []);
+
   // Cleanup scroll manager on component unmount
   useEffect(() => {
     return () => {
@@ -159,8 +178,8 @@ const SearchForm = ({ setIsBookingDialogOpen }) => {
   return (
     <div>
       <div>
-          <div id="search-form" className="bg-gradient-to-br from-kisesa-blue via-kisesa-yellow to-kisesa-gray rounded-xl shadow-2xl shadow-kisesa-yellow/40 p-2 sm:p-3 md:p-4 mx-2 md:-mt-16 relative z-20 md:mx-2 sm:mx-4">
-            <div className="max-w-6xl mx-auto max-w-sm sm:max-w-lg md:max-w-4xl">
+          <div id="search-form" className="bg-gradient-to-br from-kisesa-blue via-kisesa-yellow to-kisesa-gray rounded-xl shadow-2xl shadow-kisesa-yellow/40 p-2 sm:p-3 md:p-4 mx-1 md:-mt-16 relative z-20 md:mx-2 sm:mx-4">
+            <div className="max-w-6xl mx-auto w-full max-w-xs sm:max-w-lg md:max-w-4xl">
               {/* Form Header */}
               <div className="text-center mb-1 sm:mb-2">
                 <h3 className="text-xs sm:text-lg md:text-xl font-bebas font-bold text-white mb-0.5 sm:mb-1 tracking-wide">
