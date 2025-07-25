@@ -46,7 +46,7 @@ const Gallery = () => {
       id: 7,
       src: '/images/kisesa-7-mobile.png',
       alt: 'Kisesa Express Bus - Mobile View',
-      title: 'Mobile View'
+      title: t('mobileView')
     },
     {
       id: 8,
@@ -58,25 +58,25 @@ const Gallery = () => {
       id: 9,
       src: '/images/kisesa one.jpeg',
       alt: 'Kisesa Express Bus - Fleet One',
-      title: 'Fleet One'
+      title: t('fleetOne')
     },
     {
       id: 10,
       src: '/images/kisesa two.jpeg',
       alt: 'Kisesa Express Bus - Fleet Two',
-      title: 'Fleet Two'
+      title: t('fleetTwo')
     },
     {
       id: 11,
       src: '/images/kisesa three.jpeg',
       alt: 'Kisesa Express Bus - Fleet Three',
-      title: 'Fleet Three'
+      title: t('fleetThree')
     },
     {
       id: 12,
       src: '/images/kisesa four.jpeg',
       alt: 'Kisesa Express Bus - Fleet Four',
-      title: 'Fleet Four'
+      title: t('fleetFour')
     }
   ];
 
@@ -138,7 +138,7 @@ const Gallery = () => {
         {/* Features Section */}
         <div className="mt-16 text-center">
           <h2 className="text-3xl md:text-4xl font-bebas font-bold text-kisesa-blue mb-8 tracking-wide">
-            WHY CHOOSE KISESA EXPRESS
+            {t('whyChooseKisesaExpress')}
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="text-center p-6 rounded-lg bg-white shadow-lg">
@@ -148,10 +148,10 @@ const Gallery = () => {
                 </svg>
               </div>
               <h3 className="text-xl font-bebas font-bold text-kisesa-blue mb-2 tracking-wide">
-                PREMIUM COMFORT
+                {t('premiumComfort')}
               </h3>
               <p className="text-gray-600 font-poppins">
-                Luxury seats, air conditioning, and spacious interiors for your comfort
+                {t('premiumComfortDesc')}
               </p>
             </div>
             <div className="text-center p-6 rounded-lg bg-white shadow-lg">
@@ -161,10 +161,10 @@ const Gallery = () => {
                 </svg>
               </div>
               <h3 className="text-xl font-bebas font-bold text-kisesa-blue mb-2 tracking-wide">
-                ON-TIME DEPARTURE
+                {t('onTimeDeparture')}
               </h3>
               <p className="text-gray-600 font-poppins">
-                Reliable schedules and punctual service you can depend on
+                {t('onTimeDepartureDesc')}
               </p>
             </div>
             <div className="text-center p-6 rounded-lg bg-white shadow-lg">
@@ -174,10 +174,10 @@ const Gallery = () => {
                 </svg>
               </div>
               <h3 className="text-xl font-bebas font-bold text-kisesa-blue mb-2 tracking-wide">
-                SAFE TRAVEL
+                {t('safeTravel')}
               </h3>
               <p className="text-gray-600 font-poppins">
-                Professional drivers and well-maintained vehicles for your safety
+                {t('safeTravelDesc')}
               </p>
             </div>
           </div>

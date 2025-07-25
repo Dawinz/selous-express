@@ -81,7 +81,7 @@ const Routes = () => {
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div>
-              <h3 className="text-lg font-bebas font-bold text-gray-800 mb-3">DEPARTURE TIMES</h3>
+              <h3 className="text-lg font-bebas font-bold text-gray-800 mb-3">{t('departureTimes')}</h3>
               <ul className="space-y-2 font-poppins text-gray-600">
                 <li>• Morning: 6:00 AM - 8:00 AM</li>
                 <li>• Afternoon: 2:00 PM - 4:00 PM</li>
@@ -89,7 +89,7 @@ const Routes = () => {
               </ul>
             </div>
             <div>
-              <h3 className="text-lg font-bebas font-bold text-gray-800 mb-3">AMENITIES</h3>
+              <h3 className="text-lg font-bebas font-bold text-gray-800 mb-3">{t('amenities')}</h3>
               <ul className="space-y-2 font-poppins text-gray-600">
                 <li>• Air Conditioning</li>
                 <li>• Comfortable Reclining Seats</li>

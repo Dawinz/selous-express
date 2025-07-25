@@ -98,6 +98,43 @@ export const LanguageProvider = ({ children }) => {
         availableDaily: 'AVAILABLE DAILY',
         customerSupport: 'CUSTOMER SUPPORT',
         available24_7: 'Available 24/7 via WhatsApp',
+        quickSupport: 'QUICK SUPPORT',
+        needImmediateAssistance: 'Need immediate assistance? Chat with us on WhatsApp for instant support!',
+        chatOnWhatsApp: 'Chat on WhatsApp',
+        
+        // Gallery specific
+        fleetOne: 'Fleet One',
+        fleetTwo: 'Fleet Two', 
+        fleetThree: 'Fleet Three',
+        fleetFour: 'Fleet Four',
+        mobileView: 'Mobile View',
+        whyChooseKisesaExpress: 'WHY CHOOSE KISESA EXPRESS',
+        premiumComfortDesc: 'Luxury seats, air conditioning, and spacious interiors for your comfort',
+        onTimeDepartureDesc: 'Reliable schedules and punctual service you can depend on',
+        safeTravelDesc: 'Professional drivers and well-maintained vehicles for your safety',
+        
+        // Contact specific
+        simu: 'PHONE',
+        ofisi: 'OFFICE',
+        ubungoTerminal: 'Ubungo Terminal',
+        darEsSalaaam: 'Dar es Salaam, Tanzania',
+        wakatiWaHuduma: 'SERVICE HOURS',
+        tunapaikanaKilaSiku: 'AVAILABLE DAILY',
+        customerSupportDesc: 'CUSTOMER SUPPORT',
+        timeRange: '6:00am – 10:00pm',
+        
+        // Form placeholders
+        enterFullNamePlaceholder: 'Enter your full name',
+        enterEmailPlaceholder: 'Enter your email address', 
+        enterPhonePlaceholder: 'Enter your phone number',
+        enterMessagePlaceholder: 'Tell us how we can help you...',
+        
+        // Experience difference
+        experienceDifference: 'Experience the difference with our premium bus services',
+        
+        // Routes specific
+        departureTimes: 'DEPARTURE TIMES',
+        amenities: 'AMENITIES',
         
         // Cities
         mwanza: 'MWANZA MWZ',
@@ -202,6 +239,43 @@ export const LanguageProvider = ({ children }) => {
         availableDaily: 'TUNAPATIKANA KILA SIKU',
         customerSupport: 'MSAADA WA WATEJA',
         available24_7: 'Tunapatikana saa 24/7 kupitia WhatsApp',
+        quickSupport: 'MSAADA WA HARAKA',
+        needImmediateAssistance: 'Unahitaji msaada wa haraka? Ongea nasi WhatsApp kwa msaada wa mara moja!',
+        chatOnWhatsApp: 'Ongea WhatsApp',
+        
+        // Gallery specific
+        fleetOne: 'Gari la Kwanza',
+        fleetTwo: 'Gari la Pili',
+        fleetThree: 'Gari la Tatu', 
+        fleetFour: 'Gari la Nne',
+        mobileView: 'Mwonekano wa Simu',
+        whyChooseKisesaExpress: 'KWA NINI UCHAGUE KISESA EXPRESS',
+        premiumComfortDesc: 'Viti vya kifahari, hewa baridi, na mazingira mazuri ya ustarehe',
+        onTimeDepartureDesc: 'Ratiba za kuaminika na huduma ya wakati unayoweza kutegemea',
+        safeTravelDesc: 'Madereva wataalam na magari yaliyotunzwa vizuri kwa usalama wako',
+        
+        // Contact specific  
+        simu: 'SIMU',
+        ofisi: 'OFISI',
+        ubungoTerminal: 'Kituo cha Ubungo',
+        darEsSalaaam: 'Dar es Salaam, Tanzania',
+        wakatiWaHuduma: 'WAKATI WA HUDUMA',
+        tunapaikanaKilaSiku: 'TUNAPATIKANA KILA SIKU',
+        customerSupportDesc: 'MSAADA WA WATEJA',
+        timeRange: '6:00am – 10:00pm',
+        
+        // Form placeholders
+        enterFullNamePlaceholder: 'Ingiza jina lako kamili',
+        enterEmailPlaceholder: 'Ingiza barua pepe yako',
+        enterPhonePlaceholder: 'Ingiza namba yako ya simu',
+        enterMessagePlaceholder: 'Tuambie jinsi tuweza kukusaidia...',
+        
+        // Experience difference
+        experienceDifference: 'Furahia tofauti na huduma zetu za kilasi za mabasi',
+        
+        // Routes specific
+        departureTimes: 'MUDA WA KUONDOKA',
+        amenities: 'VIFAA',
         
         // Cities
         mwanza: 'MWANZA MWZ',

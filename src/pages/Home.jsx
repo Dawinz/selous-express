@@ -38,7 +38,7 @@ const Home = ({ setIsBookingDialogOpen }) => {
               {t('whyChoose')}
             </h2>
             <p className="text-lg text-kisesa-blue font-poppins max-w-2xl mx-auto">
-              Experience the difference with our premium bus services
+              {t('experienceDifference')}
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">

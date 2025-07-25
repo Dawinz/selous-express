@@ -1,6 +1,8 @@
 import React from 'react';
+import { useLanguage } from '../contexts/LanguageContext';
 
 const WhatsAppFloat = () => {
+  const { t } = useLanguage();
   const whatsappNumber = '255755478744'; // Kisesa Express WhatsApp number (format for wa.me)
   const defaultMessage = 'Hello! I would like to inquire about Kisesa Express bus services.';
   
@@ -29,7 +31,7 @@ const WhatsAppFloat = () => {
       
       {/* Tooltip - hidden on mobile, shown on desktop */}
       <div className="hidden sm:block absolute bottom-full right-0 mb-2 px-3 py-2 bg-gray-800 text-white text-sm rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap">
-        Chat with us on WhatsApp
+        {t('chatOnWhatsApp')}
         <div className="absolute top-full right-4 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-gray-800"></div>
       </div>
     </div>
