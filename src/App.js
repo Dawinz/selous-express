@@ -1,6 +1,7 @@
 import { Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
+import WhatsAppFloat from './components/WhatsAppFloat';
 import React, { useState } from 'react';
 import Home from './pages/Home';
 import RoutesPage from './pages/Routes';
@@ -31,6 +32,9 @@ function App() {
         
         {/* Footer */}
         <Footer />
+        
+        {/* WhatsApp Float */}
+        <WhatsAppFloat />
       </div>
     </LanguageProvider>
   );

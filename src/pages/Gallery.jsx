@@ -53,6 +53,30 @@ const Gallery = () => {
       src: '/images/kisesa-8.jpg',
       alt: 'Kisesa Express Bus - Terminal',
       title: t('atTheTerminal')
+    },
+    {
+      id: 9,
+      src: '/images/kisesa one.jpeg',
+      alt: 'Kisesa Express Bus - Fleet One',
+      title: 'Fleet One'
+    },
+    {
+      id: 10,
+      src: '/images/kisesa two.jpeg',
+      alt: 'Kisesa Express Bus - Fleet Two',
+      title: 'Fleet Two'
+    },
+    {
+      id: 11,
+      src: '/images/kisesa three.jpeg',
+      alt: 'Kisesa Express Bus - Fleet Three',
+      title: 'Fleet Three'
+    },
+    {
+      id: 12,
+      src: '/images/kisesa four.jpeg',
+      alt: 'Kisesa Express Bus - Fleet Four',
+      title: 'Fleet Four'
     }
   ];
 

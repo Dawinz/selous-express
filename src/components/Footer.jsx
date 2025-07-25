@@ -63,9 +63,14 @@ const Footer = () => {
                 <svg className="w-4 h-4 text-kisesa-yellow flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
                 </svg>
-                <a href="tel:+255789456321" className="text-gray-300 hover:text-white transition-colors duration-200">
-                  {t('phone')}: +255 789 456 321
-                </a>
+                <div className="text-gray-300">
+                  <div className="font-semibold mb-1">{t('phone')}:</div>
+                  <a href="tel:+255755478744" className="hover:text-white transition-colors duration-200 block">Mwanza: +255 755 478 744</a>
+                  <a href="tel:+255767350884" className="hover:text-white transition-colors duration-200 block">Mwanza: +255 767 350 884</a>
+                  <a href="tel:+255654946844" className="hover:text-white transition-colors duration-200 block">Dar: +255 654 946 844</a>
+                  <a href="tel:+255757748040" className="hover:text-white transition-colors duration-200 block">Arusha: +255 757 748 040</a>
+                  <a href="tel:+255757258844" className="hover:text-white transition-colors duration-200 block">Moshi: +255 757 258 844</a>
+                </div>
               </div>
               
               {/* Email */}
@@ -102,7 +107,7 @@ const Footer = () => {
               
               {/* WhatsApp */}
               <a 
-                href="https://wa.me/255789456321" 
+                href="https://wa.me/255755478744" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="bg-green-500 hover:bg-green-600 text-white p-2 rounded-full transition-colors duration-200"
