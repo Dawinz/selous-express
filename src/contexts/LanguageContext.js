@@ -156,7 +156,7 @@ export const LanguageProvider = ({ children }) => {
         // Cities
         mwanza: 'MWANZA MWZ',
         darEsSalaam: 'DAR ES SALAAM DSM',
-        kahama: 'KAHAMA KAH',
+        kahama: 'KAHAMA KHM',
         moshi: 'MOSHI MSH',
         
         // Footer
@@ -166,6 +166,7 @@ export const LanguageProvider = ({ children }) => {
         contactInfo: 'CONTACT INFO',
         phone: 'Phone',
         headOffice: 'Head Office',
+        headOfficeLocation: 'Nata, Mwanza',
         followUs: 'Follow Us',
         allRightsReserved: 'All rights reserved',
         bookNow: 'Book Now',
@@ -218,8 +219,8 @@ export const LanguageProvider = ({ children }) => {
         routesDesc: 'Gundua maeneo yote tunayohudumia kwa huduma zetu za kilasi za mabasi',
         price: 'Bei:',
         duration: 'Muda:',
-        bookThisRoute: 'Book Njia Hii',
-        routeInformation: 'TAARIFA ZA NJIA',
+        bookThisRoute: 'Wekesha njia hii',
+        routeInformation: 'TAARIFA ZA SAFARI',
         departureTimes: 'MUDA WA KUONDOKA',
         morning: 'Asubuhi: 6:00 AM - 8:00 AM',
         afternoon: 'Mchana: 2:00 PM - 4:00 PM',
@@ -314,7 +315,7 @@ export const LanguageProvider = ({ children }) => {
         // Cities
         mwanza: 'MWANZA MWZ',
         darEsSalaam: 'DAR ES SALAAM DSM',
-        kahama: 'KAHAMA KAH',
+        kahama: 'KAHAMA KHM',
         moshi: 'MOSHI MSH',
         
         // Footer
@@ -324,6 +325,7 @@ export const LanguageProvider = ({ children }) => {
         contactInfo: 'MAELEZO YA MAWASILIANO',
         phone: 'Simu',
         headOffice: 'Makao Makuu',
+        headOfficeLocation: 'Nata, Mwanza',
         followUs: 'Tufuate',
         allRightsReserved: 'Haki zote zimehifadhiwa',
         bookNow: 'Book Sasa',
