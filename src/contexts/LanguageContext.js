@@ -65,6 +65,16 @@ export const LanguageProvider = ({ children }) => {
         departureTimes: 'DEPARTURE TIMES',
         morning: 'Morning: 6:00 AM - 8:00 AM',
         afternoon: 'Afternoon: 2:00 PM - 4:00 PM',
+        morningTime: 'Morning: 6:00 AM - 8:00 AM',
+        afternoonTime: 'Afternoon: 2:00 PM - 4:00 PM',
+        eveningTime: 'Evening: 8:00 PM - 10:00 PM',
+        
+        // Amenities
+        airConditioning: 'Air Conditioning',
+        comfortableSeats: 'Comfortable Reclining Seats',
+        freeWifi: 'Free WiFi',
+        chargingPorts: 'Charging Ports',
+        entertainmentSystem: 'Entertainment System',
         
         // Gallery
         ourGallery: 'OUR GALLERY',
@@ -208,6 +218,16 @@ export const LanguageProvider = ({ children }) => {
         departureTimes: 'MUDA WA KUONDOKA',
         morning: 'Asubuhi: 6:00 AM - 8:00 AM',
         afternoon: 'Mchana: 2:00 PM - 4:00 PM',
+        morningTime: 'Asubuhi: 6:00 AM - 8:00 AM',
+        afternoonTime: 'Mchana: 2:00 PM - 4:00 PM',
+        eveningTime: 'Jioni: 8:00 PM - 10:00 PM',
+        
+        // Amenities
+        airConditioning: 'Hewa Baridi',
+        comfortableSeats: 'Viti Vyenye Ustarehe',
+        freeWifi: 'WiFi Bure',
+        chargingPorts: 'Mahali pa Kuchaji',
+        entertainmentSystem: 'Mfumo wa Burudani',
         
         // Gallery
         ourGallery: 'PICHA ZETU',

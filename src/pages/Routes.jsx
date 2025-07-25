@@ -83,19 +83,19 @@ const Routes = () => {
             <div>
               <h3 className="text-lg font-bebas font-bold text-gray-800 mb-3">{t('departureTimes')}</h3>
               <ul className="space-y-2 font-poppins text-gray-600">
-                <li>• Morning: 6:00 AM - 8:00 AM</li>
-                <li>• Afternoon: 2:00 PM - 4:00 PM</li>
-                <li>• Evening: 8:00 PM - 10:00 PM</li>
+                <li>• {t('morningTime')}</li>
+                <li>• {t('afternoonTime')}</li>
+                <li>• {t('eveningTime')}</li>
               </ul>
             </div>
             <div>
               <h3 className="text-lg font-bebas font-bold text-gray-800 mb-3">{t('amenities')}</h3>
               <ul className="space-y-2 font-poppins text-gray-600">
-                <li>• Air Conditioning</li>
-                <li>• Comfortable Reclining Seats</li>
-                <li>• Free WiFi</li>
-                <li>• Charging Ports</li>
-                <li>• Entertainment System</li>
+                <li>• {t('airConditioning')}</li>
+                <li>• {t('comfortableSeats')}</li>
+                <li>• {t('freeWifi')}</li>
+                <li>• {t('chargingPorts')}</li>
+                <li>• {t('entertainmentSystem')}</li>
               </ul>
             </div>
           </div>
