@@ -96,6 +96,7 @@ const SearchForm = ({ setIsBookingDialogOpen }) => {
     try {
       // Prepare booking data
       const bookingData = {
+        operatorId: '2817120015',
         origin: formData.from,
         destination: formData.to,
         departureDate: formData.date,

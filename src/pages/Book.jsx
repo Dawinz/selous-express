@@ -79,6 +79,7 @@ const Book = () => {
     try {
       // Prepare booking data for SafariYetu
       const bookingData = {
+        operatorId: '2817120015',
         origin: pickupStation,
         destination: dropOffStation,
         departureDate: new Date().toISOString().split('T')[0], // Today's date as fallback
