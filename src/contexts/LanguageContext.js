@@ -69,6 +69,8 @@ export const LanguageProvider = ({ children }) => {
         // Gallery
         ourGallery: 'OUR GALLERY',
         galleryDesc: 'Take a look at our modern fleet of buses and experience the comfort and luxury of traveling with Kisesa Express',
+        ourFleet: 'OUR FLEET',
+        fleetDescription: 'Experience comfort and luxury with our modern fleet of buses',
         modernFleet: 'Modern Fleet',
         comfortableInterior: 'Comfortable Interior',
         professionalService: 'Professional Service',
@@ -210,6 +212,8 @@ export const LanguageProvider = ({ children }) => {
         // Gallery
         ourGallery: 'PICHA ZETU',
         galleryDesc: 'Angalia gari zetu za kisasa na ujaribu ustarehe na anasa ya kusafiri na Kisesa Express',
+        ourFleet: 'MAGARI YETU',
+        fleetDescription: 'Furahia ustarehe na anasa na magari yetu ya kisasa',
         modernFleet: 'Magari ya Kisasa',
         comfortableInterior: 'Ndani Yenye Ustarehe',
         professionalService: 'Huduma ya Kitaalam',

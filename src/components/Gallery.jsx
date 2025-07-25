@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
+import { useLanguage } from '../contexts/LanguageContext';
 
 const Gallery = () => {
+  const { t } = useLanguage();
   const [selectedImage, setSelectedImage] = useState(null);
 
   const images = [
@@ -38,10 +40,10 @@ const Gallery = () => {
         {/* Gallery Header */}
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bebas font-bold text-white mb-4 tracking-wide">
-            OUR FLEET
+            {t('ourFleet')}
           </h2>
           <p className="text-lg text-kisesa-white font-poppins max-w-2xl mx-auto">
-            Experience comfort and luxury with our modern fleet of buses
+            {t('fleetDescription')}
           </p>
         </div>
 
