@@ -76,6 +76,11 @@ export const LanguageProvider = ({ children }) => {
         chargingPorts: 'Charging Ports',
         entertainmentSystem: 'Entertainment System',
         
+        // Duration hours
+        fourHours: '4 hours',
+        eightHours: '8 hours', 
+        twelveHours: '12 hours',
+        
         // Gallery
         ourGallery: 'OUR GALLERY',
         galleryDesc: 'Take a look at our modern fleet of buses and experience the comfort and luxury of traveling with Kisesa Express',
@@ -228,6 +233,11 @@ export const LanguageProvider = ({ children }) => {
         freeWifi: 'WiFi Bure',
         chargingPorts: 'Mahali pa Kuchaji',
         entertainmentSystem: 'Mfumo wa Burudani',
+        
+        // Duration hours
+        fourHours: 'Masaa 4',
+        eightHours: 'Masaa 8',
+        twelveHours: 'Masaa 12',
         
         // Gallery
         ourGallery: 'PICHA ZETU',

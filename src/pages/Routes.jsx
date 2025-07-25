@@ -6,12 +6,12 @@ const Routes = () => {
   const { t } = useLanguage();
   const navigate = useNavigate();
   const routes = [
-    { from: t('darEsSalaam'), to: t('mwanza'), price: 'TSh 65,000', duration: '12 hours', fromValue: 'dar-es-salaam', toValue: 'mwanza' },
-    { from: t('mwanza'), to: t('darEsSalaam'), price: 'TSh 65,000', duration: '12 hours', fromValue: 'mwanza', toValue: 'dar-es-salaam' },
-    { from: t('mwanza'), to: t('kahama'), price: 'TSh 14,000', duration: '4 hours', fromValue: 'mwanza', toValue: 'kahama' },
-    { from: t('kahama'), to: t('mwanza'), price: 'TSh 14,000', duration: '4 hours', fromValue: 'kahama', toValue: 'mwanza' },
-    { from: t('mwanza'), to: t('moshi'), price: 'TSh 48,000', duration: '8 hours', fromValue: 'mwanza', toValue: 'moshi' },
-    { from: t('moshi'), to: t('mwanza'), price: 'TSh 48,000', duration: '8 hours', fromValue: 'moshi', toValue: 'mwanza' },
+    { from: t('darEsSalaam'), to: t('mwanza'), price: 'TSh 65,000', duration: t('twelveHours'), fromValue: 'dar-es-salaam', toValue: 'mwanza' },
+    { from: t('mwanza'), to: t('darEsSalaam'), price: 'TSh 65,000', duration: t('twelveHours'), fromValue: 'mwanza', toValue: 'dar-es-salaam' },
+    { from: t('mwanza'), to: t('kahama'), price: 'TSh 14,000', duration: t('fourHours'), fromValue: 'mwanza', toValue: 'kahama' },
+    { from: t('kahama'), to: t('mwanza'), price: 'TSh 14,000', duration: t('fourHours'), fromValue: 'kahama', toValue: 'mwanza' },
+    { from: t('mwanza'), to: t('moshi'), price: 'TSh 48,000', duration: t('eightHours'), fromValue: 'mwanza', toValue: 'moshi' },
+    { from: t('moshi'), to: t('mwanza'), price: 'TSh 48,000', duration: t('eightHours'), fromValue: 'moshi', toValue: 'mwanza' },
   ];
 
   const handleBookRoute = (route) => {
