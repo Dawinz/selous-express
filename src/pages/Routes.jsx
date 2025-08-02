@@ -12,6 +12,12 @@ const Routes = () => {
     { from: t('kahama'), to: t('mwanza'), price: 'TSh 14,000', duration: t('fourHours'), fromValue: 'kahama', toValue: 'mwanza' },
     { from: t('mwanza'), to: t('moshi'), price: 'TSh 48,000', duration: t('eightHours'), fromValue: 'mwanza', toValue: 'moshi' },
     { from: t('moshi'), to: t('mwanza'), price: 'TSh 48,000', duration: t('eightHours'), fromValue: 'moshi', toValue: 'mwanza' },
+    { from: t('mwanza'), to: t('shinyanga'), price: 'TSh 18,000', duration: t('fiveHours'), fromValue: 'mwanza', toValue: 'shinyanga' },
+    { from: t('shinyanga'), to: t('mwanza'), price: 'TSh 18,000', duration: t('fiveHours'), fromValue: 'shinyanga', toValue: 'mwanza' },
+    { from: t('mwanza'), to: t('arusha'), price: 'TSh 55,000', duration: t('tenHours'), fromValue: 'mwanza', toValue: 'arusha' },
+    { from: t('arusha'), to: t('mwanza'), price: 'TSh 55,000', duration: t('tenHours'), fromValue: 'arusha', toValue: 'mwanza' },
+    { from: t('mwanza'), to: t('singida'), price: 'TSh 25,000', duration: t('sixHours'), fromValue: 'mwanza', toValue: 'singida' },
+    { from: t('singida'), to: t('mwanza'), price: 'TSh 25,000', duration: t('sixHours'), fromValue: 'singida', toValue: 'mwanza' },
   ];
 
   const handleBookRoute = (route) => {

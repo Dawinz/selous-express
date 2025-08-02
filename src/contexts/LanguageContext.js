@@ -78,7 +78,10 @@ export const LanguageProvider = ({ children }) => {
         
         // Duration hours
         fourHours: '4 hours',
-        eightHours: '8 hours', 
+        fiveHours: '5 hours',
+        sixHours: '6 hours',
+        eightHours: '8 hours',
+        tenHours: '10 hours',
         twelveHours: '12 hours',
         
         // Gallery
@@ -158,6 +161,9 @@ export const LanguageProvider = ({ children }) => {
         darEsSalaam: 'DAR ES SALAAM DSM',
         kahama: 'KAHAMA KHM',
         moshi: 'MOSHI MSH',
+        shinyanga: 'SHINYANGA SHY',
+        arusha: 'ARUSHA ARS',
+        singida: 'SINGIDA SGD',
         
         // Footer
         footerTagline: 'Premium Travel, Easy Booking',
@@ -237,7 +243,10 @@ export const LanguageProvider = ({ children }) => {
         
         // Duration hours
         fourHours: 'Masaa 4',
+        fiveHours: 'Masaa 5',
+        sixHours: 'Masaa 6',
         eightHours: 'Masaa 8',
+        tenHours: 'Masaa 10',
         twelveHours: 'Masaa 12',
         
         // Gallery
@@ -317,6 +326,9 @@ export const LanguageProvider = ({ children }) => {
         darEsSalaam: 'DAR ES SALAAM DSM',
         kahama: 'KAHAMA KHM',
         moshi: 'MOSHI MSH',
+        shinyanga: 'SHINYANGA SHY',
+        arusha: 'ARUSHA ARS',
+        singida: 'SINGIDA SGD',
         
         // Footer
         footerTagline: 'Safari za Kifahari, Tiketi kwa Urahisi',

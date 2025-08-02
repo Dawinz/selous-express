@@ -170,7 +170,10 @@ const SearchForm = ({ setIsBookingDialogOpen }) => {
     { value: 'mwanza', label: t('mwanza') },
     { value: 'dar-es-salaam', label: t('darEsSalaam') },
     { value: 'kahama', label: t('kahama') },
-    { value: 'moshi', label: t('moshi') }
+    { value: 'moshi', label: t('moshi') },
+    { value: 'shinyanga', label: t('shinyanga') },
+    { value: 'arusha', label: t('arusha') },
+    { value: 'singida', label: t('singida') }
   ];
 
   // Show overlay instead of hiding the form completely
