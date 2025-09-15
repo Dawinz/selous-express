@@ -6,18 +6,19 @@ const Routes = () => {
   const { t } = useLanguage();
   const navigate = useNavigate();
   const routes = [
-    { from: t('darEsSalaam'), to: t('mwanza'), price: 'TSh 65,000', duration: t('twelveHours'), fromValue: 'dar-es-salaam', toValue: 'mwanza' },
-    { from: t('mwanza'), to: t('darEsSalaam'), price: 'TSh 65,000', duration: t('twelveHours'), fromValue: 'mwanza', toValue: 'dar-es-salaam' },
-    { from: t('mwanza'), to: t('kahama'), price: 'TSh 14,000', duration: t('fourHours'), fromValue: 'mwanza', toValue: 'kahama' },
-    { from: t('kahama'), to: t('mwanza'), price: 'TSh 14,000', duration: t('fourHours'), fromValue: 'kahama', toValue: 'mwanza' },
-    { from: t('mwanza'), to: t('moshi'), price: 'TSh 48,000', duration: t('eightHours'), fromValue: 'mwanza', toValue: 'moshi' },
-    { from: t('moshi'), to: t('mwanza'), price: 'TSh 48,000', duration: t('eightHours'), fromValue: 'moshi', toValue: 'mwanza' },
-    { from: t('mwanza'), to: t('shinyanga'), price: 'TSh 18,000', duration: t('fiveHours'), fromValue: 'mwanza', toValue: 'shinyanga' },
-    { from: t('shinyanga'), to: t('mwanza'), price: 'TSh 18,000', duration: t('fiveHours'), fromValue: 'shinyanga', toValue: 'mwanza' },
-    { from: t('mwanza'), to: t('arusha'), price: 'TSh 55,000', duration: t('tenHours'), fromValue: 'mwanza', toValue: 'arusha' },
-    { from: t('arusha'), to: t('mwanza'), price: 'TSh 55,000', duration: t('tenHours'), fromValue: 'arusha', toValue: 'mwanza' },
-    { from: t('mwanza'), to: t('singida'), price: 'TSh 25,000', duration: t('sixHours'), fromValue: 'mwanza', toValue: 'singida' },
-    { from: t('singida'), to: t('mwanza'), price: 'TSh 25,000', duration: t('sixHours'), fromValue: 'singida', toValue: 'mwanza' },
+    // Songea Routes
+    { from: 'Songea', to: t('darEsSalaam'), fromValue: 'songea', toValue: 'dar-es-salaam' },
+    { from: t('darEsSalaam'), to: 'Songea', fromValue: 'dar-es-salaam', toValue: 'songea' },
+    { from: 'Songea', to: 'Mbeya', fromValue: 'songea', toValue: 'mbeya' },
+    { from: 'Mbeya', to: 'Songea', fromValue: 'mbeya', toValue: 'songea' },
+    { from: 'Songea', to: 'Dodoma', fromValue: 'songea', toValue: 'dodoma' },
+    { from: 'Dodoma', to: 'Songea', fromValue: 'dodoma', toValue: 'songea' },
+    { from: 'Songea', to: 'Tunduma', fromValue: 'songea', toValue: 'tunduma' },
+    { from: 'Tunduma', to: 'Songea', fromValue: 'tunduma', toValue: 'songea' },
+    { from: 'Songea', to: t('mwanza'), fromValue: 'songea', toValue: 'mwanza' },
+    { from: t('mwanza'), to: 'Songea', fromValue: 'mwanza', toValue: 'songea' },
+    { from: 'Songea', to: t('moshi'), fromValue: 'songea', toValue: 'moshi' },
+    { from: t('moshi'), to: 'Songea', fromValue: 'moshi', toValue: 'songea' },
   ];
 
   const handleBookRoute = (route) => {
@@ -26,11 +27,11 @@ const Routes = () => {
   };
 
   return (
-    <div className="min-h-screen bg-kisesa-gray py-8">
+    <div className="min-h-screen bg-gradient-to-br from-selous-blue-100 via-selous-gray-100 to-selous-gold-100 py-8">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-12">
-          <h1 className="text-4xl md:text-5xl font-bebas font-bold text-kisesa-blue mb-4 tracking-wide">
+          <h1 className="text-4xl md:text-5xl font-bebas font-bold text-selous-blue-800 mb-4 tracking-wide">
             {t('ourRoutes')}
           </h1>
           <p className="text-lg text-gray-600 font-poppins max-w-2xl mx-auto">
@@ -43,11 +44,11 @@ const Routes = () => {
           {routes.map((route, index) => (
             <div
               key={index}
-              className="bg-white rounded-xl shadow-lg p-6 border border-gray-200 hover:shadow-xl transition-shadow duration-200"
+              className="bg-gradient-to-br from-white via-selous-gray-50 to-selous-blue-50 rounded-xl shadow-lg p-6 border border-selous-gray-200 hover:shadow-xl transition-all duration-300 hover:scale-105"
             >
               <div className="flex items-center justify-between mb-4">
                 <div className="flex items-center space-x-2">
-                  <div className="w-3 h-3 bg-kisesa-orange rounded-full"></div>
+                  <div className="w-3 h-3 bg-gradient-to-br from-selous-gold-400 to-selous-gold-500 rounded-full shadow-sm"></div>
                   <span className="font-poppins font-semibold text-gray-800">{route.from}</span>
                 </div>
                 <svg className="w-6 h-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -55,24 +56,14 @@ const Routes = () => {
                 </svg>
                 <div className="flex items-center space-x-2">
                   <span className="font-poppins font-semibold text-gray-800">{route.to}</span>
-                  <div className="w-3 h-3 bg-kisesa-orange rounded-full"></div>
+                  <div className="w-3 h-3 bg-gradient-to-br from-selous-gold-400 to-selous-gold-500 rounded-full shadow-sm"></div>
                 </div>
               </div>
 
-              <div className="space-y-3">
-                <div className="flex justify-between items-center">
-                  <span className="text-sm font-poppins text-gray-600">{t('price')}</span>
-                  <span className="text-lg font-bebas font-bold text-kisesa-orange">{route.price}</span>
-                </div>
-                <div className="flex justify-between items-center">
-                  <span className="text-sm font-poppins text-gray-600">{t('duration')}</span>
-                  <span className="text-sm font-poppins font-semibold text-gray-800">{route.duration}</span>
-                </div>
-              </div>
 
               <button 
                 onClick={() => handleBookRoute(route)}
-                className="w-full mt-4 bg-kisesa-yellow hover:bg-yellow-500 text-kisesa-blue font-poppins font-bold py-3 px-4 rounded-lg transition-colors duration-200"
+                className="w-full mt-4 bg-gradient-to-r from-selous-gold-400 to-selous-gold-500 hover:from-selous-gold-500 hover:to-selous-gold-600 text-selous-gray-800 font-poppins font-bold py-3 px-4 rounded-lg transition-all duration-200 shadow-lg hover:shadow-xl transform hover:scale-105"
               >
                 {t('bookThisRoute')}
               </button>
@@ -82,7 +73,7 @@ const Routes = () => {
 
         {/* Additional Info */}
         <div className="mt-16 bg-white rounded-xl shadow-lg p-8">
-          <h2 className="text-2xl font-bebas font-bold text-kisesa-navy mb-6 tracking-wide text-center">
+          <h2 className="text-2xl font-bebas font-bold text-selous-navy mb-6 tracking-wide text-center">
             ROUTE INFORMATION
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">

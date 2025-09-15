@@ -3,18 +3,11 @@ import React from 'react';
 const Hero = () => {
   return (
     <div className="relative h-screen flex items-center justify-center">
-      {/* Mobile Background Image */}
+      {/* Background Image */}
       <div 
-        className="relative w-full h-full bg-cover bg-center bg-no-repeat md:hidden"
+        className="relative w-full h-full bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: "url('/images/kisesa-7-mobile.png')",
-        }}
-      ></div>
-      {/* Desktop Background Image */}
-      <div 
-        className="relative w-full h-full bg-cover bg-center bg-no-repeat hidden md:block"
-        style={{
-          backgroundImage: "url('/images/kisesa-7.png')"
+          backgroundImage: "url('/images/selous-3.jpg')",
         }}
       ></div>
     </div>

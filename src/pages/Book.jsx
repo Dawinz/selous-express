@@ -9,6 +9,7 @@ const Book = () => {
   const [dropOffStation, setDropOffStation] = useState('');
   const [isBookingDialogOpen, setIsBookingDialogOpen] = useState(false);
   const [currentBookingData, setCurrentBookingData] = useState({});
+  const [operatorId] = useState('430510003');
   const scrollManagerRef = useRef(null);
 
   // Cleanup scroll manager on component unmount
@@ -79,7 +80,7 @@ const Book = () => {
     try {
       // Prepare booking data for SafariYetu
       const bookingData = {
-        operatorId: '2817120015',
+        operatorId: operatorId,
         origin: pickupStation,
         destination: dropOffStation,
         departureDate: new Date().toISOString().split('T')[0], // Today's date as fallback
@@ -146,9 +147,9 @@ const Book = () => {
       return 'bg-gray-300 cursor-not-allowed';
     }
     if (seat.isSelected) {
-      return 'bg-kisesa-orange text-white cursor-pointer';
+      return 'bg-selous-orange text-white cursor-pointer';
     }
-    return 'bg-white border-2 border-gray-300 hover:border-kisesa-orange cursor-pointer';
+    return 'bg-white border-2 border-gray-300 hover:border-selous-orange cursor-pointer';
   };
 
   // Show overlay instead of completely replacing the UI
@@ -159,7 +160,7 @@ const Book = () => {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-8">
-          <h1 className="text-4xl md:text-5xl font-bebas font-bold text-kisesa-navy mb-4 tracking-wide">
+          <h1 className="text-4xl md:text-5xl font-bebas font-bold text-selous-navy mb-4 tracking-wide">
             SELECT YOUR SEATS
           </h1>
           <p className="text-lg text-gray-600 font-poppins">
@@ -173,7 +174,7 @@ const Book = () => {
             <div className="bg-white rounded-xl shadow-lg p-8">
               {/* Driver Section */}
               <div className="flex justify-center mb-6">
-                <div className="bg-kisesa-navy text-white px-4 py-2 rounded-lg font-bebas font-bold">
+                <div className="bg-selous-navy text-white px-4 py-2 rounded-lg font-bebas font-bold">
                   DRIVER
                 </div>
               </div>
@@ -185,7 +186,7 @@ const Book = () => {
                   <span>Available</span>
                 </div>
                 <div className="flex items-center space-x-2">
-                  <div className="w-4 h-4 bg-kisesa-orange rounded"></div>
+                  <div className="w-4 h-4 bg-selous-orange rounded"></div>
                   <span>Selected</span>
                 </div>
                 <div className="flex items-center space-x-2">
@@ -221,7 +222,7 @@ const Book = () => {
           <div className="space-y-6">
             {/* Trip Details */}
             <div className="bg-white rounded-xl shadow-lg p-6">
-              <h3 className="text-xl font-bebas font-bold text-kisesa-navy mb-4 tracking-wide">
+              <h3 className="text-xl font-bebas font-bold text-selous-navy mb-4 tracking-wide">
                 TRIP DETAILS
               </h3>
               <div className="space-y-3 text-sm font-poppins">
@@ -246,7 +247,7 @@ const Book = () => {
 
             {/* Selected Seats */}
             <div className="bg-white rounded-xl shadow-lg p-6">
-              <h3 className="text-xl font-bebas font-bold text-kisesa-navy mb-4 tracking-wide">
+              <h3 className="text-xl font-bebas font-bold text-selous-navy mb-4 tracking-wide">
                 SELECTED SEATS
               </h3>
               {selectedSeats.length === 0 ? (
@@ -256,7 +257,7 @@ const Book = () => {
                   {selectedSeats.map(seatNumber => (
                     <div key={seatNumber} className="flex justify-between items-center">
                       <span className="font-poppins">Seat {seatNumber}</span>
-                      <span className="font-bebas font-bold text-kisesa-orange">TSh 45,000</span>
+                      <span className="font-bebas font-bold text-selous-orange">TSh 45,000</span>
                     </div>
                   ))}
                 </div>
@@ -265,7 +266,7 @@ const Book = () => {
 
             {/* Station Selection */}
             <div className="bg-white rounded-xl shadow-lg p-6">
-              <h3 className="text-xl font-bebas font-bold text-kisesa-navy mb-4 tracking-wide">
+              <h3 className="text-xl font-bebas font-bold text-selous-navy mb-4 tracking-wide">
                 PICKUP & DROP-OFF
               </h3>
               <div className="space-y-4">
@@ -277,7 +278,7 @@ const Book = () => {
                   <select
                     value={pickupStation}
                     onChange={(e) => setPickupStation(e.target.value)}
-                    className="w-full p-3 border-2 border-gray-200 rounded-lg focus:border-kisesa-orange focus:outline-none font-poppins text-sm"
+                    className="w-full p-3 border-2 border-gray-200 rounded-lg focus:border-selous-orange focus:outline-none font-poppins text-sm"
                     required
                   >
                     <option value="">Select pickup station</option>
@@ -295,7 +296,7 @@ const Book = () => {
                   <select
                     value={dropOffStation}
                     onChange={(e) => setDropOffStation(e.target.value)}
-                    className="w-full p-3 border-2 border-gray-200 rounded-lg focus:border-kisesa-orange focus:outline-none font-poppins text-sm"
+                    className="w-full p-3 border-2 border-gray-200 rounded-lg focus:border-selous-orange focus:outline-none font-poppins text-sm"
                     required
                   >
                     <option value="">Select drop-off station</option>
@@ -309,7 +310,7 @@ const Book = () => {
 
             {/* Price Summary */}
             <div className="bg-white rounded-xl shadow-lg p-6">
-              <h3 className="text-xl font-bebas font-bold text-kisesa-navy mb-4 tracking-wide">
+              <h3 className="text-xl font-bebas font-bold text-selous-navy mb-4 tracking-wide">
                 PRICE SUMMARY
               </h3>
               <div className="space-y-2 text-sm font-poppins">
@@ -324,7 +325,7 @@ const Book = () => {
                 <hr className="my-2" />
                 <div className="flex justify-between font-bold text-lg">
                   <span>Total:</span>
-                  <span className="text-kisesa-orange">
+                  <span className="text-selous-orange">
                     TSh {(selectedSeats.length * 45000 + 2000).toLocaleString()}
                   </span>
                 </div>
@@ -338,7 +339,7 @@ const Book = () => {
               className={`w-full text-white font-poppins font-bold py-4 px-6 rounded-lg transition-all duration-200 ${
                 selectedSeats.length === 0 || !pickupStation || !dropOffStation || isLoading
                   ? 'bg-gray-400 cursor-not-allowed'
-                  : 'bg-kisesa-orange hover:bg-orange-600 transform hover:scale-105'
+                  : 'bg-selous-orange hover:bg-orange-600 transform hover:scale-105'
               } shadow-lg`}
             >
               {isLoading ? (

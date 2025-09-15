@@ -3,8 +3,8 @@ import { useLanguage } from '../contexts/LanguageContext';
 
 const WhatsAppFloat = () => {
   const { t } = useLanguage();
-  const whatsappNumber = '255755478744'; // Kisesa Express WhatsApp number (format for wa.me)
-  const defaultMessage = 'Hello! I would like to inquire about Kisesa Express bus services.';
+  const whatsappNumber = '255755478744'; // Selous Express WhatsApp number (format for wa.me)
+  const defaultMessage = 'Hello! I would like to inquire about Selous Express bus services.';
   
   const handleWhatsAppClick = () => {
     const encodedMessage = encodeURIComponent(defaultMessage);

@@ -29,7 +29,7 @@ export const LanguageProvider = ({ children }) => {
         
         // Hero & CTA
         findYourJourney: 'FIND YOUR JOURNEY',
-        searchBookPremium: 'Search and book your premium bus travel',
+        searchBookPremium: 'Search your premium bus travel',
         bookYourJourney: 'BOOK YOUR JOURNEY',
         
         // Form Labels
@@ -47,7 +47,7 @@ export const LanguageProvider = ({ children }) => {
         popularRoutes: 'Popular Routes:',
         
         // Features
-        whyChoose: 'WHY CHOOSE KISESA EXPRESS',
+        whyChoose: 'WHY CHOOSE SELOUS EXPRESS',
         premiumComfort: 'PREMIUM COMFORT',
         comfortDesc: 'Luxury seats, air conditioning, and spacious interiors for your comfort',
         onTimeDeparture: 'ON-TIME DEPARTURE',
@@ -83,10 +83,13 @@ export const LanguageProvider = ({ children }) => {
         eightHours: '8 hours',
         tenHours: '10 hours',
         twelveHours: '12 hours',
+        thirteenHours: '13 hours',
+        fourteenHours: '14 hours',
+        elevenHours: '11 hours',
         
         // Gallery
         ourGallery: 'OUR GALLERY',
-        galleryDesc: 'Take a look at our modern fleet of buses and experience the comfort and luxury of traveling with Kisesa Express',
+        galleryDesc: 'Take a look at our modern fleet of buses and experience the comfort and luxury of traveling with Selous Express',
         ourFleet: 'OUR FLEET',
         fleetDescription: 'Experience comfort and luxury with our modern fleet of buses',
         modernFleet: 'Modern Fleet',
@@ -128,7 +131,7 @@ export const LanguageProvider = ({ children }) => {
         fleetThree: 'Fleet Three',
         fleetFour: 'Fleet Four',
         mobileView: 'Mobile View',
-        whyChooseKisesaExpress: 'WHY CHOOSE KISESA EXPRESS',
+        whyChooseSelousExpress: 'WHY CHOOSE SELOUS EXPRESS',
         premiumComfortDesc: 'Luxury seats, air conditioning, and spacious interiors for your comfort',
         onTimeDepartureDesc: 'Reliable schedules and punctual service you can depend on',
         safeTravelDesc: 'Professional drivers and well-maintained vehicles for your safety',
@@ -194,7 +197,7 @@ export const LanguageProvider = ({ children }) => {
         
         // Hero & CTA
         findYourJourney: 'TAFUTA SAFARI YAKO',
-        searchBookPremium: 'Tafuta na book safari yako ya kilasi',
+        searchBookPremium: 'Tafuta safari yako ya kilasi',
         bookYourJourney: 'BOOK SAFARI YAKO',
         
         // Form Labels
@@ -212,7 +215,7 @@ export const LanguageProvider = ({ children }) => {
         popularRoutes: 'Njia Maarufu:',
         
         // Features
-        whyChoose: 'KWA NINI UCHAGUE KISESA EXPRESS',
+        whyChoose: 'KWA NINI UCHAGUE SELOUS EXPRESS',
         premiumComfort: 'USTAREHE WA KILASI',
         comfortDesc: 'Viti vya kifahari, hewa baridi, na mazingira mazuri ya ustarehe',
         onTimeDeparture: 'KUONDOKA KWA WAKATI',
@@ -248,10 +251,13 @@ export const LanguageProvider = ({ children }) => {
         eightHours: 'Masaa 8',
         tenHours: 'Masaa 10',
         twelveHours: 'Masaa 12',
+        thirteenHours: 'Masaa 13',
+        fourteenHours: 'Masaa 14',
+        elevenHours: 'Masaa 11',
         
         // Gallery
         ourGallery: 'PICHA ZETU',
-        galleryDesc: 'Angalia gari zetu za kisasa na ujaribu ustarehe na anasa ya kusafiri na Kisesa Express',
+        galleryDesc: 'Angalia gari zetu za kisasa na ujaribu ustarehe na anasa ya kusafiri na Selous Express',
         ourFleet: 'MAGARI YETU',
         fleetDescription: 'Furahia ustarehe na anasa na magari yetu ya kisasa',
         modernFleet: 'Magari ya Kisasa',
@@ -293,7 +299,7 @@ export const LanguageProvider = ({ children }) => {
         fleetThree: 'Gari la Tatu', 
         fleetFour: 'Gari la Nne',
         mobileView: 'Mwonekano wa Simu',
-        whyChooseKisesaExpress: 'KWA NINI UCHAGUE KISESA EXPRESS',
+        whyChooseSelousExpress: 'KWA NINI UCHAGUE SELOUS EXPRESS',
         premiumComfortDesc: 'Viti vya kifahari, hewa baridi, na mazingira mazuri ya ustarehe',
         onTimeDepartureDesc: 'Ratiba za kuaminika na huduma ya wakati unayoweza kutegemea',
         safeTravelDesc: 'Madereva wataalam na magari yaliyotunzwa vizuri kwa usalama wako',

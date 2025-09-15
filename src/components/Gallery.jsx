@@ -8,20 +8,20 @@ const Gallery = () => {
   const images = [
     {
       id: 1,
-      src: '/images/kisesa-2.jpg',
-      alt: 'Kisesa Express Bus - Modern Fleet',
+      src: '/images/selous-2.jpg',
+      alt: 'Selous Express Bus - Modern Fleet',
       title: 'Premium Fleet'
     },
     {
       id: 2,
-      src: '/images/kisesa-3.jpg',
-      alt: 'Kisesa Express Bus - Front View with Route Destinations',
+      src: '/images/selous-3.jpg',
+      alt: 'Selous Express Bus - Front View with Route Destinations',
       title: 'Modern Buses'
     },
     {
       id: 3,
-      src: '/images/kisesa-4.jpg',
-      alt: 'Kisesa Express Bus - Professional Service',
+      src: '/images/selous-4.jpg',
+      alt: 'Selous Express Bus - Professional Service',
       title: 'Reliable Service'
     }
   ];
@@ -35,14 +35,14 @@ const Gallery = () => {
   };
 
   return (
-    <section className="py-16 bg-kisesa-navy">
+    <section className="py-16 bg-selous-navy">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Gallery Header */}
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bebas font-bold text-white mb-4 tracking-wide">
             {t('ourFleet')}
           </h2>
-          <p className="text-lg text-kisesa-white font-poppins max-w-2xl mx-auto">
+          <p className="text-lg text-selous-white font-poppins max-w-2xl mx-auto">
             {t('fleetDescription')}
           </p>
         </div>
@@ -64,7 +64,7 @@ const Gallery = () => {
               </div>
               
               {/* Overlay */}
-              <div className="absolute inset-0 bg-gradient-to-t from-kisesa-navy/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <div className="absolute inset-0 bg-gradient-to-t from-selous-navy/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <div className="absolute bottom-4 left-4 right-4">
                   <h3 className="text-white font-bebas font-bold text-xl tracking-wide">
                     {image.title}
@@ -89,7 +89,7 @@ const Gallery = () => {
               {/* Close Button */}
               <button
                 onClick={closeModal}
-                className="absolute top-4 right-4 text-white hover:text-kisesa-orange transition-colors duration-200 z-10"
+                className="absolute top-4 right-4 text-white hover:text-selous-orange transition-colors duration-200 z-10"
               >
                 <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12"></path>

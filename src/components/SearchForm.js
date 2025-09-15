@@ -9,7 +9,8 @@ const SearchForm = ({ setIsBookingDialogOpen }) => {
     from: '',
     to: '',
     date: '',
-    passengers: '1'
+    passengers: '1',
+    operatorId: '430510003'
   });
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState('');
@@ -96,7 +97,7 @@ const SearchForm = ({ setIsBookingDialogOpen }) => {
     try {
       // Prepare booking data
       const bookingData = {
-        operatorId: '2817120015',
+        operatorId: formData.operatorId,
         origin: formData.from,
         destination: formData.to,
         departureDate: formData.date,
@@ -165,15 +166,15 @@ const SearchForm = ({ setIsBookingDialogOpen }) => {
     }
   };
 
-  // Limited routes for Kisesa Express
+  // Limited routes for Selous Express - Songea destinations only
   const popularRoutes = [
-    { value: 'mwanza', label: t('mwanza') },
+    { value: 'songea', label: 'Songea' },
     { value: 'dar-es-salaam', label: t('darEsSalaam') },
-    { value: 'kahama', label: t('kahama') },
-    { value: 'moshi', label: t('moshi') },
-    { value: 'shinyanga', label: t('shinyanga') },
-    { value: 'arusha', label: t('arusha') },
-    { value: 'singida', label: t('singida') }
+    { value: 'mbeya', label: 'Mbeya' },
+    { value: 'dodoma', label: 'Dodoma' },
+    { value: 'tunduma', label: 'Tunduma' },
+    { value: 'mwanza', label: t('mwanza') },
+    { value: 'moshi', label: t('moshi') }
   ];
 
   // Show overlay instead of hiding the form completely
@@ -182,19 +183,19 @@ const SearchForm = ({ setIsBookingDialogOpen }) => {
   return (
     <div>
       <div>
-          <div id="search-form" className="bg-gradient-to-br from-kisesa-blue via-kisesa-yellow to-kisesa-gray rounded-xl shadow-2xl shadow-kisesa-yellow/40 p-2 sm:p-3 md:p-4 mx-1 md:-mt-16 relative z-20 md:mx-2 sm:mx-4">
+          <div id="search-form" className="bg-gradient-to-br from-selous-blue-600 via-selous-blue-500 to-selous-gold-400 rounded-xl shadow-2xl shadow-selous-blue-500/30 p-2 sm:p-3 md:p-4 mx-1 md:-mt-16 relative z-20 md:mx-2 sm:mx-4">
             <div className="max-w-6xl mx-auto w-full max-w-xs sm:max-w-lg md:max-w-4xl">
               {/* Form Header */}
               <div className="text-center mb-1 sm:mb-2">
                 <h3 className="text-xs sm:text-lg md:text-xl font-bebas font-bold text-white mb-0.5 sm:mb-1 tracking-wide">
                   {t('findYourJourney')}
                 </h3>
-                <p className="text-kisesa-white font-poppins text-2xs sm:text-xs md:text-sm hidden sm:block">
+                <p className="text-selous-white font-poppins text-2xs sm:text-xs md:text-sm hidden sm:block">
                   {t('searchBookPremium')}
                 </p>
                 {/* Error Message */}
                 {error && (
-                  <div className="mt-1 sm:mt-2 p-1 sm:p-2 bg-red-100 border-2 border-kisesa-yellow text-kisesa-red rounded-lg font-poppins text-2xs sm:text-xs font-semibold">
+                  <div className="mt-1 sm:mt-2 p-1 sm:p-2 bg-red-100 border-2 border-selous-yellow text-selous-red rounded-lg font-poppins text-2xs sm:text-xs font-semibold">
                     ⚠️ {error}
                   </div>
                 )}
@@ -205,14 +206,14 @@ const SearchForm = ({ setIsBookingDialogOpen }) => {
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-2 sm:gap-2">
                   {/* From */}
                   <div className="space-y-1 sm:space-y-1.5">
-                    <label className="block text-2xs sm:text-xs font-poppins font-semibold text-kisesa-white mb-1">
+                    <label className="block text-2xs sm:text-xs font-poppins font-semibold text-selous-white mb-1">
                       {t('from')}
                     </label>
                     <select
                       name="from"
                       value={formData.from}
                       onChange={handleInputChange}
-                      className="w-full p-2 sm:p-2.5 border-2 border-kisesa-gray rounded-lg focus:border-kisesa-yellow focus:outline-none font-poppins text-kisesa-blue bg-kisesa-gray text-xs sm:text-sm"
+                      className="w-full p-2 sm:p-2.5 border-2 border-selous-gray-200 rounded-lg focus:border-selous-gold-400 focus:outline-none font-poppins text-selous-gray-800 bg-selous-gray-50 text-xs sm:text-sm"
                       required
                     >
                       <option value="">{t('selectDeparture')}</option>
@@ -224,14 +225,14 @@ const SearchForm = ({ setIsBookingDialogOpen }) => {
 
                   {/* To */}
                   <div className="space-y-1 sm:space-y-1.5">
-                    <label className="block text-2xs sm:text-xs font-poppins font-semibold text-kisesa-white mb-1">
+                    <label className="block text-2xs sm:text-xs font-poppins font-semibold text-selous-white mb-1">
                       {t('to')}
                     </label>
                     <select
                       name="to"
                       value={formData.to}
                       onChange={handleInputChange}
-                      className="w-full p-2 sm:p-2.5 border-2 border-kisesa-gray rounded-lg focus:border-kisesa-yellow focus:outline-none font-poppins text-kisesa-blue bg-kisesa-gray text-xs sm:text-sm"
+                      className="w-full p-2 sm:p-2.5 border-2 border-selous-gray-200 rounded-lg focus:border-selous-gold-400 focus:outline-none font-poppins text-selous-gray-800 bg-selous-gray-50 text-xs sm:text-sm"
                       required
                     >
                       <option value="">{t('selectDestination')}</option>
@@ -243,7 +244,7 @@ const SearchForm = ({ setIsBookingDialogOpen }) => {
 
                   {/* Date */}
                   <div className="space-y-1 sm:space-y-1.5">
-                    <label className="block text-2xs sm:text-xs font-poppins font-semibold text-kisesa-white mb-1">
+                    <label className="block text-2xs sm:text-xs font-poppins font-semibold text-selous-white mb-1">
                       {t('travelDate')}
                     </label>
                     <input
@@ -252,21 +253,21 @@ const SearchForm = ({ setIsBookingDialogOpen }) => {
                       value={formData.date}
                       onChange={handleInputChange}
                       min={new Date().toISOString().split('T')[0]}
-                      className="w-full p-2 sm:p-2.5 border-2 border-kisesa-gray rounded-lg focus:border-kisesa-yellow focus:outline-none font-poppins text-kisesa-blue text-xs sm:text-sm bg-kisesa-gray"
+                      className="w-full p-2 sm:p-2.5 border-2 border-selous-gray-200 rounded-lg focus:border-selous-gold-400 focus:outline-none font-poppins text-selous-gray-800 text-xs sm:text-sm bg-selous-gray-50"
                       required
                     />
                   </div>
 
                   {/* Passengers */}
                   <div className="space-y-1 sm:space-y-1.5">
-                    <label className="block text-2xs sm:text-xs font-poppins font-semibold text-kisesa-white mb-1">
+                    <label className="block text-2xs sm:text-xs font-poppins font-semibold text-selous-white mb-1">
                       {t('passengers')}
                     </label>
                     <select
                       name="passengers"
                       value={formData.passengers}
                       onChange={handleInputChange}
-                      className="w-full p-2 sm:p-2.5 border-2 border-kisesa-gray rounded-lg focus:border-kisesa-yellow focus:outline-none font-poppins text-kisesa-blue bg-kisesa-gray text-xs sm:text-sm"
+                      className="w-full p-2 sm:p-2.5 border-2 border-selous-gray-200 rounded-lg focus:border-selous-gold-400 focus:outline-none font-poppins text-selous-gray-800 bg-selous-gray-50 text-xs sm:text-sm"
                     >
                       {[1,2,3,4,5,6,7,8,9,10].map(num => (
                         <option key={num} value={num}>{num} {num > 1 ? t('passengers') : t('passenger')}</option>
@@ -285,7 +286,7 @@ const SearchForm = ({ setIsBookingDialogOpen }) => {
                       className={`w-full text-white font-poppins font-bold py-1.5 sm:py-2 px-2 sm:px-3 rounded-lg transition-all duration-200 shadow-lg text-2xs sm:text-xs ${
                         isLoading 
                           ? 'bg-gray-400 cursor-not-allowed' 
-                          : 'bg-kisesa-yellow hover:bg-orange-600 transform hover:scale-105'
+                          : 'bg-gradient-to-r from-selous-gold-400 to-selous-gold-500 hover:from-selous-gold-500 hover:to-selous-gold-600 transform hover:scale-105 shadow-lg'
                       }`}
                     >
                       {isLoading ? (
@@ -309,9 +310,12 @@ const SearchForm = ({ setIsBookingDialogOpen }) => {
                 <p className="text-2xs sm:text-xs font-poppins text-white mb-1 sm:mb-1.5">{t('popularRoutes')}</p>
                 <div className="flex flex-wrap justify-center items-center gap-0.5 sm:gap-1 mx-auto w-fit">
                   {[
-                    { route: 'Mwanza - Dar es Salaam', from: 'mwanza', to: 'dar-es-salaam' },
-                    { route: 'Dar es Salaam - Mwanza', from: 'dar-es-salaam', to: 'mwanza' },
-                    { route: 'Mwanza - Kahama', from: 'mwanza', to: 'kahama' }
+                    { route: 'Songea - Dar es Salaam', from: 'songea', to: 'dar-es-salaam' },
+                    { route: 'Songea - Mbeya', from: 'songea', to: 'mbeya' },
+                    { route: 'Songea - Dodoma', from: 'songea', to: 'dodoma' },
+                    { route: 'Songea - Tunduma', from: 'songea', to: 'tunduma' },
+                    { route: 'Songea - Mwanza', from: 'songea', to: 'mwanza' },
+                    { route: 'Songea - Moshi', from: 'songea', to: 'moshi' }
                   ].map(({ route, from, to }) => (
                     <button
                       key={route}
@@ -325,7 +329,7 @@ const SearchForm = ({ setIsBookingDialogOpen }) => {
                         setError('');
                       }}
                       disabled={isLoading}
-                      className="text-2xs sm:text-xs bg-gray-100 hover:bg-kisesa-blue hover:text-white text-gray-700 px-1.5 sm:px-2 py-0.5 sm:py-1 rounded-full font-poppins transition-colors duration-200 disabled:opacity-50"
+                      className="text-2xs sm:text-xs bg-gray-100 hover:bg-selous-blue hover:text-white text-gray-700 px-1.5 sm:px-2 py-0.5 sm:py-1 rounded-full font-poppins transition-colors duration-200 disabled:opacity-50"
                     >
                       {route}
                     </button>
