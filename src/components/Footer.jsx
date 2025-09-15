@@ -12,9 +12,16 @@ const Footer = () => {
           
           {/* Company Info Section */}
           <div className="lg:col-span-2">
-            <h3 className="text-2xl font-bebas font-bold mb-4 tracking-wide">
-              SELOUS EXPRESS
-            </h3>
+            <div className="flex items-center space-x-3 mb-4">
+              <img 
+                src="/images/selous-logo.png" 
+                alt="Selous Express Logo" 
+                className="h-12 w-12"
+              />
+              <h3 className="text-2xl font-bebas font-bold tracking-wide">
+                SELOUS EXPRESS
+              </h3>
+            </div>
             <p className="text-gray-300 font-poppins mb-4 text-lg">
               {t('footerTagline')}
             </p>

@@ -46,10 +46,15 @@ const Navbar = () => {
           <div className="flex-shrink-0">
             <Link 
               to="/" 
-              className="text-xl font-bebas font-bold tracking-wider hover:text-selous-gold-400 transition-colors duration-200"
+              className="flex items-center space-x-2 hover:text-selous-gold-400 transition-colors duration-200"
               onClick={closeMenu}
             >
-              SELOUS EXPRESS
+              <img 
+                src="/images/selous-header-logo.png" 
+                alt="Selous Express Logo" 
+                className="h-8 w-8"
+              />
+              <span className="text-xl font-bebas font-bold tracking-wider">SELOUS EXPRESS</span>
             </Link>
           </div>
 

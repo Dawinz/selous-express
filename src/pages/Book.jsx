@@ -160,9 +160,16 @@ const Book = () => {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-8">
-          <h1 className="text-4xl md:text-5xl font-bebas font-bold text-selous-navy mb-4 tracking-wide">
-            SELECT YOUR SEATS
-          </h1>
+          <div className="flex items-center justify-center space-x-4 mb-4">
+            <img 
+              src="/images/selous-logo.png" 
+              alt="Selous Express Logo" 
+              className="h-16 w-16"
+            />
+            <h1 className="text-4xl md:text-5xl font-bebas font-bold text-selous-blue-800 tracking-wide">
+              SELECT YOUR SEATS
+            </h1>
+          </div>
           <p className="text-lg text-gray-600 font-poppins">
             Choose your preferred seats for your journey
           </p>
