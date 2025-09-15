@@ -130,11 +130,12 @@ const Contact = () => {
                   </div>
                   <div>
                     <h3 className="font-bebas font-bold text-gray-800 text-lg">{t('simu')}</h3>
-                    <p className="text-gray-600 font-poppins">Mwanza: +255 767 350 884</p>
-                    <p className="text-gray-600 font-poppins">Mwanza: +255 755 478 744</p>
-                    <p className="text-gray-600 font-poppins">Dar: +255 654 946 844</p>
-                    <p className="text-gray-600 font-poppins">Arusha: +255 757 748 040</p>
-                    <p className="text-gray-600 font-poppins">Moshi: +255 757 258 844</p>
+                    <p className="text-gray-600 font-poppins"><strong>Headquarters (Songea):</strong> +255 767 350 884</p>
+                    <p className="text-gray-600 font-poppins"><strong>Mwanza Office:</strong> +255 626 944 800</p>
+                    <p className="text-gray-600 font-poppins"><strong>Mwanza Office:</strong> +255 755 478 744</p>
+                    <p className="text-gray-600 font-poppins"><strong>Dar es Salaam:</strong> +255 654 946 844</p>
+                    <p className="text-gray-600 font-poppins"><strong>Arusha:</strong> +255 757 748 040</p>
+                    <p className="text-gray-600 font-poppins"><strong>Moshi:</strong> +255 757 258 844</p>
                   </div>
                 </div>
 
@@ -162,8 +163,9 @@ const Contact = () => {
                   </div>
                   <div>
                     <h3 className="font-bebas font-bold text-gray-800 text-lg">{t('ofisi')}</h3>
-                    <p className="text-gray-600 font-poppins">{t('ubungoTerminal')}</p>
-                    <p className="text-gray-600 font-poppins">{t('darEsSalaaam')}</p>
+                    <p className="text-gray-600 font-poppins"><strong>Headquarters:</strong> Songea Town, Ruvuma Region</p>
+                    <p className="text-gray-600 font-poppins"><strong>Mwanza Office:</strong> Nyegezi, Mwanza</p>
+                    <p className="text-gray-600 font-poppins"><em>Ticketing & Parcel Services</em></p>
                   </div>
                 </div>
               </div>
