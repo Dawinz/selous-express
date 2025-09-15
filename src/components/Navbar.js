@@ -39,7 +39,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-gradient-to-r from-selous-blue-800 via-selous-blue-700 to-selous-blue-800 text-selous-white shadow-lg sticky top-0 z-50">
+    <nav className="bg-gradient-to-r from-selous-purple-800 via-selous-purple-700 to-selous-purple-800 text-selous-white shadow-lg sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}

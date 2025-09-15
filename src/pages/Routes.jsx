@@ -27,11 +27,11 @@ const Routes = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-selous-blue-100 via-selous-gray-100 to-selous-gold-100 py-8">
+    <div className="min-h-screen bg-gradient-to-br from-selous-purple-100 via-selous-gray-100 to-selous-gold-100 py-8">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-12">
-          <h1 className="text-4xl md:text-5xl font-bebas font-bold text-selous-blue-800 mb-4 tracking-wide">
+          <h1 className="text-4xl md:text-5xl font-bebas font-bold text-selous-purple-800 mb-4 tracking-wide">
             {t('ourRoutes')}
           </h1>
           <p className="text-lg text-gray-600 font-poppins max-w-2xl mx-auto">
@@ -44,7 +44,7 @@ const Routes = () => {
           {routes.map((route, index) => (
             <div
               key={index}
-              className="bg-gradient-to-br from-white via-selous-gray-50 to-selous-blue-50 rounded-xl shadow-lg p-6 border border-selous-gray-200 hover:shadow-xl transition-all duration-300 hover:scale-105"
+              className="bg-gradient-to-br from-white via-selous-gray-50 to-selous-purple-50 rounded-xl shadow-lg p-6 border border-selous-gray-200 hover:shadow-xl transition-all duration-300 hover:scale-105"
             >
               <div className="flex items-center justify-between mb-4">
                 <div className="flex items-center space-x-2">

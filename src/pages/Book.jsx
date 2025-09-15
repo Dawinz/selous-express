@@ -166,7 +166,7 @@ const Book = () => {
               alt="Selous Express Logo" 
               className="h-16 w-16"
             />
-            <h1 className="text-4xl md:text-5xl font-bebas font-bold text-selous-blue-800 tracking-wide">
+            <h1 className="text-4xl md:text-5xl font-bebas font-bold text-selous-purple-800 tracking-wide">
               SELECT YOUR SEATS
             </h1>
           </div>

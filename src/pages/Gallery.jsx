@@ -91,11 +91,11 @@ const Gallery = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-selous-gray-100 via-selous-blue-50 to-selous-gold-50 py-8">
+    <div className="min-h-screen bg-gradient-to-br from-selous-gray-100 via-selous-purple-50 to-selous-gold-50 py-8">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-12">
-          <h1 className="text-4xl md:text-5xl font-bebas font-bold text-selous-blue-800 mb-4 tracking-wide">
+          <h1 className="text-4xl md:text-5xl font-bebas font-bold text-selous-purple-800 mb-4 tracking-wide">
             {t('ourGallery')}
           </h1>
           <p className="text-lg text-gray-600 font-poppins max-w-2xl mx-auto">
@@ -137,11 +137,11 @@ const Gallery = () => {
 
         {/* Features Section */}
         <div className="mt-16 text-center">
-          <h2 className="text-3xl md:text-4xl font-bebas font-bold text-selous-blue-800 mb-8 tracking-wide">
+          <h2 className="text-3xl md:text-4xl font-bebas font-bold text-selous-purple-800 mb-8 tracking-wide">
             {t('whyChooseSelousExpress')}
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="text-center p-6 rounded-lg bg-gradient-to-br from-white via-selous-gray-50 to-selous-blue-50 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
+            <div className="text-center p-6 rounded-lg bg-gradient-to-br from-white via-selous-gray-50 to-selous-purple-50 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
               <div className="w-16 h-16 bg-gradient-to-br from-selous-gold-400 to-selous-gold-500 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
                 <svg className="w-8 h-8 text-selous-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
@@ -154,8 +154,8 @@ const Gallery = () => {
                 {t('premiumComfortDesc')}
               </p>
             </div>
-            <div className="text-center p-6 rounded-lg bg-gradient-to-br from-white via-selous-gray-50 to-selous-blue-50 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
-              <div className="w-16 h-16 bg-gradient-to-br from-selous-blue-400 to-selous-blue-500 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+            <div className="text-center p-6 rounded-lg bg-gradient-to-br from-white via-selous-gray-50 to-selous-purple-50 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
+              <div className="w-16 h-16 bg-gradient-to-br from-selous-purple-400 to-selous-purple-500 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
                 <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                 </svg>
@@ -167,8 +167,8 @@ const Gallery = () => {
                 {t('onTimeDepartureDesc')}
               </p>
             </div>
-            <div className="text-center p-6 rounded-lg bg-gradient-to-br from-white via-selous-gray-50 to-selous-blue-50 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
-              <div className="w-16 h-16 bg-gradient-to-br from-selous-blue-600 to-selous-blue-700 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+            <div className="text-center p-6 rounded-lg bg-gradient-to-br from-white via-selous-gray-50 to-selous-purple-50 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
+              <div className="w-16 h-16 bg-gradient-to-br from-selous-purple-600 to-selous-purple-700 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
                 <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                 </svg>

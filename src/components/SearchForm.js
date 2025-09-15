@@ -183,7 +183,7 @@ const SearchForm = ({ setIsBookingDialogOpen }) => {
   return (
     <div>
       <div>
-          <div id="search-form" className="bg-gradient-to-br from-selous-blue-600 via-selous-blue-500 to-selous-gold-400 rounded-xl shadow-2xl shadow-selous-blue-500/30 p-2 sm:p-3 md:p-4 mx-1 md:-mt-16 relative z-20 md:mx-2 sm:mx-4">
+          <div id="search-form" className="bg-gradient-to-br from-selous-purple-600 via-selous-purple-500 to-selous-gold-400 rounded-xl shadow-2xl shadow-selous-purple-500/30 p-2 sm:p-3 md:p-4 mx-1 md:-mt-16 relative z-20 md:mx-2 sm:mx-4">
             <div className="max-w-6xl mx-auto w-full max-w-xs sm:max-w-lg md:max-w-4xl">
               {/* Form Header */}
               <div className="text-center mb-1 sm:mb-2">
