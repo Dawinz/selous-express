@@ -77,6 +77,12 @@ const Gallery = () => {
       src: '/images/selous-12.jpg',
       alt: 'Selous Express Bus - Fleet Four',
       title: t('fleetFour')
+    },
+    {
+      id: 13,
+      src: '/images/selous-bus-model.jpg',
+      alt: 'Selous Express Bus - Premium Bus Model',
+      title: t('premiumBusModel')
     }
   ];
 
