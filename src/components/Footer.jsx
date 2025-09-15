@@ -67,11 +67,8 @@ const Footer = () => {
                 </svg>
                 <div className="text-gray-300">
                   <div className="font-semibold mb-1">{t('phone')}:</div>
-                  <a href="tel:+255755478744" className="hover:text-white transition-colors duration-200 block">Mwanza: +255 755 478 744</a>
-                  <a href="tel:+255767350884" className="hover:text-white transition-colors duration-200 block">Mwanza: +255 767 350 884</a>
-                  <a href="tel:+255654946844" className="hover:text-white transition-colors duration-200 block">Dar: +255 654 946 844</a>
-                  <a href="tel:+255757748040" className="hover:text-white transition-colors duration-200 block">Arusha: +255 757 748 040</a>
-                  <a href="tel:+255757258844" className="hover:text-white transition-colors duration-200 block">Moshi: +255 757 258 844</a>
+                  <a href="tel:0763100064" className="hover:text-white transition-colors duration-200 block">Songea HQ: 0763100064</a>
+                  <a href="tel:0623388388" className="hover:text-white transition-colors duration-200 block">Mwanza: 0623388388</a>
                 </div>
               </div>
               
