@@ -51,11 +51,6 @@ const Footer = () => {
                   {t('contact')}
                 </Link>
               </li>
-              <li>
-                <Link to="/book" className="text-gray-300 hover:text-selous-yellow transition-colors duration-200">
-                  {t('bookNow')}
-                </Link>
-              </li>
             </ul>
           </div>
 
