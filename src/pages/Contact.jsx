@@ -130,12 +130,16 @@ const Contact = () => {
                   </div>
                   <div>
                     <h3 className="font-bebas font-bold text-gray-800 text-lg">{t('simu')}</h3>
-                    <p className="text-gray-600 font-poppins"><strong>Headquarters (Songea):</strong> +255 767 350 884</p>
-                    <p className="text-gray-600 font-poppins"><strong>Mwanza Office:</strong> +255 626 944 800</p>
-                    <p className="text-gray-600 font-poppins"><strong>Mwanza Office:</strong> +255 755 478 744</p>
-                    <p className="text-gray-600 font-poppins"><strong>Dar es Salaam:</strong> +255 654 946 844</p>
-                    <p className="text-gray-600 font-poppins"><strong>Arusha:</strong> +255 757 748 040</p>
-                    <p className="text-gray-600 font-poppins"><strong>Moshi:</strong> +255 757 258 844</p>
+                    <p className="text-gray-600 font-poppins"><strong>Songea HQ:</strong> 0763100064</p>
+                    <p className="text-gray-600 font-poppins"><strong>Njombe:</strong> 0764100057</p>
+                    <p className="text-gray-600 font-poppins"><strong>Iringa:</strong> 0764100035</p>
+                    <p className="text-gray-600 font-poppins"><strong>Dodoma:</strong> 0768100068</p>
+                    <p className="text-gray-600 font-poppins"><strong>Mwanza:</strong> 0623388388</p>
+                    <p className="text-gray-600 font-poppins"><strong>Moshi & Arusha:</strong> 0626810000</p>
+                    <p className="text-gray-600 font-poppins"><strong>Tabora:</strong> 0676378388</p>
+                    <p className="text-gray-600 font-poppins"><strong>Mbeya:</strong> 0763100028</p>
+                    <p className="text-gray-600 font-poppins"><strong>Dar es Salaam:</strong> 0657571820</p>
+                    <p className="text-gray-600 font-poppins"><strong>Morogoro:</strong> 0653748428</p>
                   </div>
                 </div>
 
