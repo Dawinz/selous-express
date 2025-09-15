@@ -89,7 +89,7 @@ const Navbar = () => {
                 href="https://superfeoexpress.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-gradient-to-r from-selous-gold-400 to-selous-gold-500 hover:from-selous-gold-500 hover:to-selous-gold-600 px-4 py-2 rounded-lg font-bebas font-bold text-selous-gray-800 transition-all duration-200 transform hover:scale-105 shadow-lg"
+                className="bg-[#E00080] hover:bg-[#C00070] px-4 py-2 rounded-lg font-bebas font-bold text-white transition-all duration-200 transform hover:scale-105 shadow-lg"
               >
                 SUPERFEO EXPRESS
               </a>
@@ -183,7 +183,7 @@ const Navbar = () => {
               href="https://superfeoexpress.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="block w-full text-center px-4 py-3 bg-gradient-to-r from-selous-gold-400 to-selous-gold-500 hover:from-selous-gold-500 hover:to-selous-gold-600 text-selous-gray-800 font-bebas font-bold rounded-lg transition-all duration-200 transform hover:scale-105 shadow-lg mx-3"
+              className="block w-full text-center px-4 py-3 bg-[#E00080] hover:bg-[#C00070] text-white font-bebas font-bold rounded-lg transition-all duration-200 transform hover:scale-105 shadow-lg mx-3"
               onClick={closeMenu}
             >
               SUPERFEO EXPRESS
