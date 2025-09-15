@@ -85,6 +85,14 @@ const Navbar = () => {
               >
                 {t('contact')}
               </Link>
+              <a
+                href="https://superfeoexpress.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-gradient-to-r from-selous-gold-400 to-selous-gold-500 hover:from-selous-gold-500 hover:to-selous-gold-600 px-4 py-2 rounded-lg font-bebas font-bold text-selous-gray-800 transition-all duration-200 transform hover:scale-105 shadow-lg"
+              >
+                SUPERFEO EXPRESS
+              </a>
               <button
                 onClick={toggleLanguage}
                 className="flex items-center space-x-1 hover:text-selous-blue hover:bg-selous-blue hover:bg-opacity-10 px-3 py-2 rounded-md transition-all duration-200 font-poppins font-medium"
@@ -171,6 +179,15 @@ const Navbar = () => {
             >
               {t('contact')}
             </Link>
+            <a
+              href="https://superfeoexpress.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block w-full text-center px-4 py-3 bg-gradient-to-r from-selous-gold-400 to-selous-gold-500 hover:from-selous-gold-500 hover:to-selous-gold-600 text-selous-gray-800 font-bebas font-bold rounded-lg transition-all duration-200 transform hover:scale-105 shadow-lg mx-3"
+              onClick={closeMenu}
+            >
+              SUPERFEO EXPRESS
+            </a>
             <button
               onClick={toggleLanguage}
               className="block w-full text-left px-3 py-3 rounded-md text-base font-poppins font-medium text-selous-blue hover:text-white hover:bg-selous-blue transition-colors duration-200"
