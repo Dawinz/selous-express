@@ -319,21 +319,10 @@ const SearchForm = ({ setIsBookingDialogOpen }) => {
                 <p className="text-2xs sm:text-xs font-poppins text-white mb-1 sm:mb-1.5">{t('popularRoutes')}</p>
                 <div className="flex flex-wrap justify-center items-center gap-0.5 sm:gap-1 mx-auto w-fit">
                   {[
-                    { route: 'Songea - Moshi', from: 'songea', to: 'moshi' },
-                    { route: 'Songea - Dodoma', from: 'songea', to: 'dodoma' },
-                    { route: 'Songea - Mwanza', from: 'songea', to: 'mwanza' },
                     { route: 'Songea - Dar es Salaam', from: 'songea', to: 'dar-es-salaam' },
-                    { route: 'Songea - Kyela', from: 'songea', to: 'kyela' },
-                    { route: 'Songea - Tunduma', from: 'songea', to: 'tunduma' },
-                    { route: 'Songea - Mbeya', from: 'songea', to: 'mbeya' },
-                    { route: 'Songea - Makambako', from: 'songea', to: 'makambako' },
-                    { route: 'Songea - Iringa', from: 'songea', to: 'iringa' },
-                    { route: 'Songea - Njombe', from: 'songea', to: 'njombe' },
-                    { route: 'Songea - Mtwara', from: 'songea', to: 'mtwara' },
-                    { route: 'Songea - Masasi', from: 'songea', to: 'masasi' },
-                    { route: 'Songea - Tunduru', from: 'songea', to: 'tunduru' },
-                    { route: 'Songea - Mbinga', from: 'songea', to: 'mbinga' },
-                    { route: 'Songea - Mbambabay', from: 'songea', to: 'mbambabay' }
+                    { route: 'Dodoma - Songea', from: 'dodoma', to: 'songea' },
+                    { route: 'Songea - Mwanza', from: 'songea', to: 'mwanza' },
+                    { route: 'Moshi - Songea', from: 'moshi', to: 'songea' }
                   ].map(({ route, from, to }) => (
                     <button
                       key={route}
