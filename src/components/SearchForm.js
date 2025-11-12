@@ -166,15 +166,24 @@ const SearchForm = ({ setIsBookingDialogOpen }) => {
     }
   };
 
-  // Limited routes for Selous Express - Songea destinations only
+  // All routes from Songea to destinations
   const popularRoutes = [
     { value: 'songea', label: 'Songea' },
-    { value: 'dar-es-salaam', label: t('darEsSalaam') },
-    { value: 'mbeya', label: 'Mbeya' },
+    { value: 'moshi', label: t('moshi') },
     { value: 'dodoma', label: 'Dodoma' },
-    { value: 'tunduma', label: 'Tunduma' },
     { value: 'mwanza', label: t('mwanza') },
-    { value: 'moshi', label: t('moshi') }
+    { value: 'dar-es-salaam', label: t('darEsSalaam') },
+    { value: 'kyela', label: 'Kyela' },
+    { value: 'tunduma', label: 'Tunduma' },
+    { value: 'mbeya', label: 'Mbeya' },
+    { value: 'makambako', label: 'Makambako' },
+    { value: 'iringa', label: 'Iringa' },
+    { value: 'njombe', label: 'Njombe' },
+    { value: 'mtwara', label: 'Mtwara' },
+    { value: 'masasi', label: 'Masasi' },
+    { value: 'tunduru', label: 'Tunduru' },
+    { value: 'mbinga', label: 'Mbinga' },
+    { value: 'mbambabay', label: 'Mbambabay' }
   ];
 
   // Show overlay instead of hiding the form completely
@@ -310,12 +319,21 @@ const SearchForm = ({ setIsBookingDialogOpen }) => {
                 <p className="text-2xs sm:text-xs font-poppins text-white mb-1 sm:mb-1.5">{t('popularRoutes')}</p>
                 <div className="flex flex-wrap justify-center items-center gap-0.5 sm:gap-1 mx-auto w-fit">
                   {[
-                    { route: 'Songea - Dar es Salaam', from: 'songea', to: 'dar-es-salaam' },
-                    { route: 'Songea - Mbeya', from: 'songea', to: 'mbeya' },
+                    { route: 'Songea - Moshi', from: 'songea', to: 'moshi' },
                     { route: 'Songea - Dodoma', from: 'songea', to: 'dodoma' },
-                    { route: 'Songea - Tunduma', from: 'songea', to: 'tunduma' },
                     { route: 'Songea - Mwanza', from: 'songea', to: 'mwanza' },
-                    { route: 'Songea - Moshi', from: 'songea', to: 'moshi' }
+                    { route: 'Songea - Dar es Salaam', from: 'songea', to: 'dar-es-salaam' },
+                    { route: 'Songea - Kyela', from: 'songea', to: 'kyela' },
+                    { route: 'Songea - Tunduma', from: 'songea', to: 'tunduma' },
+                    { route: 'Songea - Mbeya', from: 'songea', to: 'mbeya' },
+                    { route: 'Songea - Makambako', from: 'songea', to: 'makambako' },
+                    { route: 'Songea - Iringa', from: 'songea', to: 'iringa' },
+                    { route: 'Songea - Njombe', from: 'songea', to: 'njombe' },
+                    { route: 'Songea - Mtwara', from: 'songea', to: 'mtwara' },
+                    { route: 'Songea - Masasi', from: 'songea', to: 'masasi' },
+                    { route: 'Songea - Tunduru', from: 'songea', to: 'tunduru' },
+                    { route: 'Songea - Mbinga', from: 'songea', to: 'mbinga' },
+                    { route: 'Songea - Mbambabay', from: 'songea', to: 'mbambabay' }
                   ].map(({ route, from, to }) => (
                     <button
                       key={route}

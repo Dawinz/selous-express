@@ -6,19 +6,22 @@ const Routes = () => {
   const { t } = useLanguage();
   const navigate = useNavigate();
   const routes = [
-    // Songea Routes
-    { from: 'Songea', to: t('darEsSalaam'), fromValue: 'songea', toValue: 'dar-es-salaam' },
-    { from: t('darEsSalaam'), to: 'Songea', fromValue: 'dar-es-salaam', toValue: 'songea' },
-    { from: 'Songea', to: 'Mbeya', fromValue: 'songea', toValue: 'mbeya' },
-    { from: 'Mbeya', to: 'Songea', fromValue: 'mbeya', toValue: 'songea' },
-    { from: 'Songea', to: 'Dodoma', fromValue: 'songea', toValue: 'dodoma' },
-    { from: 'Dodoma', to: 'Songea', fromValue: 'dodoma', toValue: 'songea' },
-    { from: 'Songea', to: 'Tunduma', fromValue: 'songea', toValue: 'tunduma' },
-    { from: 'Tunduma', to: 'Songea', fromValue: 'tunduma', toValue: 'songea' },
-    { from: 'Songea', to: t('mwanza'), fromValue: 'songea', toValue: 'mwanza' },
-    { from: t('mwanza'), to: 'Songea', fromValue: 'mwanza', toValue: 'songea' },
+    // All routes from Songea
     { from: 'Songea', to: t('moshi'), fromValue: 'songea', toValue: 'moshi' },
-    { from: t('moshi'), to: 'Songea', fromValue: 'moshi', toValue: 'songea' },
+    { from: 'Songea', to: 'Dodoma', fromValue: 'songea', toValue: 'dodoma' },
+    { from: 'Songea', to: t('mwanza'), fromValue: 'songea', toValue: 'mwanza' },
+    { from: 'Songea', to: t('darEsSalaam'), fromValue: 'songea', toValue: 'dar-es-salaam' },
+    { from: 'Songea', to: 'Kyela', fromValue: 'songea', toValue: 'kyela' },
+    { from: 'Songea', to: 'Tunduma', fromValue: 'songea', toValue: 'tunduma' },
+    { from: 'Songea', to: 'Mbeya', fromValue: 'songea', toValue: 'mbeya' },
+    { from: 'Songea', to: 'Makambako', fromValue: 'songea', toValue: 'makambako' },
+    { from: 'Songea', to: 'Iringa', fromValue: 'songea', toValue: 'iringa' },
+    { from: 'Songea', to: 'Njombe', fromValue: 'songea', toValue: 'njombe' },
+    { from: 'Songea', to: 'Mtwara', fromValue: 'songea', toValue: 'mtwara' },
+    { from: 'Songea', to: 'Masasi', fromValue: 'songea', toValue: 'masasi' },
+    { from: 'Songea', to: 'Tunduru', fromValue: 'songea', toValue: 'tunduru' },
+    { from: 'Songea', to: 'Mbinga', fromValue: 'songea', toValue: 'mbinga' },
+    { from: 'Songea', to: 'Mbambabay', fromValue: 'songea', toValue: 'mbambabay' },
   ];
 
   const handleBookRoute = (route) => {
