@@ -6,8 +6,7 @@ const Routes = () => {
   const { t } = useLanguage();
   const navigate = useNavigate();
   const routes = [
-    // Bidirectional routes: Songea ↔ Destinations
-    // Songea → Destinations
+    // All routes from Songea to destinations
     { from: 'Songea', to: t('moshi'), fromValue: 'songea', toValue: 'moshi' },
     { from: 'Songea', to: 'Dodoma', fromValue: 'songea', toValue: 'dodoma' },
     { from: 'Songea', to: t('mwanza'), fromValue: 'songea', toValue: 'mwanza' },
@@ -23,22 +22,6 @@ const Routes = () => {
     { from: 'Songea', to: 'Tunduru', fromValue: 'songea', toValue: 'tunduru' },
     { from: 'Songea', to: 'Mbinga', fromValue: 'songea', toValue: 'mbinga' },
     { from: 'Songea', to: 'Mbambabay', fromValue: 'songea', toValue: 'mbambabay' },
-    // Destinations → Songea
-    { from: t('moshi'), to: 'Songea', fromValue: 'moshi', toValue: 'songea' },
-    { from: 'Dodoma', to: 'Songea', fromValue: 'dodoma', toValue: 'songea' },
-    { from: t('mwanza'), to: 'Songea', fromValue: 'mwanza', toValue: 'songea' },
-    { from: t('darEsSalaam'), to: 'Songea', fromValue: 'dar-es-salaam', toValue: 'songea' },
-    { from: 'Kyela', to: 'Songea', fromValue: 'kyela', toValue: 'songea' },
-    { from: 'Tunduma', to: 'Songea', fromValue: 'tunduma', toValue: 'songea' },
-    { from: 'Mbeya', to: 'Songea', fromValue: 'mbeya', toValue: 'songea' },
-    { from: 'Makambako', to: 'Songea', fromValue: 'makambako', toValue: 'songea' },
-    { from: 'Iringa', to: 'Songea', fromValue: 'iringa', toValue: 'songea' },
-    { from: 'Njombe', to: 'Songea', fromValue: 'njombe', toValue: 'songea' },
-    { from: 'Mtwara', to: 'Songea', fromValue: 'mtwara', toValue: 'songea' },
-    { from: 'Masasi', to: 'Songea', fromValue: 'masasi', toValue: 'songea' },
-    { from: 'Tunduru', to: 'Songea', fromValue: 'tunduru', toValue: 'songea' },
-    { from: 'Mbinga', to: 'Songea', fromValue: 'mbinga', toValue: 'songea' },
-    { from: 'Mbambabay', to: 'Songea', fromValue: 'mbambabay', toValue: 'songea' },
   ];
 
   const handleBookRoute = (route) => {
