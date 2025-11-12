@@ -43,7 +43,7 @@ const Home = ({ setIsBookingDialogOpen }) => {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* Feature 1 */}
-            <div className="text-center p-6 rounded-lg bg-white border border-selous-gray hover:shadow-lg transition-shadow duration-200">
+            <div className="text-center p-6 rounded-lg bg-gradient-to-br from-white via-selous-gray-50 to-selous-purple-50 border border-selous-gray-200 hover:shadow-lg transition-shadow duration-200">
               <div className="w-16 h-16 bg-gradient-to-br from-selous-gold-400 to-selous-gold-500 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
                 <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
@@ -57,7 +57,7 @@ const Home = ({ setIsBookingDialogOpen }) => {
               </p>
             </div>
             {/* Feature 2 */}
-            <div className="text-center p-6 rounded-lg bg-white border border-selous-gray hover:shadow-lg transition-shadow duration-200">
+            <div className="text-center p-6 rounded-lg bg-gradient-to-br from-white via-selous-gray-50 to-selous-purple-50 border border-selous-gray-200 hover:shadow-lg transition-shadow duration-200">
               <div className="w-16 h-16 bg-gradient-to-br from-selous-gold-400 to-selous-gold-500 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
                 <svg className="w-8 h-8 text-selous-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
@@ -71,7 +71,7 @@ const Home = ({ setIsBookingDialogOpen }) => {
               </p>
             </div>
             {/* Feature 3 */}
-            <div className="text-center p-6 rounded-lg bg-white border border-selous-gray hover:shadow-lg transition-shadow duration-200">
+            <div className="text-center p-6 rounded-lg bg-gradient-to-br from-white via-selous-gray-50 to-selous-purple-50 border border-selous-gray-200 hover:shadow-lg transition-shadow duration-200">
               <div className="w-16 h-16 bg-gradient-to-br from-selous-purple-600 to-selous-purple-700 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
                 <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>

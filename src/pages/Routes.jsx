@@ -75,7 +75,7 @@ const Routes = () => {
         </div>
 
         {/* Additional Info */}
-        <div className="mt-16 bg-white rounded-xl shadow-lg p-8">
+        <div className="mt-16 bg-gradient-to-br from-white via-selous-gray-50 to-selous-purple-50 rounded-xl shadow-lg p-8">
           <h2 className="text-2xl font-bebas font-bold text-selous-navy mb-6 tracking-wide text-center">
             ROUTE INFORMATION
           </h2>

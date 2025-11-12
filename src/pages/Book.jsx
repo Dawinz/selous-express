@@ -156,7 +156,7 @@ const Book = () => {
   const showOverlay = isBookingDialogOpen;
 
   return (
-    <div className="min-h-screen bg-gray-50 py-8">
+    <div className="min-h-screen bg-gradient-to-br from-selous-purple-100 via-selous-gray-100 to-selous-gold-100 py-8">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-8">
@@ -178,7 +178,7 @@ const Book = () => {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {/* Seat Map */}
           <div className="lg:col-span-2">
-            <div className="bg-white rounded-xl shadow-lg p-8">
+            <div className="bg-gradient-to-br from-white via-selous-gray-50 to-selous-purple-50 rounded-xl shadow-lg p-8">
               {/* Driver Section */}
               <div className="flex justify-center mb-6">
                 <div className="bg-selous-navy text-white px-4 py-2 rounded-lg font-bebas font-bold">
@@ -228,7 +228,7 @@ const Book = () => {
           {/* Booking Summary */}
           <div className="space-y-6">
             {/* Trip Details */}
-            <div className="bg-white rounded-xl shadow-lg p-6">
+            <div className="bg-gradient-to-br from-white via-selous-gray-50 to-selous-purple-50 rounded-xl shadow-lg p-6">
               <h3 className="text-xl font-bebas font-bold text-selous-navy mb-4 tracking-wide">
                 TRIP DETAILS
               </h3>
@@ -253,7 +253,7 @@ const Book = () => {
             </div>
 
             {/* Selected Seats */}
-            <div className="bg-white rounded-xl shadow-lg p-6">
+            <div className="bg-gradient-to-br from-white via-selous-gray-50 to-selous-purple-50 rounded-xl shadow-lg p-6">
               <h3 className="text-xl font-bebas font-bold text-selous-navy mb-4 tracking-wide">
                 SELECTED SEATS
               </h3>
@@ -272,7 +272,7 @@ const Book = () => {
             </div>
 
             {/* Station Selection */}
-            <div className="bg-white rounded-xl shadow-lg p-6">
+            <div className="bg-gradient-to-br from-white via-selous-gray-50 to-selous-purple-50 rounded-xl shadow-lg p-6">
               <h3 className="text-xl font-bebas font-bold text-selous-navy mb-4 tracking-wide">
                 PICKUP & DROP-OFF
               </h3>
@@ -316,7 +316,7 @@ const Book = () => {
             </div>
 
             {/* Price Summary */}
-            <div className="bg-white rounded-xl shadow-lg p-6">
+            <div className="bg-gradient-to-br from-white via-selous-gray-50 to-selous-purple-50 rounded-xl shadow-lg p-6">
               <h3 className="text-xl font-bebas font-bold text-selous-navy mb-4 tracking-wide">
                 PRICE SUMMARY
               </h3>
