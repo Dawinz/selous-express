@@ -22,32 +22,32 @@ const Footer = () => {
                 SELOUS EXPRESS
               </h3>
             </div>
-            <p className="text-gray-300 font-poppins mb-4 text-lg">
+            <p className="text-white font-poppins mb-4 text-lg">
               {t('footerTagline')}
             </p>
-            <p className="text-gray-400 font-poppins text-sm leading-relaxed">
+            <p className="text-white font-poppins text-sm leading-relaxed">
               {t('footerDescription')}
             </p>
           </div>
 
           {/* Quick Links Section */}
           <div>
-            <h4 className="text-lg font-bebas font-bold mb-4 tracking-wide text-selous-yellow">
+            <h4 className="text-lg font-bebas font-bold mb-4 tracking-wide text-white">
               {t('quickLinks')}
             </h4>
             <ul className="space-y-2 font-poppins">
               <li>
-                <Link to="/" className="text-gray-300 hover:text-selous-yellow transition-colors duration-200">
+                <Link to="/" className="text-white hover:text-selous-gold-300 transition-colors duration-200">
                   {t('home')}
                 </Link>
               </li>
               <li>
-                <Link to="/routes" className="text-gray-300 hover:text-selous-yellow transition-colors duration-200">
+                <Link to="/routes" className="text-white hover:text-selous-gold-300 transition-colors duration-200">
                   {t('routes')}
                 </Link>
               </li>
               <li>
-                <Link to="/contact" className="text-gray-300 hover:text-selous-yellow transition-colors duration-200">
+                <Link to="/contact" className="text-white hover:text-selous-gold-300 transition-colors duration-200">
                   {t('contact')}
                 </Link>
               </li>
@@ -56,39 +56,39 @@ const Footer = () => {
 
           {/* Contact Info Section */}
           <div>
-            <h4 className="text-lg font-bebas font-bold mb-4 tracking-wide text-selous-yellow">
+            <h4 className="text-lg font-bebas font-bold mb-4 tracking-wide text-white">
               {t('contactInfo')}
             </h4>
             <div className="space-y-3 font-poppins text-sm">
               {/* Phone */}
               <div className="flex items-center space-x-2">
-                <svg className="w-4 h-4 text-selous-yellow flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-4 h-4 text-white flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
                 </svg>
-                <div className="text-gray-300">
+                <div className="text-white">
                   <div className="font-semibold mb-1">{t('phone')}:</div>
-                  <a href="tel:0763100064" className="hover:text-white transition-colors duration-200 block">Songea HQ: 0763100064</a>
-                  <a href="tel:0623388388" className="hover:text-white transition-colors duration-200 block">Mwanza: 0623388388</a>
+                  <a href="tel:0763100064" className="hover:text-selous-gold-300 transition-colors duration-200 block">Songea HQ: 0763100064</a>
+                  <a href="tel:0623388388" className="hover:text-selous-gold-300 transition-colors duration-200 block">Mwanza: 0623388388</a>
                 </div>
               </div>
               
               {/* Email */}
               <div className="flex items-center space-x-2">
-                <svg className="w-4 h-4 text-selous-yellow flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-4 h-4 text-white flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 7.89a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
                 </svg>
-                <a href="mailto:support@selous.co.tz" className="text-gray-300 hover:text-white transition-colors duration-200">
+                <a href="mailto:support@selous.co.tz" className="text-white hover:text-selous-gold-300 transition-colors duration-200">
                   support@selous.co.tz
                 </a>
               </div>
               
               {/* Location */}
               <div className="flex items-start space-x-2">
-                <svg className="w-4 h-4 text-selous-yellow flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-4 h-4 text-white flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
                 </svg>
-                <span className="text-gray-300">
+                <span className="text-white">
                   {t('headOffice')}: {t('headOfficeLocation')}
                 </span>
               </div>
@@ -102,7 +102,7 @@ const Footer = () => {
             
             {/* Social Media Links */}
             <div className="flex items-center space-x-4">
-              <span className="text-gray-400 font-poppins text-sm">{t('followUs')}:</span>
+              <span className="text-white font-poppins text-sm">{t('followUs')}:</span>
               
               {/* WhatsApp */}
               <a 
@@ -142,7 +142,7 @@ const Footer = () => {
             </div>
 
             {/* Copyright */}
-            <div className="text-gray-400 font-poppins text-sm">
+            <div className="text-white font-poppins text-sm">
               © {new Date().getFullYear()} Selous Express. {t('allRightsReserved')}.
             </div>
           </div>
