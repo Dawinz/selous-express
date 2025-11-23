@@ -327,9 +327,13 @@ const SearchForm = ({ setIsBookingDialogOpen }) => {
                 <div className="flex flex-wrap justify-center items-center gap-0.5 sm:gap-1 mx-auto w-fit">
                   {[
                     { route: 'Songea - Dar es Salaam', from: 'songea', to: 'dar-es-salaam' },
-                    { route: 'Dodoma - Songea', from: 'dodoma', to: 'songea' },
+                    { route: 'Dar es Salaam - Songea', from: 'dar-es-salaam', to: 'songea' },
                     { route: 'Songea - Mwanza', from: 'songea', to: 'mwanza' },
-                    { route: 'Moshi - Songea', from: 'moshi', to: 'songea' }
+                    { route: 'Mwanza - Songea', from: 'mwanza', to: 'songea' },
+                    { route: 'Songea - Moshi', from: 'songea', to: 'moshi' },
+                    { route: 'Moshi - Songea', from: 'moshi', to: 'songea' },
+                    { route: 'Songea - Dodoma', from: 'songea', to: 'dodoma' },
+                    { route: 'Dodoma - Songea', from: 'dodoma', to: 'songea' }
                   ].map(({ route, from, to }) => (
                     <button
                       key={route}

@@ -23,9 +23,25 @@ const Routes = () => {
     { from: 'Songea', to: 'Mbinga', fromValue: 'songea', toValue: 'mbinga' },
     { from: 'Songea', to: 'Mbambabay', fromValue: 'songea', toValue: 'mbambabay' },
     
+    // All routes from destinations to Songea (return routes)
+    { from: t('moshi'), to: 'Songea', fromValue: 'moshi', toValue: 'songea' },
+    { from: 'Dodoma', to: 'Songea', fromValue: 'dodoma', toValue: 'songea' },
+    { from: t('mwanza'), to: 'Songea', fromValue: 'mwanza', toValue: 'songea' },
+    { from: t('darEsSalaam'), to: 'Songea', fromValue: 'dar-es-salaam', toValue: 'songea' },
+    { from: 'Kyela', to: 'Songea', fromValue: 'kyela', toValue: 'songea' },
+    { from: 'Tunduma', to: 'Songea', fromValue: 'tunduma', toValue: 'songea' },
+    { from: 'Mbeya', to: 'Songea', fromValue: 'mbeya', toValue: 'songea' },
+    { from: 'Makambako', to: 'Songea', fromValue: 'makambako', toValue: 'songea' },
+    { from: 'Iringa', to: 'Songea', fromValue: 'iringa', toValue: 'songea' },
+    { from: 'Njombe', to: 'Songea', fromValue: 'njombe', toValue: 'songea' },
+    { from: 'Mtwara', to: 'Songea', fromValue: 'mtwara', toValue: 'songea' },
+    { from: 'Masasi', to: 'Songea', fromValue: 'masasi', toValue: 'songea' },
+    { from: 'Tunduru', to: 'Songea', fromValue: 'tunduru', toValue: 'songea' },
+    { from: 'Mbinga', to: 'Songea', fromValue: 'mbinga', toValue: 'songea' },
+    { from: 'Mbambabay', to: 'Songea', fromValue: 'mbambabay', toValue: 'songea' },
+    
     // All routes from Mbeya to destinations
     { from: 'Mbeya', to: 'Mtwara', fromValue: 'mbeya', toValue: 'mtwara' },
-    { from: 'Mbeya', to: 'Songea', fromValue: 'mbeya', toValue: 'songea' },
     { from: 'Mbeya', to: t('kiuma'), fromValue: 'mbeya', toValue: 'kiuma' },
     { from: 'Mbeya', to: 'Tunduru', fromValue: 'mbeya', toValue: 'tunduru' },
     { from: 'Mbeya', to: t('mangaka'), fromValue: 'mbeya', toValue: 'mangaka' },
