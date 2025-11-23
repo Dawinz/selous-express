@@ -183,7 +183,14 @@ const SearchForm = ({ setIsBookingDialogOpen }) => {
     { value: 'masasi', label: 'Masasi' },
     { value: 'tunduru', label: 'Tunduru' },
     { value: 'mbinga', label: 'Mbinga' },
-    { value: 'mbambabay', label: 'Mbambabay' }
+    { value: 'mbambabay', label: 'Mbambabay' },
+    { value: 'kiuma', label: t('kiuma') },
+    { value: 'mangaka', label: t('mangaka') },
+    { value: 'ndanda', label: t('ndanda') },
+    { value: 'mtama', label: t('mtama') },
+    { value: 'mnazi-mmoja', label: t('mnaziMmoja') },
+    { value: 'masasi-mjini', label: t('masasiMjini') },
+    { value: 'namtumbo', label: t('namtumbo') }
   ];
 
   // Show overlay instead of hiding the form completely

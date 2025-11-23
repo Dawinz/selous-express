@@ -22,6 +22,21 @@ const Routes = () => {
     { from: 'Songea', to: 'Tunduru', fromValue: 'songea', toValue: 'tunduru' },
     { from: 'Songea', to: 'Mbinga', fromValue: 'songea', toValue: 'mbinga' },
     { from: 'Songea', to: 'Mbambabay', fromValue: 'songea', toValue: 'mbambabay' },
+    
+    // All routes from Mbeya to destinations
+    { from: 'Mbeya', to: 'Mtwara', fromValue: 'mbeya', toValue: 'mtwara' },
+    { from: 'Mbeya', to: 'Songea', fromValue: 'mbeya', toValue: 'songea' },
+    { from: 'Mbeya', to: t('kiuma'), fromValue: 'mbeya', toValue: 'kiuma' },
+    { from: 'Mbeya', to: 'Tunduru', fromValue: 'mbeya', toValue: 'tunduru' },
+    { from: 'Mbeya', to: t('mangaka'), fromValue: 'mbeya', toValue: 'mangaka' },
+    { from: 'Mbeya', to: 'Masasi', fromValue: 'mbeya', toValue: 'masasi' },
+    { from: 'Mbeya', to: t('ndanda'), fromValue: 'mbeya', toValue: 'ndanda' },
+    { from: 'Mbeya', to: t('mtama'), fromValue: 'mbeya', toValue: 'mtama' },
+    { from: 'Mbeya', to: t('mnaziMmoja'), fromValue: 'mbeya', toValue: 'mnazi-mmoja' },
+    { from: 'Mbeya', to: 'Makambako', fromValue: 'mbeya', toValue: 'makambako' },
+    { from: 'Mbeya', to: t('masasiMjini'), fromValue: 'mbeya', toValue: 'masasi-mjini' },
+    { from: 'Mbeya', to: t('namtumbo'), fromValue: 'mbeya', toValue: 'namtumbo' },
+    { from: 'Mbeya', to: 'Njombe', fromValue: 'mbeya', toValue: 'njombe' },
   ];
 
   const handleBookRoute = (route) => {

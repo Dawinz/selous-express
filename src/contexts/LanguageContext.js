@@ -168,6 +168,13 @@ export const LanguageProvider = ({ children }) => {
         shinyanga: 'SHINYANGA SHY',
         arusha: 'ARUSHA ARS',
         singida: 'SINGIDA SGD',
+        kiuma: 'KIUMA',
+        mangaka: 'MANGAKA',
+        ndanda: 'NDANDA',
+        mtama: 'MTAMA',
+        mnaziMmoja: 'MNAZI MMOJA',
+        masasiMjini: 'MASASI MJINI',
+        namtumbo: 'NAMTUMBO',
         
         // Footer
         footerTagline: 'Premium Travel, Easy Booking',
@@ -337,6 +344,13 @@ export const LanguageProvider = ({ children }) => {
         shinyanga: 'SHINYANGA SHY',
         arusha: 'ARUSHA ARS',
         singida: 'SINGIDA SGD',
+        kiuma: 'KIUMA',
+        mangaka: 'MANGAKA',
+        ndanda: 'NDANDA',
+        mtama: 'MTAMA',
+        mnaziMmoja: 'MNAZI MMOJA',
+        masasiMjini: 'MASASI MJINI',
+        namtumbo: 'NAMTUMBO',
         
         // Footer
         footerTagline: 'Safari za Kifahari, Tiketi kwa Urahisi',
