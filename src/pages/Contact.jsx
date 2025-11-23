@@ -152,8 +152,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h3 className="font-bebas font-bold text-gray-800 text-lg">{t('email')}</h3>
-                    <p className="text-gray-600 font-poppins">support@selous.co.tz</p>
-                    <p className="text-gray-600 font-poppins">bookings@selous.co.tz</p>
+                    <p className="text-gray-600 font-poppins">info@selousexpress.co.tz</p>
                   </div>
                 </div>
 
