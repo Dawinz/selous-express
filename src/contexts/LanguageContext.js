@@ -153,6 +153,13 @@ export const LanguageProvider = ({ children }) => {
         enterPhonePlaceholder: 'Enter your phone number',
         enterMessagePlaceholder: 'Tell us how we can help you...',
         
+        // Contact page specific
+        postalAddress: 'Postal Address',
+        headquarters: 'Headquarters:',
+        mwanzaOffice: 'Mwanza Office:',
+        ticketingParcelServices: 'Ticketing & Parcel Services',
+        thankYouMessage: 'Thank you for your message! We will get back to you soon.',
+        
         // Experience difference
         experienceDifference: 'Experience the difference with our premium bus services',
         
@@ -328,6 +335,13 @@ export const LanguageProvider = ({ children }) => {
         enterEmailPlaceholder: 'Ingiza barua pepe yako',
         enterPhonePlaceholder: 'Ingiza namba yako ya simu',
         enterMessagePlaceholder: 'Tuambie jinsi tuweza kukusaidia...',
+        
+        // Contact page specific
+        postalAddress: 'Anwani ya Posta',
+        headquarters: 'Makao Makuu:',
+        mwanzaOffice: 'Ofisi ya Mwanza:',
+        ticketingParcelServices: 'Huduma za Tiketi na Vifurushi',
+        thankYouMessage: 'Asante kwa ujumbe wako! Tutawasiliana nawe hivi karibuni.',
         
         // Experience difference
         experienceDifference: 'Furahia tofauti na huduma zetu za kilasi za mabasi',
