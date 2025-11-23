@@ -86,7 +86,7 @@ const Navbar = () => {
                 {t('contact')}
               </Link>
               <a
-                href="https://superfeoexpress.com"
+                href="https://superfeoexpress.co.tz"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-[#E00080] hover:bg-[#C00070] px-4 py-2 rounded-lg font-bebas font-bold text-white transition-all duration-200 transform hover:scale-105 shadow-lg"
@@ -180,7 +180,7 @@ const Navbar = () => {
               {t('contact')}
             </Link>
             <a
-              href="https://superfeoexpress.com"
+              href="https://superfeoexpress.co.tz"
               target="_blank"
               rel="noopener noreferrer"
               className="block w-full text-center px-4 py-3 bg-[#E00080] hover:bg-[#C00070] text-white font-bebas font-bold rounded-lg transition-all duration-200 transform hover:scale-105 shadow-lg mx-3"
