@@ -182,6 +182,9 @@ export const LanguageProvider = ({ children }) => {
         mnaziMmoja: 'MNAZI MMOJA',
         masasiMjini: 'MASASI MJINI',
         namtumbo: 'NAMTUMBO',
+        lindi: 'LINDI',
+        mafinga: 'MAFINGA',
+        mikumi: 'MIKUMI',
         
         // Footer
         footerTagline: 'Premium Travel, Easy Booking',
@@ -365,6 +368,9 @@ export const LanguageProvider = ({ children }) => {
         mnaziMmoja: 'MNAZI MMOJA',
         masasiMjini: 'MASASI MJINI',
         namtumbo: 'NAMTUMBO',
+        lindi: 'LINDI',
+        mafinga: 'MAFINGA',
+        mikumi: 'MIKUMI',
         
         // Footer
         footerTagline: 'Safari za Kifahari, Tiketi kwa Urahisi',

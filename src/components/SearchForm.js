@@ -166,31 +166,28 @@ const SearchForm = ({ setIsBookingDialogOpen }) => {
     }
   };
 
-  // All routes from Songea to destinations
+  // All available regions for booking
   const popularRoutes = [
-    { value: 'songea', label: 'Songea' },
-    { value: 'moshi', label: t('moshi') },
-    { value: 'dodoma', label: 'Dodoma' },
-    { value: 'mwanza', label: t('mwanza') },
-    { value: 'dar-es-salaam', label: t('darEsSalaam') },
-    { value: 'kyela', label: 'Kyela' },
-    { value: 'tunduma', label: 'Tunduma' },
+    // Mbeya group
     { value: 'mbeya', label: 'Mbeya' },
-    { value: 'makambako', label: 'Makambako' },
-    { value: 'iringa', label: 'Iringa' },
-    { value: 'njombe', label: 'Njombe' },
-    { value: 'mtwara', label: 'Mtwara' },
-    { value: 'masasi', label: 'Masasi' },
-    { value: 'tunduru', label: 'Tunduru' },
-    { value: 'mbinga', label: 'Mbinga' },
-    { value: 'mbambabay', label: 'Mbambabay' },
+    { value: 'songea', label: 'Songea' },
     { value: 'kiuma', label: t('kiuma') },
+    { value: 'tunduru', label: 'Tunduru' },
     { value: 'mangaka', label: t('mangaka') },
+    { value: 'masasi', label: 'Masasi' },
     { value: 'ndanda', label: t('ndanda') },
     { value: 'mtama', label: t('mtama') },
     { value: 'mnazi-mmoja', label: t('mnaziMmoja') },
-    { value: 'masasi-mjini', label: t('masasiMjini') },
-    { value: 'namtumbo', label: t('namtumbo') }
+    { value: 'makambako', label: 'Makambako' },
+    { value: 'namtumbo', label: t('namtumbo') },
+    { value: 'njombe', label: 'Njombe' },
+    // Dar es Salaam group
+    { value: 'dar-es-salaam', label: t('darEsSalaam') },
+    { value: 'lindi', label: t('lindi') },
+    { value: 'mafinga', label: t('mafinga') },
+    { value: 'iringa', label: 'Iringa' },
+    { value: 'mikumi', label: t('mikumi') },
+    { value: 'morogoro', label: 'Morogoro' }
   ];
 
   // Show overlay instead of hiding the form completely
