@@ -181,6 +181,7 @@ const SearchForm = ({ setIsBookingDialogOpen }) => {
     { value: 'makambako', label: 'Makambako' },
     { value: 'namtumbo', label: t('namtumbo') },
     { value: 'njombe', label: 'Njombe' },
+    { value: 'mtwara', label: 'Mtwara' },
     // Dar es Salaam group
     { value: 'dar-es-salaam', label: t('darEsSalaam') },
     { value: 'lindi', label: t('lindi') },
@@ -323,14 +324,11 @@ const SearchForm = ({ setIsBookingDialogOpen }) => {
                 <p className="text-2xs sm:text-xs font-poppins text-white mb-1 sm:mb-1.5">{t('popularRoutes')}</p>
                 <div className="flex flex-wrap justify-center items-center gap-0.5 sm:gap-1 mx-auto w-fit">
                   {[
-                    { route: 'Songea - Dar es Salaam', from: 'songea', to: 'dar-es-salaam' },
-                    { route: 'Dar es Salaam - Songea', from: 'dar-es-salaam', to: 'songea' },
-                    { route: 'Songea - Mwanza', from: 'songea', to: 'mwanza' },
-                    { route: 'Mwanza - Songea', from: 'mwanza', to: 'songea' },
-                    { route: 'Songea - Moshi', from: 'songea', to: 'moshi' },
-                    { route: 'Moshi - Songea', from: 'moshi', to: 'songea' },
-                    { route: 'Songea - Dodoma', from: 'songea', to: 'dodoma' },
-                    { route: 'Dodoma - Songea', from: 'dodoma', to: 'songea' }
+                    { route: 'Mbeya - Songea', from: 'mbeya', to: 'songea' },
+                    { route: 'Mtwara - Mbeya', from: 'mtwara', to: 'mbeya' },
+                    { route: 'Njombe - Tunduru', from: 'njombe', to: 'tunduru' },
+                    { route: 'Makambako - Mtwara', from: 'makambako', to: 'mtwara' },
+                    { route: 'Masasi - Mbeya', from: 'masasi', to: 'mbeya' }
                   ].map(({ route, from, to }) => (
                     <button
                       key={route}
