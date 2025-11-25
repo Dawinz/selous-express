@@ -64,6 +64,7 @@ module.exports = {
       fontFamily: {
         'poppins': ['Poppins', 'sans-serif'],
         'bebas': ['Bebas Neue', 'sans-serif'],
+        'roboto': ['Roboto', 'sans-serif'],
       }
     },
   },
