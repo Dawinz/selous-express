@@ -6,53 +6,15 @@ const Routes = () => {
   const { t } = useLanguage();
   const navigate = useNavigate();
   const routes = [
-    // All routes from Songea to destinations
-    { from: 'Songea', to: t('moshi'), fromValue: 'songea', toValue: 'moshi', price: 'TSh 85,000' },
-    { from: 'Songea', to: 'Dodoma', fromValue: 'songea', toValue: 'dodoma', price: 'TSh 65,000' },
-    { from: 'Songea', to: t('mwanza'), fromValue: 'songea', toValue: 'mwanza', price: 'TSh 75,000' },
-    { from: 'Songea', to: t('darEsSalaam'), fromValue: 'songea', toValue: 'dar-es-salaam', price: 'TSh 95,000' },
-    { from: 'Songea', to: 'Kyela', fromValue: 'songea', toValue: 'kyela', price: 'TSh 45,000' },
-    { from: 'Songea', to: 'Tunduma', fromValue: 'songea', toValue: 'tunduma', price: 'TSh 50,000' },
-    { from: 'Songea', to: 'Mbeya', fromValue: 'songea', toValue: 'mbeya', price: 'TSh 55,000' },
-    { from: 'Songea', to: 'Makambako', fromValue: 'songea', toValue: 'makambako', price: 'TSh 40,000' },
-    { from: 'Songea', to: 'Iringa', fromValue: 'songea', toValue: 'iringa', price: 'TSh 50,000' },
-    { from: 'Songea', to: 'Njombe', fromValue: 'songea', toValue: 'njombe', price: 'TSh 35,000' },
-    { from: 'Songea', to: 'Mtwara', fromValue: 'songea', toValue: 'mtwara', price: 'TSh 80,000' },
-    { from: 'Songea', to: 'Masasi', fromValue: 'songea', toValue: 'masasi', price: 'TSh 70,000' },
-    { from: 'Songea', to: 'Tunduru', fromValue: 'songea', toValue: 'tunduru', price: 'TSh 60,000' },
-    { from: 'Songea', to: 'Mbinga', fromValue: 'songea', toValue: 'mbinga', price: 'TSh 55,000' },
-    { from: 'Songea', to: 'Mbambabay', fromValue: 'songea', toValue: 'mbambabay', price: 'TSh 75,000' },
-    
-    // All routes from destinations to Songea (return routes)
-    { from: t('moshi'), to: 'Songea', fromValue: 'moshi', toValue: 'songea', price: 'TSh 85,000' },
-    { from: 'Dodoma', to: 'Songea', fromValue: 'dodoma', toValue: 'songea', price: 'TSh 65,000' },
-    { from: t('mwanza'), to: 'Songea', fromValue: 'mwanza', toValue: 'songea', price: 'TSh 75,000' },
-    { from: t('darEsSalaam'), to: 'Songea', fromValue: 'dar-es-salaam', toValue: 'songea', price: 'TSh 95,000' },
-    { from: 'Kyela', to: 'Songea', fromValue: 'kyela', toValue: 'songea', price: 'TSh 45,000' },
-    { from: 'Tunduma', to: 'Songea', fromValue: 'tunduma', toValue: 'songea', price: 'TSh 50,000' },
-    { from: 'Mbeya', to: 'Songea', fromValue: 'mbeya', toValue: 'songea', price: 'TSh 31,000' },
-    { from: 'Makambako', to: 'Songea', fromValue: 'makambako', toValue: 'songea', price: 'TSh 40,000' },
-    { from: 'Iringa', to: 'Songea', fromValue: 'iringa', toValue: 'songea', price: 'TSh 50,000' },
-    { from: 'Njombe', to: 'Songea', fromValue: 'njombe', toValue: 'songea', price: 'TSh 35,000' },
-    { from: 'Mtwara', to: 'Songea', fromValue: 'mtwara', toValue: 'songea', price: 'TSh 80,000' },
-    { from: 'Masasi', to: 'Songea', fromValue: 'masasi', toValue: 'songea', price: 'TSh 70,000' },
-    { from: 'Tunduru', to: 'Songea', fromValue: 'tunduru', toValue: 'songea', price: 'TSh 60,000' },
-    { from: 'Mbinga', to: 'Songea', fromValue: 'mbinga', toValue: 'songea', price: 'TSh 55,000' },
-    { from: 'Mbambabay', to: 'Songea', fromValue: 'mbambabay', toValue: 'songea', price: 'TSh 75,000' },
-    
-    // All routes from Mbeya to destinations
+    // Routes from Mbeya to destinations
     { from: 'Mbeya', to: 'Mtwara', fromValue: 'mbeya', toValue: 'mtwara', price: 'TSh 75,000' },
+    { from: 'Mbeya', to: 'Songea', fromValue: 'mbeya', toValue: 'songea', price: 'TSh 31,000' },
     { from: 'Mbeya', to: t('kiuma'), fromValue: 'mbeya', toValue: 'kiuma', price: 'TSh 42,000' },
     { from: 'Mbeya', to: 'Tunduru', fromValue: 'mbeya', toValue: 'tunduru', price: 'TSh 49,000' },
     { from: 'Mbeya', to: t('mangaka'), fromValue: 'mbeya', toValue: 'mangaka', price: 'TSh 58,000' },
     { from: 'Mbeya', to: 'Masasi', fromValue: 'mbeya', toValue: 'masasi', price: 'TSh 61,000' },
     { from: 'Mbeya', to: t('ndanda'), fromValue: 'mbeya', toValue: 'ndanda', price: 'TSh 65,000' },
     { from: 'Mbeya', to: t('mtama'), fromValue: 'mbeya', toValue: 'mtama', price: 'TSh 65,000' },
-    { from: 'Mbeya', to: t('mnaziMmoja'), fromValue: 'mbeya', toValue: 'mnazi-mmoja', price: 'TSh 65,000' },
-    { from: 'Mbeya', to: 'Makambako', fromValue: 'mbeya', toValue: 'makambako', price: 'TSh 30,000' },
-    { from: 'Mbeya', to: t('masasiMjini'), fromValue: 'mbeya', toValue: 'masasi-mjini', price: 'TSh 62,000' },
-    { from: 'Mbeya', to: t('namtumbo'), fromValue: 'mbeya', toValue: 'namtumbo', price: 'TSh 45,000' },
-    { from: 'Mbeya', to: 'Njombe', fromValue: 'mbeya', toValue: 'njombe', price: 'TSh 38,000' },
   ];
 
   const handleBookRoute = (route) => {
